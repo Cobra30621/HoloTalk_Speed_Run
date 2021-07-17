@@ -39,6 +39,7 @@
      <Compile Include="Assets\Scripts\QuetionData\CsvLoader.cs" />
      <Compile Include="Assets\Scripts\QuetionData\QuestionData.cs" />
      <Compile Include="Assets\Scripts\QuetionData\QuestionDataManager.cs" />
+     <None Include="Assets\Lean\READ ME.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -650,6 +651,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="LeanLocalization.csproj">
+      <Project>{5cc2d012-d41b-441f-1c7d-ee274660c183}</Project>
+      <Name>LeanLocalization</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeanCommon.csproj">
+      <Project>{0044d1b0-b0c0-0e3f-3113-62272b23ef74}</Project>
+      <Name>LeanCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
