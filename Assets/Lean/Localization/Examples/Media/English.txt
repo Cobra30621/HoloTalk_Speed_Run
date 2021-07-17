@@ -1,1 +1,10 @@
-﻿Title = Hello\nEnglish // Description
+﻿Title , Hello\nEng 
+question, Question
+_option0, Option 0
+_option1, Option 1
+question0, Hot or cold weather?
+0_option0, Cold
+0_option1, Hot
+question1, Rice or noodles?
+1_option0, Rice
+1_option1, Noodles

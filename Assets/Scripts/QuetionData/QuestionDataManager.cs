@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-    
+using Lean.Localization;
+
 public class QuestionDataManager : MonoBehaviour{
     // 資料庫
     public QuestionData questionData;
@@ -11,6 +12,31 @@ public class QuestionDataManager : MonoBehaviour{
     public List<int> playerAnswers;
     public VTuber foundVTuber;
     public Dictionary<VTuber, float> similarityDictionary;
+
+    public int now_question;
+
+    public LeanLocalizedText LLT_question;
+    public List<LeanLocalizedText> LLT_options;
+
+    private const string optionKey = "_option";
+    private const string questionKey = "question";
+
+    [ContextMenu("Test2")]
+    public void Test2(){
+        SetQuetionWithId(now_question);
+        
+    }
+
+    public void SetQuetionWithId(int id){
+        LLT_question.TranslationName = questionKey + id;
+
+        for (int i = 0; i < LLT_options.Count; i++)
+        {
+            // 題目_option_選項  0_option0
+            string optionFullKey = id + optionKey + i ; 
+            LLT_options[i].TranslationName = optionFullKey;
+        }
+    }
 
 
     [ContextMenu("Test")]
