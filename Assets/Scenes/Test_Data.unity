@@ -164,6 +164,136 @@ Transform:
   m_Father: {fileID: 1412378300}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &294280791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 294280792}
+  - component: {fileID: 294280795}
+  - component: {fileID: 294280794}
+  - component: {fileID: 294280793}
+  m_Layer: 5
+  m_Name: Button_Next
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &294280792
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294280791}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 860155194}
+  m_Father: {fileID: 447384779}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 473, y: 393}
+  m_SizeDelta: {x: 312.77612, y: 131.88022}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &294280793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294280791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 294280794}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1412378299}
+        m_MethodName: NextQuetion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &294280794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294280791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &294280795
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294280791}
+  m_CullTransparentMesh: 0
 --- !u!1 &447384778
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,6 +326,7 @@ RectTransform:
   - {fileID: 803514650}
   - {fileID: 1432211668}
   - {fileID: 2102170137}
+  - {fileID: 294280792}
   m_Father: {fileID: 1601102014}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -388,7 +519,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &803514649
 GameObject:
@@ -483,6 +614,84 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   translationName: question
   FallbackText: Questions
+--- !u!1 &860155193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 860155194}
+  - component: {fileID: 860155196}
+  - component: {fileID: 860155195}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &860155194
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860155193}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 294280792}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &860155195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860155193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 50
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 5
+    m_MaxSize: 50
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Next
+--- !u!222 &860155196
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860155193}
+  m_CullTransparentMesh: 0
 --- !u!1 &875564631
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +769,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1349941116}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -599,7 +809,157 @@ MonoBehaviour:
   NewLine: \n
   Comment: 
   Cache: 0
-  entries: []
+  entries:
+  - Name: Title
+    Text: Hello
+  - Name: _question
+    Text: Question
+  - Name: _option0
+    Text: option0
+  - Name: _option1
+    Text: option1
+  - Name: _option2
+    Text: option2
+  - Name: _option3
+    Text: option3
+  - Name: _option4
+    Text: option4
+  - Name: _option5
+    Text: option5
+  - Name: 0_question
+    Text: Hot or cold weather?
+  - Name: 0_option0
+    Text: Cold
+  - Name: 0_option1
+    Text: Hot
+  - Name: 1_question
+    Text: Rice or noodles?
+  - Name: 1_option0
+    Text: Rice
+  - Name: 1_option1
+    Text: Noodles
+  - Name: 2_question
+    Text: Gusto Or Saizeriya?
+  - Name: 2_option0
+    Text: Saizeriya
+  - Name: 2_option1
+    Text: Gusto
+  - Name: 2_option2
+    Text: Both
+  - Name: 3_question
+    Text: Twitter or Instagram?
+  - Name: 3_option0
+    Text: Twitter
+  - Name: 3_option1
+    Text: Instagram
+  - Name: 4_question
+    Text: Coke or pepsi?
+  - Name: 4_option0
+    Text: Coke
+  - Name: 4_option1
+    Text: Pepsi
+  - Name: 5_question
+    Text: apple or orange juice?
+  - Name: 5_option0
+    Text: Orange juice
+  - Name: 5_option1
+    Text: Apple juice
+  - Name: 6_question
+    Text: Climb a mountain or run a marathon?
+  - Name: 6_option0
+    Text: Climb a mountain
+  - Name: 6_option1
+    Text: Run a marathon
+  - Name: 7_question
+    Text: PC or console?
+  - Name: 7_option0
+    Text: PC
+  - Name: 7_option1
+    Text: Console
+  - Name: 8_question
+    Text: pineapple on pizza yes or no?
+  - Name: 8_option0
+    Text: Yes
+  - Name: 8_option1
+    Text: No
+  - Name: 9_question
+    Text: Spicy or sweet food?
+  - Name: 9_option0
+    Text: Sweet
+  - Name: 9_option1
+    Text: Spicy
+  - Name: 10_question
+    Text: Tea or coffee?
+  - Name: 10_option0
+    Text: Tea
+  - Name: 10_option1
+    Text: Coffee
+  - Name: 10_option2
+    Text: Neither
+  - Name: 11_question
+    Text: Vacation at beach paradise of at famous metropolitan city?
+  - Name: 11_option0
+    Text: Beach
+  - Name: 11_option1
+    Text: City
+  - Name: 12_question
+    Text: Sleep naked or with clothes?
+  - Name: 12_option0
+    Text: With clothes
+  - Name: 12_option1
+    Text: Naked
+  - Name: 13_question
+    Text: Favorite holiday?
+  - Name: 13_option0
+    Text: Christmas
+  - Name: 13_option1
+    Text: HollowWind
+  - Name: 13_option2
+    Text: Labor Thanksgiving Day
+  - Name: 13_option3
+    Text: Children's day
+  - Name: 13_option4
+    Text: Every Day
+  - Name: 14_question
+    Text: 7-eleven FamilyMart or Lawason?
+  - Name: 14_option0
+    Text: FamilyMart
+  - Name: 14_option1
+    Text: Lawason
+  - Name: 14_option2
+    Text: 7-eleven
+  - Name: 15_question
+    Text: texting or talking on the phone?
+  - Name: 15_option0
+    Text: Talking on the phone
+  - Name: 15_option1
+    Text: Texting
+  - Name: 16_question
+    Text: giving or receiving presents?
+  - Name: 16_option0
+    Text: Receiving
+  - Name: 16_option1
+    Text: Giving
+  - Name: 17_question
+    Text: walk 1 station or take the train?
+  - Name: 17_option0
+    Text: Walk 1 station
+  - Name: 17_option1
+    Text: Take the train
+  - Name: 18_question
+    Text: What the colour of your panties?
+  - Name: 18_option0
+    Text: Pink
+  - Name: 18_option1
+    Text: White
+  - Name: 18_option2
+    Text: Mint Green
+  - Name: 18_option3
+    Text: Black
+  - Name: 18_option4
+    Text: Secret
+  - Name: 18_option5
+    Text: No Panties
 --- !u!4 &1349941116
 Transform:
   m_ObjectHideFlags: 0
@@ -607,12 +967,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349941114}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.63602, y: 1.3627483, z: -0.20657659}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 875564633}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1412378298
 GameObject:
@@ -856,7 +1216,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Questions
+  m_Text: option1
 --- !u!222 &1476770355
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -971,7 +1331,7 @@ RectTransform:
   m_Children:
   - {fileID: 447384779}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1048,7 +1408,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Questions
+  m_Text: option0
 --- !u!222 &1738872345
 CanvasRenderer:
   m_ObjectHideFlags: 0
