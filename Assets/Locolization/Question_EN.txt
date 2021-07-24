@@ -1,0 +1,74 @@
+_question,Question
+_option0,option0
+_option1,option1
+_option2,option2
+_option3,option3
+_option4,option4
+_option5,option5
+0_question, Hot or cold weather?
+0_option0, Cold
+0_option1, Hot
+1_question, Rice or noodles?
+1_option0, Rice
+1_option1, Noodles
+2_question,Gusto Or Saizeriya?
+2_option0,Saizeriya
+2_option1,Gusto
+2_option2,Both
+3_question,Twitter or Instagram?
+3_option0,Twitter
+3_option1,Instagram
+4_question,Coke or pepsi?
+4_option0,Coke
+4_option1,Pepsi
+5_question,apple or orange juice?
+5_option0,Orange juice
+5_option1,Apple juice
+6_question,Climb a mountain or run a marathon?
+6_option0,Climb a mountain
+6_option1,Run a marathon
+7_question,PC or console?
+7_option0,PC
+7_option1,Console
+8_question,pineapple on pizza yes or no?
+8_option0,Yes
+8_option1,No
+9_question,Spicy or sweet food?
+9_option0,Sweet
+9_option1,Spicy
+10_question,Tea or coffee?
+10_option0,Tea
+10_option1,Coffee
+10_option2,Neither
+11_question,Vacation at beach paradise of at famous metropolitan city?
+11_option0,Beach
+11_option1,City
+12_question,Sleep naked or with clothes?
+12_option0,With clothes
+12_option1,Naked
+13_question,Favorite holiday?
+13_option0,Christmas
+13_option1,HollowWind
+13_option2,Labor Thanksgiving Day
+13_option3,Children's day
+13_option4,Every Day
+14_question,7-eleven FamilyMart or Lawason?
+14_option0,FamilyMart
+14_option1,Lawason
+14_option2,7-eleven
+15_question,texting or talking on the phone?
+15_option0,Talking on the phone
+15_option1,Texting
+16_question,giving or receiving presents?
+16_option0,Receiving
+16_option1,Giving
+17_question,walk 1 station or take the train?
+17_option0,Walk 1 station
+17_option1,Take the train
+18_question,What the colour of your panties?
+18_option0,Pink
+18_option1,White
+18_option2,Mint Green
+18_option3,Black
+18_option4,Secret
+18_option5,No Panties
