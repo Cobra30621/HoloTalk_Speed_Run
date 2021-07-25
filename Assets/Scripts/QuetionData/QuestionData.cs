@@ -7,6 +7,7 @@ using UnityEngine;
 public class QuestionData: ScriptableObject {
     public List<Question> questionsList;
     public List<Answerer> answerersList;
+    public List<VTuberOutcome> vTuberOutcomesList;
 
 
     public Question GetQuestionById(int id){
@@ -53,6 +54,13 @@ public class Answerer{ // 一個角色的答案
     public string name;
     // option_id
     public List<int> answers; 
+}
+
+[System.Serializable]
+public class VTuberOutcome{ // 一個角色的答案
+    public VTuber vTuber;
+    public string name;
+    public Sprite[] sprites;
 }
 
 [System.Serializable]

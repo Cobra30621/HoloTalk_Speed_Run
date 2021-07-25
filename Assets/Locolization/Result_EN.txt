@@ -1,0 +1,3 @@
+answer_count, Answer:{answerCount} 
+skip_count, Skip:{skipCount}
+title, The most similar VTuber with your 

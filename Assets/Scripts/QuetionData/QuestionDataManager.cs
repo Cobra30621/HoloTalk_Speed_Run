@@ -22,6 +22,40 @@ public class QuestionDataManager : MonoBehaviour{
         return questionData.GetQuestionById(id);
     }
 
+    public Sprite GetVtuberSprite(VTuber vTuber){
+        foreach (VTuberOutcome answerer in questionData.vTuberOutcomesList)
+        {
+            if(vTuber == answerer.vTuber){
+                return answerer.sprites[0];
+            }
+            
+        }
+        Debug.LogError($"找不到sprite{vTuber}");
+        return null;
+    }    
+
+    public List<VTuberSimilar> GetMostSimilarVuber(List<int> playerAnswers){
+        Dictionary<VTuber, float> similarityDictionary = CalculateAllSimilarity(playerAnswers);
+        List<VTuberSimilar> most_answerer = new List<VTuberSimilar>();
+
+        float high_similar = 0;
+        foreach (KeyValuePair<VTuber, float> vtuber in similarityDictionary)
+        {
+            VTuberSimilar answerer = new VTuberSimilar(vtuber.Key, vtuber.Value, 0); 
+            if(vtuber.Value > high_similar){
+                most_answerer.Clear();
+                high_similar = vtuber.Value;
+                most_answerer.Add(answerer);
+            }
+            else if (vtuber.Value == high_similar)
+            {
+                most_answerer.Add(answerer);
+            }
+        }
+
+        return most_answerer;
+    }
+
     public Dictionary<VTuber, float> CalculateAllSimilarity(List<int> playerAnswers){
         similarityDictionary = new Dictionary<VTuber, float>();
         foreach (Answerer answerer in questionData.answerersList)
@@ -157,5 +191,19 @@ public class QuestionDataManager : MonoBehaviour{
 
     
 }
- 
+
+[System.Serializable]
+public class VTuberSimilar{
+    
+    public VTuber vTuber;
+    public float similarity;
+    public float similarity_skip;
+
+    public VTuberSimilar(VTuber vTuber, float similarity, float similarity_skip){
+        this.vTuber = vTuber;
+        this.similarity = similarity;
+        this.similarity_skip = similarity_skip;
+    }
+        
+}
 
