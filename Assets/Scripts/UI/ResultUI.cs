@@ -23,6 +23,12 @@ public class ResultUI : MonoBehaviour
     public List<VTuberSimilar> most_simliarVTuber;
     public List<int> playerAnswers;
 
+    [Header("Detail")]
+    [SerializeField] private GameObject detailPanel;
+    [SerializeField] private GameObject barPrefab;
+    [SerializeField] private Transform bar_pos;
+    private List<SimilarityBar> similarityBars;
+
 
     [ContextMenu("Test")]
     public void Test(){
@@ -41,12 +47,49 @@ public class ResultUI : MonoBehaviour
         VTuber vTuber = most_simliarVTuber[0].vTuber;
         similarity = most_simliarVTuber[0].similarity;
 
-        lab_similarity.text = (similarity * 100) + "%";
-        lab_vubter.text = vTuber.ToString();
-        Debug.Log("(similarity * 100)"+ (similarity * 100));
-        img_vtuber.sprite = questionDataManager.GetVtuberSprite(vTuber);
+        lab_similarity.text = (similarity ) + "%";
+        lab_vubter.text = most_simliarVTuber[0].name;
+        Debug.Log("(similarity * 100)"+ (similarity ));
+        img_vtuber.sprite = most_simliarVTuber[0].sprites[0];
 
         // matsuriSpeech1.text = localize ? LeanLocalization.GetTranslationText(text) : text;
         yield return null;
     }
+
+
+    public void ShowDetailPanel(){
+        detailPanel.SetActive(true);
+        RemoveAllBar();
+
+        List<VTuberSimilar> allSimliaritys = questionDataManager.GetAllSimilarityWithSort(playerAnswers);
+        similarityBars= new List<SimilarityBar>();
+        foreach (VTuberSimilar simliarity in allSimliaritys)
+        {
+            CreateSimilarityBar(simliarity);
+        }
+    }
+
+    public void CloseDetailPanel(){
+        detailPanel.SetActive(false);
+    }
+
+    public void CreateSimilarityBar(VTuberSimilar simliarity )
+    {
+        var g = Instantiate(barPrefab, bar_pos);
+
+        var l = g.GetComponent<SimilarityBar>();
+        l.SetInfo( simliarity ); 
+        similarityBars.Add( l);
+    }
+
+    private void RemoveAllBar(){
+        if(similarityBars == null)
+            return;
+        
+        foreach(SimilarityBar bar in similarityBars){
+            if(bar != null)
+                Destroy(bar.gameObject);
+        }
+    }
+
 }

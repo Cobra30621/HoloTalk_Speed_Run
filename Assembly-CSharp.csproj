@@ -41,6 +41,7 @@
      <Compile Include="Assets\Scripts\QuetionData\QuestionDataManager.cs" />
      <Compile Include="Assets\Scripts\System\GameManager.cs" />
      <Compile Include="Assets\Scripts\UI\ResultUI.cs" />
+     <Compile Include="Assets\Scripts\UI\SimilarityBar.cs" />
      <None Include="Assets\Locolization\Question_EN.txt" />
      <None Include="Assets\Lean\READ ME.txt" />
      <None Include="Assets\Locolization\Result_EN.txt" />
