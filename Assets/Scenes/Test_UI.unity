@@ -422,6 +422,7 @@ GameObject:
   - component: {fileID: 446148500}
   - component: {fileID: 446148499}
   - component: {fileID: 446148498}
+  - component: {fileID: 446148502}
   m_Layer: 5
   m_Name: ConversationCanvas
   m_TagString: Untagged
@@ -500,7 +501,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 476238981}
+  - {fileID: 1974761783}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -509,6 +510,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &446148502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446148497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d78d76858f6130149821fe4b3c706ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kiara: {fileID: 1974761786}
+  info: Kiara/Intro1
+  anime: exciting
 --- !u!1 &476238980
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +537,7 @@ GameObject:
   - component: {fileID: 476238983}
   - component: {fileID: 476238982}
   m_Layer: 5
-  m_Name: Conversation
+  m_Name: Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -539,13 +555,13 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 793748860}
-  m_Father: {fileID: 446148501}
-  m_RootOrder: 0
+  m_Father: {fileID: 1974761783}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -339.7, y: 344.8}
-  m_SizeDelta: {x: -774.6135, y: -827.3247}
+  m_AnchoredPosition: {x: -905.6639, y: 71.985245}
+  m_SizeDelta: {x: 527.47253, y: -353.41547}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &476238982
 MonoBehaviour:
@@ -1236,7 +1252,7 @@ GameObject:
   - component: {fileID: 793748862}
   - component: {fileID: 793748861}
   m_Layer: 5
-  m_Name: lab_title
+  m_Name: lab_speech
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1256,10 +1272,10 @@ RectTransform:
   m_Father: {fileID: 476238981}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00765227, y: -0.000030517578}
-  m_SizeDelta: {x: 1145.3716, y: 181.64948}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &793748861
 MonoBehaviour:
@@ -1298,9 +1314,9 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 70
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
-    m_MaxSize: 100
+    m_MaxSize: 70
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1640,6 +1656,100 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1240677110}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1254584387
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1254584388}
+  - component: {fileID: 1254584391}
+  - component: {fileID: 1254584390}
+  - component: {fileID: 1254584389}
+  m_Layer: 5
+  m_Name: Kiara
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1254584388
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254584387}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1974761783}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -339}
+  m_SizeDelta: {x: 500, y: 678}
+  m_Pivot: {x: 0.5, y: 0}
+--- !u!95 &1254584389
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254584387}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 303d202a34ed98746a4e1b6cfcb71755, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1254584390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254584387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e933d5aed209b804f91233b021675659, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1254584391
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254584387}
+  m_CullTransparentMesh: 0
 --- !u!114 &1287993504 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7316699847972946082, guid: 7cc285844aec364449f84c06bdc4021e,
@@ -1659,6 +1769,751 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.size
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[0].Name
+      value: _question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[0].Text
+      value: Question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[1].Name
+      value: _option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[1].Text
+      value: option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[2].Name
+      value: _option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[2].Text
+      value: option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[3].Name
+      value: _option2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[3].Text
+      value: option2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[4].Name
+      value: _option3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[4].Text
+      value: option3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[5].Name
+      value: _option4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[5].Text
+      value: option4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[6].Name
+      value: _option5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[6].Text
+      value: option5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[7].Name
+      value: 0_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[7].Text
+      value: Hot or cold weather?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[8].Name
+      value: 0_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[8].Text
+      value: Cold
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[9].Name
+      value: 0_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[9].Text
+      value: Hot
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[10].Name
+      value: 1_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[10].Text
+      value: Rice or noodles?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[11].Name
+      value: 1_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[11].Text
+      value: Rice
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[12].Name
+      value: 1_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[12].Text
+      value: Noodles
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[13].Name
+      value: 2_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[13].Text
+      value: Gusto Or Saizeriya?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[14].Name
+      value: 2_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[14].Text
+      value: Saizeriya
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[15].Name
+      value: 2_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[15].Text
+      value: Gusto
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[16].Name
+      value: 2_option2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[16].Text
+      value: Both
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[17].Name
+      value: 3_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[17].Text
+      value: Twitter or Instagram?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[18].Name
+      value: 3_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[18].Text
+      value: Twitter
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[19].Name
+      value: 3_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[19].Text
+      value: Instagram
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[20].Name
+      value: 4_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[20].Text
+      value: Coke or pepsi?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[21].Name
+      value: 4_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[21].Text
+      value: Coke
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[22].Name
+      value: 4_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[22].Text
+      value: Pepsi
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[23].Name
+      value: 5_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[23].Text
+      value: apple or orange juice?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[24].Name
+      value: 5_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[24].Text
+      value: Orange juice
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[25].Name
+      value: 5_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[25].Text
+      value: Apple juice
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[26].Name
+      value: 6_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[26].Text
+      value: Climb a mountain or run a marathon?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[27].Name
+      value: 6_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[27].Text
+      value: Climb a mountain
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[28].Name
+      value: 6_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[28].Text
+      value: Run a marathon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[29].Name
+      value: 7_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[29].Text
+      value: PC or console?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[30].Name
+      value: 7_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[30].Text
+      value: PC
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[31].Name
+      value: 7_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[31].Text
+      value: Console
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[32].Name
+      value: 8_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[32].Text
+      value: pineapple on pizza yes or no?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[33].Name
+      value: 8_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[33].Text
+      value: Yes
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[34].Name
+      value: 8_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[34].Text
+      value: No
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[35].Name
+      value: 9_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[35].Text
+      value: Spicy or sweet food?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[36].Name
+      value: 9_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[36].Text
+      value: Sweet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[37].Name
+      value: 9_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[37].Text
+      value: Spicy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[38].Name
+      value: 10_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[38].Text
+      value: Tea or coffee?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[39].Name
+      value: 10_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[39].Text
+      value: Tea
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[40].Name
+      value: 10_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[40].Text
+      value: Coffee
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[41].Name
+      value: 10_option2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[41].Text
+      value: Neither
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[42].Name
+      value: 11_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[42].Text
+      value: Vacation at beach paradise of at famous metropolitan city?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[43].Name
+      value: 11_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[43].Text
+      value: Beach
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[44].Name
+      value: 11_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[44].Text
+      value: City
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[45].Name
+      value: 12_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[45].Text
+      value: Sleep naked or with clothes?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[46].Name
+      value: 12_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[46].Text
+      value: With clothes
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[47].Name
+      value: 12_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[47].Text
+      value: Naked
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[48].Name
+      value: 13_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[48].Text
+      value: Favorite holiday?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[49].Name
+      value: 13_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[49].Text
+      value: Christmas
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[50].Name
+      value: 13_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[50].Text
+      value: HollowWind
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[51].Name
+      value: 13_option2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[51].Text
+      value: Labor Thanksgiving Day
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[52].Name
+      value: 13_option3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[52].Text
+      value: Children's day
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[53].Name
+      value: 13_option4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[53].Text
+      value: Every Day
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[54].Name
+      value: 14_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[54].Text
+      value: 7-eleven FamilyMart or Lawason?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[55].Name
+      value: 14_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[55].Text
+      value: FamilyMart
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[56].Name
+      value: 14_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[56].Text
+      value: Lawason
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[57].Name
+      value: 14_option2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[57].Text
+      value: 7-eleven
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[58].Name
+      value: 15_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[58].Text
+      value: texting or talking on the phone?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[59].Name
+      value: 15_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[59].Text
+      value: Talking on the phone
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[60].Name
+      value: 15_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[60].Text
+      value: Texting
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[61].Name
+      value: 16_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[61].Text
+      value: giving or receiving presents?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[62].Name
+      value: 16_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[62].Text
+      value: Receiving
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[63].Name
+      value: 16_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[63].Text
+      value: Giving
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[64].Name
+      value: 17_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[64].Text
+      value: walk 1 station or take the train?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[65].Name
+      value: 17_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[65].Text
+      value: Walk 1 station
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[66].Name
+      value: 17_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[66].Text
+      value: Take the train
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[67].Name
+      value: 18_question
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[67].Text
+      value: What the colour of your panties?
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[68].Name
+      value: 18_option0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[68].Text
+      value: Pink
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[69].Name
+      value: 18_option1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[69].Text
+      value: White
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[70].Name
+      value: 18_option2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[70].Text
+      value: Mint Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[71].Name
+      value: 18_option3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[71].Text
+      value: Black
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[72].Name
+      value: 18_option4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[72].Text
+      value: Secret
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[73].Name
+      value: 18_option5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4428177818511471491, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[73].Text
+      value: No Panties
+      objectReference: {fileID: 0}
     - target: {fileID: 4428177819076694267, guid: 6251ef876976b6b4dbb3652433f3d2d0,
         type: 3}
       propertyPath: m_Name
@@ -1718,6 +2573,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491682182735317627, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491682182735317627, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: Source
+      value: 
+      objectReference: {fileID: 4900000, guid: 4145d83c07a6b4547b28bebd34213b0b, type: 3}
+    - target: {fileID: 4491682182735317627, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[0].Name
+      value: Kiara/Intro2 = Well then
+      objectReference: {fileID: 0}
+    - target: {fileID: 4491682182735317627, guid: 6251ef876976b6b4dbb3652433f3d2d0,
+        type: 3}
+      propertyPath: entries.Array.data[0].Text
+      value: let's get started!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6251ef876976b6b4dbb3652433f3d2d0, type: 3}
@@ -2649,6 +3524,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966977341}
   m_CullTransparentMesh: 0
+--- !u!1 &1974761782
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1974761783}
+  - component: {fileID: 1974761785}
+  - component: {fileID: 1974761784}
+  - component: {fileID: 1974761786}
+  m_Layer: 5
+  m_Name: Kiara_talk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1974761783
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974761782}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1254584388}
+  - {fileID: 476238981}
+  m_Father: {fileID: 446148501}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1208, y: 196}
+  m_SizeDelta: {x: 500.22644, y: 678.02747}
+  m_Pivot: {x: 1.7375116, y: 0.8306433}
+--- !u!114 &1974761784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974761782}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1974761785
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974761782}
+  m_CullTransparentMesh: 0
+--- !u!114 &1974761786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974761782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c4c07864b61f124f961dc33ce82f51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1254584389}
+  kiaraBubble: {fileID: 476238980}
+  lab_speech: {fileID: 793748862}
 --- !u!1001 &1998847679
 PrefabInstance:
   m_ObjectHideFlags: 0

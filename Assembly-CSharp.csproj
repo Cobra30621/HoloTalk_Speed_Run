@@ -36,12 +36,15 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\MainGame\Kiara.cs" />
+     <Compile Include="Assets\Scripts\MainGame\Test.cs" />
      <Compile Include="Assets\Scripts\QuetionData\CsvLoader.cs" />
      <Compile Include="Assets\Scripts\QuetionData\QuestionData.cs" />
      <Compile Include="Assets\Scripts\QuetionData\QuestionDataManager.cs" />
      <Compile Include="Assets\Scripts\System\GameManager.cs" />
      <Compile Include="Assets\Scripts\UI\ResultUI.cs" />
      <Compile Include="Assets\Scripts\UI\SimilarityBar.cs" />
+     <None Include="Assets\Locolization\Kiara_EN.txt" />
      <None Include="Assets\Locolization\Question_EN.txt" />
      <None Include="Assets\Lean\READ ME.txt" />
      <None Include="Assets\Locolization\Result_EN.txt" />

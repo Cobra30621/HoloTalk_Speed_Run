@@ -1,5 +1,205 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &619709338740004297
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657467406699678536}
+  - component: {fileID: 4491682182735317627}
+  m_Layer: 0
+  m_Name: KiaraTalk
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &657467406699678536
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619709338740004297}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.63602, y: 1.3627483, z: -0.20657659}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4428177819076694269}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4491682182735317627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619709338740004297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086ae75064fca9f46b315403da7f5d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Source: {fileID: 4900000, guid: c69a2d94ee3532a4d92016dc2c587bed, type: 3}
+  Language: English
+  Separator: ','
+  NewLine: \n
+  Comment: 
+  Cache: 0
+  entries:
+  - Name: Title
+    Text: Hello
+  - Name: _question
+    Text: Question
+  - Name: _option0
+    Text: option0
+  - Name: _option1
+    Text: option1
+  - Name: _option2
+    Text: option2
+  - Name: _option3
+    Text: option3
+  - Name: _option4
+    Text: option4
+  - Name: _option5
+    Text: option5
+  - Name: 0_question
+    Text: Hot or cold weather?
+  - Name: 0_option0
+    Text: Cold
+  - Name: 0_option1
+    Text: Hot
+  - Name: 1_question
+    Text: Rice or noodles?
+  - Name: 1_option0
+    Text: Rice
+  - Name: 1_option1
+    Text: Noodles
+  - Name: 2_question
+    Text: Gusto Or Saizeriya?
+  - Name: 2_option0
+    Text: Saizeriya
+  - Name: 2_option1
+    Text: Gusto
+  - Name: 2_option2
+    Text: Both
+  - Name: 3_question
+    Text: Twitter or Instagram?
+  - Name: 3_option0
+    Text: Twitter
+  - Name: 3_option1
+    Text: Instagram
+  - Name: 4_question
+    Text: Coke or pepsi?
+  - Name: 4_option0
+    Text: Coke
+  - Name: 4_option1
+    Text: Pepsi
+  - Name: 5_question
+    Text: apple or orange juice?
+  - Name: 5_option0
+    Text: Orange juice
+  - Name: 5_option1
+    Text: Apple juice
+  - Name: 6_question
+    Text: Climb a mountain or run a marathon?
+  - Name: 6_option0
+    Text: Climb a mountain
+  - Name: 6_option1
+    Text: Run a marathon
+  - Name: 7_question
+    Text: PC or console?
+  - Name: 7_option0
+    Text: PC
+  - Name: 7_option1
+    Text: Console
+  - Name: 8_question
+    Text: pineapple on pizza yes or no?
+  - Name: 8_option0
+    Text: Yes
+  - Name: 8_option1
+    Text: No
+  - Name: 9_question
+    Text: Spicy or sweet food?
+  - Name: 9_option0
+    Text: Sweet
+  - Name: 9_option1
+    Text: Spicy
+  - Name: 10_question
+    Text: Tea or coffee?
+  - Name: 10_option0
+    Text: Tea
+  - Name: 10_option1
+    Text: Coffee
+  - Name: 10_option2
+    Text: Neither
+  - Name: 11_question
+    Text: Vacation at beach paradise of at famous metropolitan city?
+  - Name: 11_option0
+    Text: Beach
+  - Name: 11_option1
+    Text: City
+  - Name: 12_question
+    Text: Sleep naked or with clothes?
+  - Name: 12_option0
+    Text: With clothes
+  - Name: 12_option1
+    Text: Naked
+  - Name: 13_question
+    Text: Favorite holiday?
+  - Name: 13_option0
+    Text: Christmas
+  - Name: 13_option1
+    Text: HollowWind
+  - Name: 13_option2
+    Text: Labor Thanksgiving Day
+  - Name: 13_option3
+    Text: Children's day
+  - Name: 13_option4
+    Text: Every Day
+  - Name: 14_question
+    Text: 7-eleven FamilyMart or Lawason?
+  - Name: 14_option0
+    Text: FamilyMart
+  - Name: 14_option1
+    Text: Lawason
+  - Name: 14_option2
+    Text: 7-eleven
+  - Name: 15_question
+    Text: texting or talking on the phone?
+  - Name: 15_option0
+    Text: Talking on the phone
+  - Name: 15_option1
+    Text: Texting
+  - Name: 16_question
+    Text: giving or receiving presents?
+  - Name: 16_option0
+    Text: Receiving
+  - Name: 16_option1
+    Text: Giving
+  - Name: 17_question
+    Text: walk 1 station or take the train?
+  - Name: 17_option0
+    Text: Walk 1 station
+  - Name: 17_option1
+    Text: Take the train
+  - Name: 18_question
+    Text: What the colour of your panties?
+  - Name: 18_option0
+    Text: Pink
+  - Name: 18_option1
+    Text: White
+  - Name: 18_option2
+    Text: Mint Green
+  - Name: 18_option3
+    Text: Black
+  - Name: 18_option4
+    Text: Secret
+  - Name: 18_option5
+    Text: No Panties
 --- !u!1 &4428177818511471489
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,6 +429,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4428177818511471488}
+  - {fileID: 657467406699678536}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
