@@ -5,21 +5,16 @@ using UnityEngine.UI;
 
 public class ResultUI : MonoBehaviour
 {
+    public static ResultUI resultUI;
     public QuestionDataManager questionDataManager;
 
     [Header("UI")]
-    public Text lab_answerCount;
-    public Text lab_skipCount;
+    public GameObject outcomePanel;
     public Text lab_similarity;
-    public Text lab_similarity_skip;
     public Text lab_vubter;
     public Image img_vtuber;
 
     [Header("Info")]
-    public int answerCount;
-    public int skipCount;
-    public float similarity;
-    public float similarity_skip;
     public List<VTuberSimilar> most_simliarVTuber;
     public List<int> playerAnswers;
 
@@ -29,23 +24,33 @@ public class ResultUI : MonoBehaviour
     [SerializeField] private Transform bar_pos;
     private List<SimilarityBar> similarityBars;
 
+    void Awake(){
+        resultUI = this;
+    }
 
     [ContextMenu("Test")]
     public void Test(){
-        SetOutCome();
+        SetOutCome(playerAnswers);
     }
 
 
-    public void SetOutCome(){
-        StartCoroutine(ShowCoroutine());
+    public static void ShowResult(List<int> playerAnswers)
+    {
+        resultUI.SetOutCome(playerAnswers);
+    }
+
+    public void SetOutCome(List<int> playerAnswers){
+        outcomePanel.SetActive(true);
+        StartCoroutine(ShowCoroutine(playerAnswers));
         
     }
 
-    IEnumerator ShowCoroutine()
+    IEnumerator ShowCoroutine(List<int> playerAnswers)
     {
+        this.playerAnswers = playerAnswers;
         most_simliarVTuber = questionDataManager.GetMostSimilarVuber(playerAnswers);
         VTuber vTuber = most_simliarVTuber[0].vTuber;
-        similarity = most_simliarVTuber[0].similarity;
+        float similarity = most_simliarVTuber[0].similarity;
 
         lab_similarity.text = (similarity ) + "%";
         lab_vubter.text = most_simliarVTuber[0].name;

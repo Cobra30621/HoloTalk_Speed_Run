@@ -15,8 +15,7 @@ public class QuestionDataManager : MonoBehaviour{
 
     [ContextMenu("Test")]
     public void Test(){
-        CalculateAllSimilarity(playerAnswers);
-        
+        ResultUI.ShowResult(playerAnswers);
     }
 
     public Question GetQuestionById(int id){
@@ -24,46 +23,84 @@ public class QuestionDataManager : MonoBehaviour{
     }
 
     public List<VTuberSimilar> GetAllSimilarityWithSort(List<int> playerAnswers){
-        Dictionary<VTuber, float> similarityDictionary = CalculateAllSimilarity(playerAnswers);
-        List<VTuberSimilar> answerers = new List<VTuberSimilar>();
-        foreach (KeyValuePair<VTuber, float> vtuber in similarityDictionary)
+        List<VTuberSimilar> vTuberSimilars = new List<VTuberSimilar>();
+
+        foreach (Answerer answerer in questionData.answerersList)
         {
-            VTuberSimilar answerer = new VTuberSimilar(vtuber.Key, vtuber.Value, 0);
-            answerer.name = vtuber.Key.ToString(); // 先隨便寫，之後要雙語實改
-            answerer.SetSprites(GetVtuberSprites(vtuber.Key)) ;
-            answerers.Add(answerer);
-        }
+            VTuber vTuber = answerer.vTuber;
+            VTuberSimilar similar = GetVTuberSimilar(playerAnswers, answerer.answers, vTuber);
+            vTuberSimilars.Add(similar);
+        } 
 
         // Sort
-        answerers.Sort( (x, y) => - x.similarity.CompareTo(y.similarity)  );
+        vTuberSimilars.Sort( (x, y) => - x.similarity.CompareTo(y.similarity)  );
 
-        return answerers;
+        return vTuberSimilars;
     }
 
+
     public List<VTuberSimilar> GetMostSimilarVuber(List<int> playerAnswers){
-        Dictionary<VTuber, float> similarityDictionary = CalculateAllSimilarity(playerAnswers);
         List<VTuberSimilar> most_answerer = new List<VTuberSimilar>();
 
         float high_similar = 0;
-        foreach (KeyValuePair<VTuber, float> vtuber in similarityDictionary)
+        foreach (Answerer answerer in questionData.answerersList)
         {
-            VTuberSimilar answerer = new VTuberSimilar(vtuber.Key, vtuber.Value, 0);
-            answerer.name = vtuber.Key.ToString(); // 先隨便寫，之後要雙語實改
-            answerer.SetSprites(GetVtuberSprites(vtuber.Key)) ;
+            VTuber vTuber = answerer.vTuber;
+            VTuberSimilar similar = GetVTuberSimilar(playerAnswers, answerer.answers, vTuber);
 
-
-            if(vtuber.Value > high_similar){
+            if(similar.similarity > high_similar){
                 most_answerer.Clear();
-                high_similar = vtuber.Value;
-                most_answerer.Add(answerer);
+                high_similar = similar.similarity;
+                most_answerer.Add(similar);
             }
-            else if (vtuber.Value == high_similar)
+            else if (similar.similarity == high_similar)
             {
-                most_answerer.Add(answerer);
+                most_answerer.Add(similar);
+            }
+        } 
+
+        return most_answerer;
+    }
+
+    public VTuberSimilar GetVTuberSimilar(List<int> answers, List<int> vtAnswers, VTuber vTuber){
+        float effectiveQuetionCount = 0;
+        float sameQuetionCount = 0;
+        
+        if(answers.Count != vtAnswers.Count){
+            Debug.Log($"玩家與VTuber的答題數不同\n玩家:{answers.Count} VTuber{vtAnswers.Count}");
+            return null;
+        }
+
+        for (int i = 0; i < answers.Count; i++)
+        {
+            if(vtAnswers[i] != -1){ // -1表示該VTuber沒答此題目
+                // Debug.Log($"answers[i]:{answers[i]},vtAnswers[i]{vtAnswers[i]}");
+                if(answers[i] == vtAnswers[i]){
+                    
+                    sameQuetionCount ++;
+                }
+                effectiveQuetionCount ++;
             }
         }
 
-        return most_answerer;
+        if(effectiveQuetionCount == 0){
+            Debug.Log("有效題數為0");
+            return null;
+        }
+
+        // Debug.Log($"sameQuetionCount:{sameQuetionCount},effectiveQuetionCount{effectiveQuetionCount}");
+        
+        // 設定similar
+        VTuberSimilar similar = new VTuberSimilar();
+        float ratePercentage = (float) Math.Round(sameQuetionCount / effectiveQuetionCount*100);
+        similar.similarity = ratePercentage;
+        similar.sameCount = sameQuetionCount;
+        similar.compareCount = effectiveQuetionCount;
+        similar.vTuber =  vTuber ;
+        similar.SetSprites(GetVtuberSprites(vTuber)) ;
+        similar.name = vTuber.ToString(); // 先隨便寫，之後要雙語實改
+
+        return similar;
     }
 
     public Sprite[] GetVtuberSprites(VTuber vTuber){
@@ -78,6 +115,8 @@ public class QuestionDataManager : MonoBehaviour{
         return null;
     }    
 
+
+    /*
     public Dictionary<VTuber, float> CalculateAllSimilarity(List<int> playerAnswers){
         similarityDictionary = new Dictionary<VTuber, float>();
         foreach (Answerer answerer in questionData.answerersList)
@@ -120,6 +159,8 @@ public class QuestionDataManager : MonoBehaviour{
         Debug.Log($"sameQuetionCount:{sameQuetionCount},effectiveQuetionCount{effectiveQuetionCount}");
         return sameQuetionCount / effectiveQuetionCount;
     } 
+
+    */
 
     // ==================================
     // 資料CSV資料致QuestionData
@@ -220,15 +261,10 @@ public class VTuberSimilar{
     
     public VTuber vTuber;
     public float similarity;
-    public float similarity_skip;
+    public float sameCount;
+    public float compareCount;
     public string name;
     public Sprite[] sprites;
-
-    public VTuberSimilar(VTuber vTuber, float similarity, float similarity_skip){
-        this.vTuber = vTuber;
-        this.similarity = similarity;
-        this.similarity_skip = similarity_skip;
-    }
 
     public void SetSprites(Sprite[] sprites){
         this.sprites = sprites;
