@@ -1,0 +1,12 @@
+Key,Enlish
+HoloMember/Shion,Murasaki Shion
+HoloMember/Subaru,Oozora Subaru
+HoloMember/Miko,Sakura Miko
+HoloMember/Mel,Yozora Mel
+HoloMember/Aki,Aki rosenthal
+HoloMember/Suisei,Hoshimachi Suisei
+HoloMember/Roboco,Roboco San
+HoloMember/A,A-chan
+HoloMember/Coco,Kiryu Coco
+HoloMember/Matsuri,Natsuiro Matsuri
+HoloMember/AZKi,AZKi

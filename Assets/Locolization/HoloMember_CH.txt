@@ -1,0 +1,12 @@
+Key,繁體中文
+HoloMember/Shion,紫咲詩音
+HoloMember/Subaru,大空昴
+HoloMember/Miko,櫻巫女
+HoloMember/Mel,夜空梅露
+HoloMember/Aki,亞綺·羅森塔爾
+HoloMember/Suisei,星街彗星
+HoloMember/Roboco,蘿蔔子 
+HoloMember/A,A醬
+HoloMember/Coco,桐生可可
+HoloMember/Matsuri,夏色祭
+HoloMember/AZKi,AZKi

@@ -430,6 +430,7 @@ Transform:
   m_Children:
   - {fileID: 4428177818511471488}
   - {fileID: 657467406699678536}
+  - {fileID: 4296731341744201737}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -483,3 +484,77 @@ MonoBehaviour:
     sources: []
   - Root: {fileID: 102900000, guid: 9a10fc8abd4f7194c9aefa85387d1d2c, type: 3}
     sources: []
+--- !u!1 &5867197457130887423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4296731341744201737}
+  - component: {fileID: 6153502098512756925}
+  m_Layer: 0
+  m_Name: HoloMember_EN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4296731341744201737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867197457130887423}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.63602, y: 1.3627483, z: -0.20657659}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4428177819076694269}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6153502098512756925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5867197457130887423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086ae75064fca9f46b315403da7f5d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Source: {fileID: 4900000, guid: 1cf896c1d6dc35242961458d0e0de791, type: 3}
+  Language: English
+  Separator: ','
+  NewLine: \n
+  Comment: 
+  Cache: 0
+  entries:
+  - Name: Key
+    Text: Enlish
+  - Name: HoloMember/Shion
+    Text: Murasaki Shion
+  - Name: HoloMember/Subaru
+    Text: Oozora Subaru
+  - Name: HoloMember/Miko
+    Text: Sakura Miko
+  - Name: HoloMember/Mel
+    Text: Yozora Mel
+  - Name: HoloMember/Aki
+    Text: Aki rosenthal
+  - Name: HoloMember/Suisei
+    Text: Hoshimachi Suisei
+  - Name: HoloMember/Roboco
+    Text: Roboco San
+  - Name: HoloMember/A
+    Text: A-chan
+  - Name: HoloMember/ Coco
+    Text: Kiryu Coco
+  - Name: HoloMember/Matsuri
+    Text: Natsuiro Matsuri
+  - Name: HoloMember/AZKi
+    Text: AZKi

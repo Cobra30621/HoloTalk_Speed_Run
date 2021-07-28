@@ -13,6 +13,7 @@ public class QuestionDataManager : MonoBehaviour{
     public List<int> playerAnswers;
     public Dictionary<VTuber, float> similarityDictionary;
 
+
     [ContextMenu("Test")]
     public void Test(){
         ResultUI.ShowResult(playerAnswers);
@@ -98,7 +99,10 @@ public class QuestionDataManager : MonoBehaviour{
         similar.compareCount = effectiveQuetionCount;
         similar.vTuber =  vTuber ;
         similar.SetSprites(GetVtuberSprites(vTuber)) ;
-        similar.name = vTuber.ToString(); // 先隨便寫，之後要雙語實改
+
+        string nameID = "HoloMember/" + vTuber.ToString();
+        Debug.Log(nameID);
+        similar.name = LeanLocalization.GetTranslationText(nameID ) ; 
 
         return similar;
     }

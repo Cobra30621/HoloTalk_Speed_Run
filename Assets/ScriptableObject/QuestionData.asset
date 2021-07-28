@@ -148,38 +148,35 @@ MonoBehaviour:
     answers: 00000000000000000000000000000000ffffffff0100000000000000000000000000000000000000000000000100000000000000010000000100000001000000000000000000000003000000
   vTuberOutcomesList:
   - vTuber: 0
-    name: 
     sprites:
-    - {fileID: 21300000, guid: aa51e578af97fd14196db9b04894e987, type: 3}
+    - {fileID: 21300000, guid: 9505dd5e0b04a794f997e3be86425a12, type: 3}
   - vTuber: 1
-    name: 
     sprites:
-    - {fileID: 21300000, guid: 786199709f2ac304aa4871dd3f9eaa87, type: 3}
+    - {fileID: 21300000, guid: 3f5735f291c9fa044afe9b72bfa3e011, type: 3}
   - vTuber: 2
-    name: 
     sprites:
-    - {fileID: 21300000, guid: 0e14c0456edeeb140bca8a1a68813e10, type: 3}
+    - {fileID: 21300000, guid: 79e90ae51b9b6324cbf902a04877f701, type: 3}
   - vTuber: 3
-    name: 
     sprites:
-    - {fileID: 21300000, guid: aa51e578af97fd14196db9b04894e987, type: 3}
+    - {fileID: 21300000, guid: 930ebd2d3d4acfb4fa4f6d0961ad7c65, type: 3}
   - vTuber: 4
-    name: 
     sprites:
-    - {fileID: 21300000, guid: aa51e578af97fd14196db9b04894e987, type: 3}
+    - {fileID: 21300000, guid: 48a384a4b3a31664f8a847432b4a1913, type: 3}
   - vTuber: 5
-    name: 
     sprites:
-    - {fileID: 21300000, guid: aa51e578af97fd14196db9b04894e987, type: 3}
+    - {fileID: 21300000, guid: dd8a3103df1d1bd4bb8e1dd8167237d1, type: 3}
   - vTuber: 6
-    name: 
     sprites:
-    - {fileID: 21300000, guid: aa51e578af97fd14196db9b04894e987, type: 3}
+    - {fileID: 21300000, guid: 9ee8ea4188338554bb1b6973346794b5, type: 3}
   - vTuber: 7
-    name: 
     sprites:
-    - {fileID: 21300000, guid: aa51e578af97fd14196db9b04894e987, type: 3}
+    - {fileID: 21300000, guid: 499186a7cbe76f34382bdd73ecbe5020, type: 3}
   - vTuber: 8
-    name: 
     sprites:
-    - {fileID: 21300000, guid: 0318e8f3ade7f4849b3e99e2719e7e88, type: 3}
+    - {fileID: 21300000, guid: f2cf6be0471ff2c429aa7749b6f11701, type: 3}
+  - vTuber: 9
+    sprites:
+    - {fileID: 21300000, guid: 139fa80913089d541bd4608e8062f821, type: 3}
+  - vTuber: 10
+    sprites:
+    - {fileID: 21300000, guid: 21bfe23a4defd9c4f8ef95dad86b8744, type: 3}

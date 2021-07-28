@@ -59,7 +59,6 @@ public class Answerer{ // 一個角色的答案
 [System.Serializable]
 public class VTuberOutcome{ // 一個角色的答案
     public VTuber vTuber;
-    public string name;
     public Sprite[] sprites;
 }
 
@@ -68,7 +67,7 @@ public enum Language{
     Chinese,English
 }
 [System.Serializable]
-public enum VTuber{
+public enum VTuber{ 
     Shion, Subaru, Miko, Mel, Aki,
-    SuiSei, Roboco, A,  CoCo
-}
+    Suisei, Roboco, A,  Coco, Matsuri, AZKi
+} 
