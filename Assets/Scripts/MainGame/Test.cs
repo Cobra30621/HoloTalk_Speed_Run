@@ -8,6 +8,16 @@ public class Test : MonoBehaviour
     public string info = "Kiara/Intro1";
     public string anime = "exciting";
 
+    public int SE_id;
+    public SFXManager sFXManager;
+
+    [ContextMenu("PlaySE")]
+    public void PlaySE(){
+        GameSettings.ResetToDefaults();
+        sFXManager.PlaySFX(SE_id);
+    }
+
+
     [ContextMenu("Say")]
     public void Say(){
         kiara.SetKiaraText(info);
