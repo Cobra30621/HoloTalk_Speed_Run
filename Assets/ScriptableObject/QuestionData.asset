@@ -16,8 +16,8 @@ MonoBehaviour:
   - id: 0
     questionInfo: Hot or cold weather?
     options:
-    - Cold
     - Hot
+    - Cold
   - id: 1
     questionInfo: Rice or noodles?
     options:
@@ -26,8 +26,8 @@ MonoBehaviour:
   - id: 2
     questionInfo: Gusto Or Saizeriya?
     options:
-    - Saizeriya
     - Gusto
+    - Saizeriya
     - Both
   - id: 3
     questionInfo: Twitter or Instagram?
@@ -40,72 +40,72 @@ MonoBehaviour:
     - Coke
     - Pepsi
   - id: 5
-    questionInfo: apple or orange juice?
+    questionInfo: Apple or orange juice?
     options:
-    - Orange juice
     - Apple juice
+    - Orange juice
   - id: 6
     questionInfo: Climb a mountain or run a marathon?
     options:
     - Climb a mountain
     - Run a marathon
+    - Neither
   - id: 7
     questionInfo: PC or console?
     options:
     - PC
     - Console
   - id: 8
-    questionInfo: pineapple on pizza yes or no?
+    questionInfo: Pineapple on pizza yes or no?
     options:
-    - No
     - Yes
+    - No
   - id: 9
     questionInfo: Spicy or sweet food?
     options:
-    - Sweet
     - Spicy
+    - Sweet
   - id: 10
     questionInfo: Tea or coffee?
     options:
     - Tea
     - Coffee
-    - Neither
   - id: 11
-    questionInfo: Vacation at beach paradise of at famous metropolitan city?
+    questionInfo: Vacation at beach paradise or at famous metropolitan city?
     options:
-    - City
     - Beach
+    - City
   - id: 12
     questionInfo: Sleep naked or with clothes?
     options:
-    - With clothes
     - Naked
+    - With clothes
   - id: 13
     questionInfo: Favorite holiday?
     options:
-    - Every Day
     - Christmas
     - HollowWind
     - Labor Thanksgiving Day
-    - 'Children''s day '
+    - Children's day
+    - Every Day
   - id: 14
     questionInfo: 7-eleven FamilyMart or Lawason?
     options:
+    - 7-eleven
     - FamilyMart
     - Lawason
-    - 7-eleven
   - id: 15
-    questionInfo: texting or talking on the phone?
+    questionInfo: Texting or talking on the phone?
     options:
-    - Talking on the phone
     - Texting
+    - Talking on the phone
   - id: 16
-    questionInfo: giving or receiving presents?
+    questionInfo: Giving or receiving presents?
     options:
-    - Receiving
     - Giving
+    - Receiving
   - id: 17
-    questionInfo: walk 1 station or take the train?
+    questionInfo: Walk 1 station or take the train?
     options:
     - Walk 1 station
     - Take the train
@@ -113,39 +113,47 @@ MonoBehaviour:
     questionInfo: What the colour of your panties?
     options:
     - Pink
-    - Secret
     - White
-    - no panties
-    - mint green
-    - black
+    - Mint Green
+    - Black
+    - Orange
+    - Secret
+    - Leave it out to your imagination
+    - No Panties
   answerersList:
   - vTuber: 0
-    name: "\u7D2B\u54B2\u8A69\u97F3(Murasaki Shion)"
-    answers: 0000000000000000000000000000000000000000ffffffff00000000000000000000000000000000000000000000000000000000ffffffff0000000000000000000000000000000000000000
+    name: HoloMember/Shion
+    answers: 0100000000000000010000000000000000000000ffffffff00000000000000000100000001000000000000000100000001000000ffffffff0100000001000000010000000000000000000000
   - vTuber: 1
-    name: "\u5927\u7A7A\u6634(Oozora Subaru)"
-    answers: 0100000000000000000000000000000000000000ffffffff00000000010000000100000000000000000000000100000001000000010000000000000000000000000000000000000001000000
+    name: HoloMember/Subaru
+    answers: 0000000000000000010000000000000000000000ffffffff00000000010000000000000001000000000000000000000000000000000000000100000001000000010000000000000005000000
   - vTuber: 2
-    name: "\u6AFB\u5DEB\u5973(Sakura Miko)"
-    answers: 0100000000000000010000000000000000000000ffffffff00000000000000000000000000000000000000000100000000000000000000000200000001000000000000000100000002000000
+    name: HoloMember/Miko
+    answers: 0000000000000000000000000000000000000000ffffffff00000000000000000100000001000000000000000000000001000000040000000000000000000000010000000100000001000000
   - vTuber: 3
-    name: "\u591C\u7A7A\u6885\u9732(Yozora Mel)"
-    answers: 0100000000000000000000000000000000000000ffffffff00000000000000000100000000000000000000000000000000000000020000000200000000000000010000000100000003000000
+    name: HoloMember/Mel
+    answers: 0000000000000000010000000000000000000000ffffffff000000000000000000000000010000000000000001000000010000000100000000000000010000000000000001000000ffffffff
   - vTuber: 4
-    name: "\u4E9E\u7DBA\xB7\u7F85\u68EE\u5854\u723E(aki rosenthal)"
-    answers: 0000000000000000000000000000000000000000ffffffff00000000000000000000000000000000000000000100000001000000010000000100000000000000010000000100000004000000
+    name: HoloMember/Aki
+    answers: 0100000000000000010000000000000000000000ffffffff000000000000000001000000010000000000000000000000000000000000000002000000010000000000000001000000ffffffff
   - vTuber: 5
-    name: "\u661F\u8857\u5F57\u661F(Hoshimachi Suisei)"
-    answers: 00000000000000000100000000000000ffffffff0000000001000000000000000000000001000000020000000000000000000000010000000100000000000000010000000000000001000000
+    name: HoloMember/Suisei
+    answers: 01000000000000000000000000000000ffffffff0100000001000000000000000100000000000000ffffffff0100000001000000000000000200000001000000000000000000000005000000
   - vTuber: 6
-    name: "\u863F\u8514\u5B50(roboco san)"
-    answers: 01000000000000000000000000000000ffffffff0100000000000000000000000000000001000000000000000100000000000000040000000000000000000000000000000100000005000000
+    name: HoloMember/Roboco
+    answers: 00000000000000000100000000000000ffffffff0000000000000000000000000100000000000000000000000000000001000000ffffffff0100000001000000010000000100000003000000
   - vTuber: 7
-    name: "A\u91AC(A-chan)"
-    answers: 01000000000000000200000000000000ffffffff0000000000000000010000000100000001000000010000000100000000000000030000000000000001000000010000000100000003000000
+    name: HoloMember/A
+    answers: 00000000000000000200000000000000ffffffff01000000000000000100000000000000000000000100000000000000010000000200000001000000000000000000000001000000ffffffff
   - vTuber: 8
-    name: "\u6850\u751F\u30B3\u30B3(Kiryu Coco)"
-    answers: 00000000000000000000000000000000ffffffff0100000000000000000000000000000000000000000000000100000000000000010000000100000001000000000000000000000003000000
+    name: HoloMember/Coco
+    answers: 01000000000000000100000000000000ffffffff00000000000000000000000001000000010000000000000000000000010000000000000002000000000000000100000000000000ffffffff
+  - vTuber: 9
+    name: HoloMember/Matsuri
+    answers: 01000000010000000100000000000000ffffffff0000000002000000000000000100000001000000000000000100000001000000000000000100000001000000000000000100000004000000
+  - vTuber: 10
+    name: HoloMember/AZKi
+    answers: 00000000000000000100000000000000ffffffff0000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000100000006000000
   vTuberOutcomesList:
   - vTuber: 0
     sprites:

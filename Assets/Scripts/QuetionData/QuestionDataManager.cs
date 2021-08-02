@@ -10,14 +10,22 @@ public class QuestionDataManager : MonoBehaviour{
     public CsvLoader csvLoader;
 
     // 儲存玩家的答題情況
-    public List<int> playerAnswers;
+    // public List<int> playerAnswers;
     public Dictionary<VTuber, float> similarityDictionary;
 
+    // 每一題的選項數量
+    public static int[] questionOptionCount = 
+    {2,2,3,2,2,
+    2,3,2,2,2,
+    3,2,2,5,3,
+    2,2,2,8};
+    private const string optionRawKey = "_option";
 
-    [ContextMenu("Test")]
-    public void Test(){
-        ResultUI.ShowResult(playerAnswers);
-    }
+
+    // [ContextMenu("Test")]
+    // public void Test(){
+    //     ResultUI.ShowResult(playerAnswers);
+    // }
 
     public Question GetQuestionById(int id){
         return questionData.GetQuestionById(id);
@@ -101,7 +109,7 @@ public class QuestionDataManager : MonoBehaviour{
         similar.SetSprites(GetVtuberSprites(vTuber)) ;
 
         string nameID = "HoloMember/" + vTuber.ToString();
-        Debug.Log(nameID);
+        // Debug.Log(nameID);
         similar.name = LeanLocalization.GetTranslationText(nameID ) ; 
 
         return similar;
@@ -181,38 +189,67 @@ public class QuestionDataManager : MonoBehaviour{
         List<Question> questionsList = new List<Question>();
 
         // 問題的數量
-        int questionCount =  csvLoader.GetQuetionCount();
-        int option_max_count = csvLoader.options[0].Length - 1; // 要去掉題目
+        int questionCount =  questionOptionCount.Length ;
 
-        for (int i = 0; i < questionCount; i++)
+        for (int quetionId = 0; quetionId < questionCount; quetionId++)
         {
             Question q = new Question();
-            q.id = i ;
-
-            // 取的問題敘述，並將問題前的換行去掉
-            string rawQuestionInfo = csvLoader.GetOptionsDataByRowAndColFrom(i, 0);
-            string questionInfo =  RemoveChangeLine(rawQuestionInfo);
+            q.id = quetionId ;
+            
+            // 取得該問題的題目 
+            string questionInfo_key = quetionId + "_question";
+            string questionInfo = LeanLocalization.GetTranslationText( questionInfo_key);
             q.questionInfo = questionInfo;
 
             // 取得該問題的選項
+            int optionCount = questionOptionCount[quetionId];
             List<string> options = new List<string>();
-            for (int op = 0; op < option_max_count; op++)
+            for (int op = 0; op < optionCount; op++)
             {
-                string option = csvLoader.GetOptionsDataByRowAndColFrom(i, op + 1);
-                if (option != ""){
-                    options.Add(option);
-                }
+                string option_key = quetionId + optionRawKey + op ;
+                string option = LeanLocalization.GetTranslationText(option_key);
+                options.Add(option);
+                Debug.Log(option_key + option );
             }
+
             q.options = options;
             questionsList.Add(q);
-        } 
+        }
 
         questionData.questionsList = questionsList;
+
+        // // 問題的數量
+        // // int questionCount =  csvLoader.GetQuetionCount();
+        // int option_max_count = csvLoader.options[0].Length - 1; // 要去掉題目
+
+        // for (int i = 0; i < questionCount; i++)
+        // {
+        //     Question q = new Question();
+        //     q.id = i ;
+
+        //     // 取的問題敘述，並將問題前的換行去掉
+        //     string rawQuestionInfo = csvLoader.GetOptionsDataByRowAndColFrom(i, 0);
+        //     string questionInfo =  RemoveChangeLine(rawQuestionInfo);
+        //     q.questionInfo = questionInfo;
+
+        //     // 取得該問題的選項
+        //     List<string> options = new List<string>();
+        //     for (int op = 0; op < option_max_count; op++)
+        //     {
+        //         string option = csvLoader.GetOptionsDataByRowAndColFrom(i, op + 1);
+        //         if (option != ""){
+        //             options.Add(option);
+        //         }
+        //     }
+        //     q.options = options;
+        //     questionsList.Add(q);
+        // } 
+
+        
     }
 
     private void SetAnswerData(){
-
-        int questionCount =  csvLoader.GetQuetionCount(); // 問題的數量
+        int questionCount =  questionOptionCount.Length ;
         int vTuberCount = csvLoader.GetVTuberCount(); // 取得VTuber數量
 
         List<Answerer> answerersList = new List<Answerer>();
@@ -224,6 +261,9 @@ public class QuestionDataManager : MonoBehaviour{
             string rawName =  csvLoader.GetVTuberAnswersDataByRowAndColFrom(vt + 1, 0);
             answerer.name = RemoveChangeLine(rawName);
             
+            // 設定Answer的腳色
+            answerer.vTuber = (VTuber)vt;
+
             // 尋找VTuber的答案
             List<int> answers = new List<int>();
             for (int q = 0; q < questionCount; q++)
@@ -234,10 +274,10 @@ public class QuestionDataManager : MonoBehaviour{
                 bool hasAnswer = false;
                 for (int option = 0; option < options.Count; option++)
                 {
-                    Debug.Log("vtAnswer" + vtAnswer + ",option" + options[option]);
                     if(vtAnswer == options[option]){
                         answers.Add(option);
                         hasAnswer = true;
+                        Debug.Log("vt"+ vt + "q" + q + vtAnswer );
                     }
                 }
 

@@ -200,6 +200,212 @@ MonoBehaviour:
     Text: Secret
   - Name: 18_option5
     Text: No Panties
+--- !u!1 &1577443877051587181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2898452908366997370}
+  - component: {fileID: 8475512209345095838}
+  m_Layer: 0
+  m_Name: Question_CH
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2898452908366997370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577443877051587181}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.63602, y: 1.3627483, z: -0.20657659}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4428177819076694269}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8475512209345095838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577443877051587181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086ae75064fca9f46b315403da7f5d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Source: {fileID: 4900000, guid: e350136c66cf75145beeef60559c8fd5, type: 3}
+  Language: English
+  Separator: ','
+  NewLine: \n
+  Comment: 
+  Cache: 0
+  entries:
+  - Name: Key
+    Text: "\u7E41\u9AD4\u4E2D\u6587"
+  - Name: _question
+    Text: "\u554F\u984C"
+  - Name: _option0
+    Text: "\u9078\u98050"
+  - Name: _option1
+    Text: "\u9078\u98051"
+  - Name: _option2
+    Text: "\u9078\u98052"
+  - Name: _option3
+    Text: "\u9078\u98053"
+  - Name: _option4
+    Text: "\u9078\u98054"
+  - Name: _option5
+    Text: "\u9078\u98055"
+  - Name: 0_question
+    Text: "\u5929\u6C23\u71B1\u6216\u51B7?"
+  - Name: 0_option0
+    Text: "\u71B1"
+  - Name: 0_option1
+    Text: "\u51B7"
+  - Name: 1_question
+    Text: "\u98EF\u6216\u9EB5?"
+  - Name: 1_option0
+    Text: "\u98EF"
+  - Name: 1_option1
+    Text: "\u9EB5"
+  - Name: 2_question
+    Text: Gusto Or Saizeriya?
+  - Name: 2_option0
+    Text: Gusto
+  - Name: 2_option1
+    Text: Saizeriya
+  - Name: 2_option2
+    Text: "\u90FD\u559C\u6B61"
+  - Name: 3_question
+    Text: Twitter or Instagram?
+  - Name: 3_option0
+    Text: Twitter
+  - Name: 3_option1
+    Text: Instagram
+  - Name: 4_question
+    Text: "\u53EF\u6A02\u6216\u767E\u4E8B?"
+  - Name: 4_option0
+    Text: "\u53EF\u6A02"
+  - Name: 4_option1
+    Text: "\u767E\u4E8B"
+  - Name: 5_question
+    Text: "\u860B\u679C\u6C41\u6216\u67F3\u4E01\u6C41?"
+  - Name: 5_option0
+    Text: Apple juice
+  - Name: 5_option1
+    Text: Orange juice
+  - Name: 6_question
+    Text: "\u722C\u5C71\u6216\u8DD1\u99AC\u62C9\u677E?"
+  - Name: 6_option0
+    Text: "\u722C\u5C71"
+  - Name: 6_option1
+    Text: "\u8DD1\u99AC\u62C9\u677E"
+  - Name: 6_option2
+    Text: "\u90FD\u4E0D"
+  - Name: 7_question
+    Text: "\u96FB\u8166\u904A\u6232\u6216\u4E3B\u6A5F\u904A\u6232?"
+  - Name: 7_option0
+    Text: "\u96FB\u8166\u904A\u6232"
+  - Name: 7_option1
+    Text: "\u4E3B\u6A5F\u904A\u6232"
+  - Name: 8_question
+    Text: "\u62AB\u85A9\u4E0A\u662F\u5426\u80FD\u653E\u9CF3\u68A8?"
+  - Name: 8_option0
+    Text: "\u662F"
+  - Name: 8_option1
+    Text: "\u5426"
+  - Name: 9_question
+    Text: "\u8FA3\u6216\u751C\u7684\u98DF\u7269?"
+  - Name: 9_option0
+    Text: "\u8FA3"
+  - Name: 9_option1
+    Text: "\u751C"
+  - Name: 10_question
+    Text: "\u8336\u6216\u5496\u5561?"
+  - Name: 10_option0
+    Text: "\u8336"
+  - Name: 10_option1
+    Text: "\u5496\u5561"
+  - Name: 10_option2
+    Text: "\u90FD\u4E0D"
+  - Name: 11_question
+    Text: "\u53BB\u6D77\u908A\u6216\u90FD\u5E02\u65C5\u884C?"
+  - Name: 11_option0
+    Text: "\u6D77\u908A"
+  - Name: 11_option1
+    Text: "\u90FD\u5E02"
+  - Name: 12_question
+    Text: "\u7761\u89BA\u6642\u88F8\u7761\u6216\u7A7F\u8863\u670D?"
+  - Name: 12_option0
+    Text: "\u88F8\u7761"
+  - Name: 12_option1
+    Text: "\u7A7F\u8863\u670D"
+  - Name: 13_question
+    Text: "\u559C\u6B61\u7684\u7BC0\u65E5?"
+  - Name: 13_option0
+    Text: "\u8056\u8A95\u7BC0"
+  - Name: 13_option1
+    Text: "\u842C\u8056\u7BC0"
+  - Name: 13_option2
+    Text: "\u52DE\u5DE5\u611F\u8B1D\u7BC0"
+  - Name: 13_option3
+    Text: "\u5152\u7AE5\u7BC0"
+  - Name: 13_option4
+    Text: "\u6BCF\u4E00\u5929"
+  - Name: 14_question
+    Text: "7-11 \u5168\u5BB6 Lawason?"
+  - Name: 14_option0
+    Text: 7-11
+  - Name: 14_option1
+    Text: "\u5168\u5BB6"
+  - Name: 14_option2
+    Text: Lawason
+  - Name: 15_question
+    Text: "\u50B3\u8A0A\u606F\u6216\u624B\u6A5F\u8B1B\u8A71?"
+  - Name: 15_option0
+    Text: "\u50B3\u8A0A\u606F"
+  - Name: 15_option1
+    Text: "\u5728\u624B\u6A5F\u8B1B\u8A71"
+  - Name: 16_question
+    Text: "\u7D66\u79AE\u7269\u6216\u6536\u79AE\u7269?"
+  - Name: 16_option0
+    Text: "\u7D66\u79AE\u7269"
+  - Name: 16_option1
+    Text: "\u6536\u79AE\u7269"
+  - Name: 17_question
+    Text: "\u8D70\u4E00\u500B\u8ECA\u7AD9\u8DDD\u96E2\u6216\u642D\u6377\u904B?"
+  - Name: 17_option0
+    Text: "\u8D70\u4E00\u500B\u8ECA\u7AD9\u8DDD\u96E2"
+  - Name: 17_option1
+    Text: "\u642D\u6377\u904B"
+  - Name: 18_question
+    Text: "\u4F60\u7684\u5167\u8932\u662F\u4EC0\u9EBC\u984F\u8272?"
+  - Name: 18_option0
+    Text: "\u7C89\u7D05"
+  - Name: 18_option1
+    Text: "\u767D\u8272"
+  - Name: 18_option2
+    Text: "\u8584\u8377\u7DA0"
+  - Name: 18_option3
+    Text: "\u9ED1\u8272"
+  - Name: 18_option4
+    Text: "\u6A58\u8272"
+  - Name: 18_option5
+    Text: "\u79D8\u5BC6"
+  - Name: 18_option6
+    Text: "\u7D66\u4F60\u60F3\u50CF"
+  - Name: 18_option7
+    Text: "\u6C92\u7A7F\u5167\u8932"
 --- !u!1 &4428177818511471489
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,8 +456,8 @@ MonoBehaviour:
   Comment: 
   Cache: 0
   entries:
-  - Name: Title
-    Text: Hello
+  - Name: Key
+    Text: Enlish
   - Name: _question
     Text: Question
   - Name: _option0
@@ -269,9 +475,9 @@ MonoBehaviour:
   - Name: 0_question
     Text: Hot or cold weather?
   - Name: 0_option0
-    Text: Cold
-  - Name: 0_option1
     Text: Hot
+  - Name: 0_option1
+    Text: Cold
   - Name: 1_question
     Text: Rice or noodles?
   - Name: 1_option0
@@ -281,9 +487,9 @@ MonoBehaviour:
   - Name: 2_question
     Text: Gusto Or Saizeriya?
   - Name: 2_option0
-    Text: Saizeriya
-  - Name: 2_option1
     Text: Gusto
+  - Name: 2_option1
+    Text: Saizeriya
   - Name: 2_option2
     Text: Both
   - Name: 3_question
@@ -299,17 +505,19 @@ MonoBehaviour:
   - Name: 4_option1
     Text: Pepsi
   - Name: 5_question
-    Text: apple or orange juice?
+    Text: Apple or orange juice?
   - Name: 5_option0
-    Text: Orange juice
-  - Name: 5_option1
     Text: Apple juice
+  - Name: 5_option1
+    Text: Orange juice
   - Name: 6_question
     Text: Climb a mountain or run a marathon?
   - Name: 6_option0
     Text: Climb a mountain
   - Name: 6_option1
     Text: Run a marathon
+  - Name: 6_option2
+    Text: Neither
   - Name: 7_question
     Text: PC or console?
   - Name: 7_option0
@@ -317,7 +525,7 @@ MonoBehaviour:
   - Name: 7_option1
     Text: Console
   - Name: 8_question
-    Text: pineapple on pizza yes or no?
+    Text: Pineapple on pizza yes or no?
   - Name: 8_option0
     Text: Yes
   - Name: 8_option1
@@ -325,9 +533,9 @@ MonoBehaviour:
   - Name: 9_question
     Text: Spicy or sweet food?
   - Name: 9_option0
-    Text: Sweet
-  - Name: 9_option1
     Text: Spicy
+  - Name: 9_option1
+    Text: Sweet
   - Name: 10_question
     Text: Tea or coffee?
   - Name: 10_option0
@@ -337,7 +545,7 @@ MonoBehaviour:
   - Name: 10_option2
     Text: Neither
   - Name: 11_question
-    Text: Vacation at beach paradise of at famous metropolitan city?
+    Text: Vacation at beach paradise or at famous metropolitan city?
   - Name: 11_option0
     Text: Beach
   - Name: 11_option1
@@ -345,9 +553,9 @@ MonoBehaviour:
   - Name: 12_question
     Text: Sleep naked or with clothes?
   - Name: 12_option0
-    Text: With clothes
-  - Name: 12_option1
     Text: Naked
+  - Name: 12_option1
+    Text: With clothes
   - Name: 13_question
     Text: Favorite holiday?
   - Name: 13_option0
@@ -363,25 +571,25 @@ MonoBehaviour:
   - Name: 14_question
     Text: 7-eleven FamilyMart or Lawason?
   - Name: 14_option0
-    Text: FamilyMart
-  - Name: 14_option1
-    Text: Lawason
-  - Name: 14_option2
     Text: 7-eleven
+  - Name: 14_option1
+    Text: FamilyMart
+  - Name: 14_option2
+    Text: Lawason
   - Name: 15_question
-    Text: texting or talking on the phone?
+    Text: Texting or talking on the phone?
   - Name: 15_option0
-    Text: Talking on the phone
-  - Name: 15_option1
     Text: Texting
+  - Name: 15_option1
+    Text: Talking on the phone
   - Name: 16_question
-    Text: giving or receiving presents?
+    Text: Giving or receiving presents?
   - Name: 16_option0
-    Text: Receiving
-  - Name: 16_option1
     Text: Giving
+  - Name: 16_option1
+    Text: Receiving
   - Name: 17_question
-    Text: walk 1 station or take the train?
+    Text: Walk 1 station or take the train?
   - Name: 17_option0
     Text: Walk 1 station
   - Name: 17_option1
@@ -397,8 +605,12 @@ MonoBehaviour:
   - Name: 18_option3
     Text: Black
   - Name: 18_option4
-    Text: Secret
+    Text: Orange
   - Name: 18_option5
+    Text: Secret
+  - Name: 18_option6
+    Text: Leave it out to your imagination
+  - Name: 18_option7
     Text: No Panties
 --- !u!1 &4428177819076694267
 GameObject:
@@ -431,6 +643,7 @@ Transform:
   - {fileID: 4428177818511471488}
   - {fileID: 657467406699678536}
   - {fileID: 4296731341744201737}
+  - {fileID: 2898452908366997370}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -552,7 +765,7 @@ MonoBehaviour:
     Text: Roboco San
   - Name: HoloMember/A
     Text: A-chan
-  - Name: HoloMember/ Coco
+  - Name: HoloMember/Coco
     Text: Kiryu Coco
   - Name: HoloMember/Matsuri
     Text: Natsuiro Matsuri
