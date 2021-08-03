@@ -1,2 +1,6 @@
-Kiara/Intro1 , HAHAHAHAAH!
-Kiara/Intro2 , Well then, let's get started!
+Kiara/Intro1, KIKERIKI ! ! 歡迎來到HOLOTALK !
+Kiara/Intro2, 我準備了一小段快問快答 
+Kiara/Intro3, 問題是要你選這個或那個的模式
+Kiara/Intro4, 要馬上回答喔！絕對不能思考！
+Kiara/Intro5, 準備好了嗎 ?
+Kiara/Intro6, HoloTalk Speed Run!

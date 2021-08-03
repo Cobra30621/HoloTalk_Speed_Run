@@ -25,26 +25,63 @@ public class GameManager : MonoBehaviour{
     public Text lab_questionInfo;
     public GameObject[] options;
     public Text[] lab_options;
+    public GameObject optionPanel;
+
+    // 流程控制
+    public Kiara kiara;
+    public BGMManager bgm;
+    // 0:holotalkspeedrun 1:yabe 2:sad 3:pant color
+    public SFXManager sfx_kiara;
 
     void Start(){
-        StartGaming();
+        StartGame();
     }
 
     [ContextMenu("StartGaming")]
-    public void StartGaming(){
+    public void StartGame(){
         now_question = 0;
-        SetQuetionWithId(now_question);
+        GameSettings.ResetToDefaults();
+        optionPanel.SetActive(false);
+        StartCoroutine(GameCoroutine());
     }
 
     public void Again(){
         SceneManager.LoadScene("Game");
     }
 
+    IEnumerator GameCoroutine()
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            string info = $"Kiara/Intro{i}";
+            Debug.Log(info);
+            kiara.SetKiaraText(info);
+            yield return new WaitForSeconds(1);
+        }
+
+        sfx_kiara.PlaySFX(0);
+        kiara.SetKiaraText("Kiara/Intro6");
+        yield return new WaitForSeconds(5);
+
+        optionPanel.SetActive(true);
+        now_question = 0;
+        SetQuetionWithId(now_question);
+    }
+
+    // IEnumerable KiaraSay(string info){
+    //     kiara.SetKiaraText(info);
+    //     yield return new WaitForSeconds(3);
+    // }
+
+
     public void AnswererQuestion(int answer){
         playerAnswers[now_question] = answer;
         Debug.Log($"Q{now_question}:{answer}");
 
+        KiaraResponceWhenAnswer(now_question, answer);
         now_question ++;
+        KiaraResponceWhenQuestioning(now_question);
+        
         if(now_question >= questionCount){
             Debug.Log("答完題了");
             ResultUI.ShowResult(playerAnswers);
@@ -53,6 +90,32 @@ public class GameManager : MonoBehaviour{
         }
 
         SetQuetionWithId(now_question);
+    }
+
+    private void KiaraResponceWhenQuestioning(int questionId){
+        switch (questionId)
+        {
+            case 18:
+                kiara.SetKiaraAnime("exciting");
+                sfx_kiara.PlaySFX(3);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void KiaraResponceWhenAnswer(int questionId, int answer){
+        switch (questionId)
+        {
+            case 12:
+                if(answer == 0) {sfx_kiara.PlaySFX(1);}
+                break;
+            case 18:
+                if(answer == 7) {sfx_kiara.PlaySFX(1);}
+                break;
+            default:
+                break;
+        }
     }
 
     public void SetQuetionWithId(int questionId){

@@ -18,6 +18,7 @@ public class Kiara : MonoBehaviour
 
     public void SetKiaraText(string text){
         SetBubbleActive(true);
+        Debug.Log(text + LeanLocalization.GetTranslationText(text));
         lab_speech.text = LeanLocalization.GetTranslationText(text);
     }
 
