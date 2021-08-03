@@ -191,22 +191,22 @@ public class QuestionDataManager : MonoBehaviour{
         // 問題的數量
         int questionCount =  questionOptionCount.Length ;
 
-        for (int quetionId = 0; quetionId < questionCount; quetionId++)
+        for (int questionId = 0; questionId < questionCount; questionId++)
         {
             Question q = new Question();
-            q.id = quetionId ;
+            q.id = questionId ;
             
             // 取得該問題的題目 
-            string questionInfo_key = quetionId + "_question";
+            string questionInfo_key = questionId + "_question";
             string questionInfo = LeanLocalization.GetTranslationText( questionInfo_key);
             q.questionInfo = questionInfo;
 
             // 取得該問題的選項
-            int optionCount = questionOptionCount[quetionId];
+            int optionCount = questionOptionCount[questionId];
             List<string> options = new List<string>();
             for (int op = 0; op < optionCount; op++)
             {
-                string option_key = quetionId + optionRawKey + op ;
+                string option_key = questionId + optionRawKey + op ;
                 string option = LeanLocalization.GetTranslationText(option_key);
                 options.Add(option);
                 Debug.Log(option_key + option );
