@@ -46,11 +46,12 @@ public class GameManager : MonoBehaviour{
     }
 
     public void Again(){
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("StartScene");
     }
 
     IEnumerator GameCoroutine()
     {
+        yield return new WaitForSeconds(1);
         for (int i = 1; i <= 5; i++)
         {
             string info = $"Kiara/Intro{i}";
@@ -84,13 +85,29 @@ public class GameManager : MonoBehaviour{
         
         if(now_question >= questionCount){
             Debug.Log("答完題了");
-            ResultUI.ShowResult(playerAnswers);
+            StartCoroutine(EndGameCoroutine());
             now_question = 0;
             return;
         }
 
         SetQuetionWithId(now_question);
     }
+
+    IEnumerator EndGameCoroutine()
+    {
+        yield return new WaitForSeconds(1);
+        for (int i = 1; i <= 3; i++)
+        {
+            string info = $"Kiara/End{i}";
+            Debug.Log(info);
+            kiara.SetKiaraText(info);
+            yield return new WaitForSeconds(1);
+        }
+        yield return new WaitForSeconds(1);
+        
+        ResultUI.ShowResult(playerAnswers); 
+    }
+
 
     private void KiaraResponceWhenQuestioning(int questionId){
         switch (questionId)
@@ -107,6 +124,9 @@ public class GameManager : MonoBehaviour{
     private void KiaraResponceWhenAnswer(int questionId, int answer){
         switch (questionId)
         {
+            case 8:
+                if(answer == 1) {sfx_kiara.PlaySFX(2);}
+                break;
             case 12:
                 if(answer == 0) {sfx_kiara.PlaySFX(1);}
                 break;

@@ -42,6 +42,7 @@
      <Compile Include="Assets\Scripts\QuetionData\CsvLoader.cs" />
      <Compile Include="Assets\Scripts\QuetionData\QuestionData.cs" />
      <Compile Include="Assets\Scripts\QuetionData\QuestionDataManager.cs" />
+     <Compile Include="Assets\Scripts\StopSceneController.cs" />
      <Compile Include="Assets\Scripts\System\BGMManager.cs" />
      <Compile Include="Assets\Scripts\System\GameManager.cs" />
      <Compile Include="Assets\Scripts\System\GameSettings.cs" />

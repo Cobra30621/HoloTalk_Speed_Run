@@ -4,3 +4,6 @@ Kiara/Intro3, 問題是要你選這個或那個的模式
 Kiara/Intro4, 要馬上回答喔！絕對不能思考！
 Kiara/Intro5, 準備好了嗎 ?
 Kiara/Intro6, HoloTalk Speed Run!
+Kiara/End1, 感謝你的回答
+Kiara/End2, 有11來賓參加過HoloTalk Speed Run。
+Kiara/End3, 答題狀況與你最相近的人是......
