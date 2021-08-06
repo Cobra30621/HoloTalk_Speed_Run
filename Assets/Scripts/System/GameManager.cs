@@ -32,6 +32,13 @@ public class GameManager : MonoBehaviour{
     public BGMManager bgm;
     // 0:holotalkspeedrun 1:yabe 2:sad 3:pant color
     public SFXManager sfx_kiara;
+    private bool needSetQuestion;
+    private bool canAnswer;
+
+    // 進度條
+    public GameObject progressBarFG;
+    private float preProgress;
+    private float nowProgress;
 
     void Start(){
         StartGame();
@@ -55,7 +62,7 @@ public class GameManager : MonoBehaviour{
         for (int i = 1; i <= 5; i++)
         {
             string info = $"Kiara/Intro{i}";
-            Debug.Log(info);
+            // Debug.Log(info);
             kiara.SetKiaraText(info);
             yield return new WaitForSeconds(1);
         }
@@ -66,8 +73,42 @@ public class GameManager : MonoBehaviour{
 
         optionPanel.SetActive(true);
         now_question = 0;
-        SetQuetionWithId(now_question);
+
+        needSetQuestion = true;
+        canAnswer = false;
+        for (int i = 0; i < questionCount; i++)
+        {
+            // 等待答題
+            while (!needSetQuestion) yield return null;
+            SetProgressBar();
+
+            // yield return new WaitForSeconds(0.2f);
+            SetQuetionWithId(now_question);
+            needSetQuestion = false;
+            canAnswer = true;
+        }
+
+        // 等待答完所有題目
+        while (now_question < questionCount) yield return null;
+        SetProgressBar(); // 設置最後一題的禁毒條
+        
+        // 結算
+        optionPanel.SetActive(false);
+        yield return new WaitForSeconds(1);
+        for (int i = 1; i <= 3; i++)
+        {
+            string info = $"Kiara/End{i}";
+            Debug.Log(info);
+            kiara.SetKiaraText(info);
+            yield return new WaitForSeconds(1);
+        }
+        yield return new WaitForSeconds(1);
+        
+        ResultUI.ShowResult(playerAnswers); 
+
     }
+
+    
 
     // IEnumerable KiaraSay(string info){
     //     kiara.SetKiaraText(info);
@@ -76,21 +117,18 @@ public class GameManager : MonoBehaviour{
 
 
     public void AnswererQuestion(int answer){
+        if(!canAnswer){return;}
+
         playerAnswers[now_question] = answer;
         Debug.Log($"Q{now_question}:{answer}");
 
         KiaraResponceWhenAnswer(now_question, answer);
         now_question ++;
         KiaraResponceWhenQuestioning(now_question);
-        
-        if(now_question >= questionCount){
-            Debug.Log("答完題了");
-            StartCoroutine(EndGameCoroutine());
-            now_question = 0;
-            return;
-        }
+        // PlayQuestionAnimeWhenAnswered();
 
-        SetQuetionWithId(now_question);
+        needSetQuestion = true;
+        canAnswer = false;
     }
 
     IEnumerator EndGameCoroutine()
@@ -106,6 +144,18 @@ public class GameManager : MonoBehaviour{
         yield return new WaitForSeconds(1);
         
         ResultUI.ShowResult(playerAnswers); 
+    }
+
+    private void SetProgressBar(){
+        nowProgress = (float)now_question / (float)questionCount;
+        Debug.Log(nowProgress);
+        if(nowProgress > 1){nowProgress = 1;}
+        if(nowProgress < 0){nowProgress = 0;}
+
+        Debug.Log(nowProgress+"JOJO");
+        progressBarFG.transform.localScale = new Vector3(nowProgress,1,1);
+
+        preProgress = nowProgress;
     }
 
 
@@ -135,6 +185,13 @@ public class GameManager : MonoBehaviour{
                 break;
             default:
                 break;
+        }
+    }
+
+    private void PlayQuestionAnimeWhenAnswered(){
+        for (int op = 0; op < lab_options.Length; op++)
+        {
+            lab_options[op].text = "";
         }
     }
 

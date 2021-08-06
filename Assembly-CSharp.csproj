@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\System\GameManager.cs" />
      <Compile Include="Assets\Scripts\System\GameSettings.cs" />
      <Compile Include="Assets\Scripts\System\SFXManager.cs" />
+     <Compile Include="Assets\Scripts\UI\ButtonClick.cs" />
      <Compile Include="Assets\Scripts\UI\ResultUI.cs" />
      <Compile Include="Assets\Scripts\UI\SimilarityBar.cs" />
      <None Include="Assets\Locolization\Kiara_EN.txt" />
