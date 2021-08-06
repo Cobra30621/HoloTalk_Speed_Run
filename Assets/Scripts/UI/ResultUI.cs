@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ResultUI : MonoBehaviour
 {
     public static ResultUI resultUI;
-    public QuestionDataManager questionDataManager;
+    public VTuberSimilarityCalculator vTuberSimilarityCalculator;
 
     [Header("UI")]
     public GameObject outcomePanel;
@@ -48,7 +48,7 @@ public class ResultUI : MonoBehaviour
     IEnumerator ShowCoroutine(List<int> playerAnswers)
     {
         this.playerAnswers = playerAnswers;
-        most_simliarVTuber = questionDataManager.GetMostSimilarVuber(playerAnswers);
+        most_simliarVTuber = vTuberSimilarityCalculator.GetMostSimilarVuber(playerAnswers);
         VTuber vTuber = most_simliarVTuber[0].vTuber;
         float similarity = most_simliarVTuber[0].similarity;
 
@@ -66,7 +66,7 @@ public class ResultUI : MonoBehaviour
         detailPanel.SetActive(true);
         RemoveAllBar();
 
-        List<VTuberSimilar> allSimliaritys = questionDataManager.GetAllSimilarityWithSort(playerAnswers);
+        List<VTuberSimilar> allSimliaritys = vTuberSimilarityCalculator.GetAllSimilarityWithSort(playerAnswers);
         similarityBars= new List<SimilarityBar>();
         foreach (VTuberSimilar simliarity in allSimliaritys)
         {

@@ -21,7 +21,6 @@ public class GameManager : MonoBehaviour{
     private float moreThanFourOptionsWeight = 1000;
     private float lessThanFourOptionsWeight = 500;
     private float optionsHeight = 100;
-
     public Text lab_questionInfo;
     public GameObject[] options;
     public Text[] lab_options;
@@ -108,13 +107,6 @@ public class GameManager : MonoBehaviour{
 
     }
 
-    
-
-    // IEnumerable KiaraSay(string info){
-    //     kiara.SetKiaraText(info);
-    //     yield return new WaitForSeconds(3);
-    // }
-
 
     public void AnswererQuestion(int answer){
         if(!canAnswer){return;}
@@ -131,34 +123,9 @@ public class GameManager : MonoBehaviour{
         canAnswer = false;
     }
 
-    IEnumerator EndGameCoroutine()
-    {
-        yield return new WaitForSeconds(1);
-        for (int i = 1; i <= 3; i++)
-        {
-            string info = $"Kiara/End{i}";
-            Debug.Log(info);
-            kiara.SetKiaraText(info);
-            yield return new WaitForSeconds(1);
-        }
-        yield return new WaitForSeconds(1);
-        
-        ResultUI.ShowResult(playerAnswers); 
-    }
+    
 
-    private void SetProgressBar(){
-        nowProgress = (float)now_question / (float)questionCount;
-        Debug.Log(nowProgress);
-        if(nowProgress > 1){nowProgress = 1;}
-        if(nowProgress < 0){nowProgress = 0;}
-
-        Debug.Log(nowProgress+"JOJO");
-        progressBarFG.transform.localScale = new Vector3(nowProgress,1,1);
-
-        preProgress = nowProgress;
-    }
-
-
+    // 回答問題時的反應
     private void KiaraResponceWhenQuestioning(int questionId){
         switch (questionId)
         {
@@ -195,6 +162,19 @@ public class GameManager : MonoBehaviour{
         }
     }
 
+    private void SetProgressBar(){
+        nowProgress = (float)now_question / (float)questionCount;
+        Debug.Log(nowProgress);
+        if(nowProgress > 1){nowProgress = 1;}
+        if(nowProgress < 0){nowProgress = 0;}
+
+        Debug.Log(nowProgress+"JOJO");
+        progressBarFG.transform.localScale = new Vector3(nowProgress,1,1);
+
+        preProgress = nowProgress;
+    }
+
+    // 顯示答題介面
     public void SetQuetionWithId(int questionId){
         // 取得題目的選項數
         int optionCount = QuestionDataManager.questionOptionCount[questionId];
