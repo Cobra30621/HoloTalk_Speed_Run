@@ -23,9 +23,5 @@ public class Test : MonoBehaviour
         kiara.SetKiaraText(info);
     }
 
-    [ContextMenu("SetAnime")]
-    public void SetAnime(){
-        kiara.SetKiaraAnime(anime);
-    }
 
 }

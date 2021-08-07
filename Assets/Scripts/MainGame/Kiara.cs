@@ -7,13 +7,64 @@ using Lean.Localization;
 public class Kiara : MonoBehaviour
 {
     public Animator animator;
+    public SFXManager sfx;
 
     public GameObject kiaraBubble;
     public Text lab_speech;
-    
-    // 0:idle 1: 
-    public void SetKiaraAnime(string trigger){
-        animator.SetTrigger(trigger);
+
+    public Sprite[] kiara_sprites;
+    public Image img_kiara;
+
+    void Update(){
+        if(Input.GetKeyDown(KeyCode.F)){
+            
+        }
+    }
+
+    public KiaraState kiaraState;
+    [ContextMenu("TestAnime")]
+    public void TestAnime(){
+        SetKiaraAnime(kiaraState);
+    }
+
+    public void SetKiaraAnime(KiaraState state){
+        switch (state)
+        {
+            case KiaraState.Idle:
+                animator.SetTrigger("idle");
+                break;
+            case KiaraState.Talking:
+                animator.SetTrigger("talking");
+                break;
+            case KiaraState.Except:
+                animator.SetTrigger("except");
+                break;
+            case KiaraState.Exciting:
+                animator.SetTrigger("exciting");
+                break;
+            case KiaraState.Unexcept:
+                animator.SetTrigger("unexcept");
+                break;
+            case KiaraState.Sad:
+                animator.SetTrigger("sad");
+                break;
+            case KiaraState.Drug:
+                animator.SetTrigger("drug");
+                break;
+            case KiaraState.KeepTalking:
+                animator.SetTrigger("keeptalking");
+                break;
+            case KiaraState.Smile:
+                animator.SetTrigger("smile");
+                break;
+            case KiaraState.SmallSmile:
+                animator.SetTrigger("smallsmile");
+                break;
+            default:
+                Debug.Log($"不存在State:{state}");
+                break;
+        }
+        Debug.Log($"撥放KiaraState:{state}");
     }
 
     public void SetKiaraText(string text){
@@ -27,3 +78,7 @@ public class Kiara : MonoBehaviour
     }
 }
 
+[System.Serializable]
+public enum KiaraState{
+    Idle, Talking, Except, Unexcept, Exciting, Sad, Drug, KeepTalking, Smile, SmallSmile
+}

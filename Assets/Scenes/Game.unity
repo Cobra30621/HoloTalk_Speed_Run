@@ -1074,6 +1074,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 756770877091433970, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 552.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 756770877091433970, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 852.64795
+      objectReference: {fileID: 0}
+    - target: {fileID: 756770877091433970, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -383.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 756770877091433970, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 353.5567
+      objectReference: {fileID: 0}
+    - target: {fileID: 2458005272247033626, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: kiara_sprites.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2458005272247033626, guid: 1f58d91d73fd2ea418878b441406ef5d,
         type: 3}
       propertyPath: kiaraBubble
@@ -1084,6 +1109,58 @@ PrefabInstance:
       propertyPath: lab_speech
       value: 
       objectReference: {fileID: 803514651}
+    - target: {fileID: 2458005272247033626, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: img_kiara
+      value: 
+      objectReference: {fileID: 498944054}
+    - target: {fileID: 2458005272247033626, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: kiara_sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 02e113e1f11ede945be15a571b046083,
+        type: 3}
+    - target: {fileID: 2458005272247033626, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: kiara_sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 80ba60c8377ffe248a865bbc99c342d5,
+        type: 3}
+    - target: {fileID: 2458005272247033626, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: kiara_sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 99e4b8fc381463a4cbacfa247f2ba135,
+        type: 3}
+    - target: {fileID: 2458005272247033626, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: kiara_sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 28cc76cb45a186745ad91b45fdd444ad,
+        type: 3}
+    - target: {fileID: 2458005272247033626, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: kiara_sprites.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4a4f4524689c54e43b015770940fae1e,
+        type: 3}
+    - target: {fileID: 2458005272247033626, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: kiara_sprites.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: bdd5fae5fe354c949a542829aa45127d,
+        type: 3}
+    - target: {fileID: 2458005272247033626, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: kiara_sprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6f47e257ec52d2d4cb109bfef8665b57,
+        type: 3}
+    - target: {fileID: 2458005272247033626, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: kiaraState
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2458005272903387569, guid: 1f58d91d73fd2ea418878b441406ef5d,
         type: 3}
       propertyPath: m_Name
@@ -1204,6 +1281,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3816179209858529403, guid: 1f58d91d73fd2ea418878b441406ef5d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 28cc76cb45a186745ad91b45fdd444ad,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f58d91d73fd2ea418878b441406ef5d, type: 3}
 --- !u!114 &498944052 stripped
@@ -1228,6 +1311,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c4c07864b61f124f961dc33ce82f51f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &498944054 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3816179209858529403, guid: 1f58d91d73fd2ea418878b441406ef5d,
+    type: 3}
+  m_PrefabInstance: {fileID: 498944051}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &519420028
@@ -3035,8 +3130,10 @@ MonoBehaviour:
   - {fileID: 117371069}
   optionPanel: {fileID: 1664247773}
   kiara: {fileID: 498944053}
-  bgm: {fileID: 1814651855}
+  kiaraResponceData: {fileID: 11400000, guid: 81ff6961e17544a488bc4e20db158a28, type: 2}
+  defaultStateWhenAnswering: 020000000800000009000000
   sfx_kiara: {fileID: 498944052}
+  bgm: {fileID: 1814651855}
   progressBarFG: {fileID: 1931126903}
 --- !u!4 &1965815776
 Transform:

@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90c6463be8cc52a4cb9fd25fb8ea2fe0, type: 3}
+  m_Name: KiaraResponceData
+  m_EditorClassIdentifier: 
+  questioningResponces:
+  - description: "\u554F\u5167\u8932"
+    questionId: 18
+    answer: 0
+    kiaraState: 4
+    sfxId: -1
+  answeredResponces:
+  - description: "\u53EF\u653E\u9CF3\u68A8"
+    questionId: 8
+    answer: 0
+    kiaraState: 6
+    sfxId: 0
+  - description: "\u4E0D\u53EF\u653E\u9CF3\u68A8"
+    questionId: 8
+    answer: 1
+    kiaraState: 5
+    sfxId: 0
+  - description: "\u88F8\u7761"
+    questionId: 12
+    answer: 0
+    kiaraState: 6
+    sfxId: 0
+  - description: "\u5167\u8932\u984F\u8272"
+    questionId: 18
+    answer: 0
+    kiaraState: 6
+    sfxId: 0
+  - description: "\u6C92\u5167\u8932"
+    questionId: 18
+    answer: 7
+    kiaraState: 6
+    sfxId: 0

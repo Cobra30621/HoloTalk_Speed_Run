@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\MainGame\Kiara.cs" />
+     <Compile Include="Assets\Scripts\MainGame\KiaraResponceData.cs" />
      <Compile Include="Assets\Scripts\MainGame\Test.cs" />
      <Compile Include="Assets\Scripts\PlayButtonController.cs" />
      <Compile Include="Assets\Scripts\QuetionData\CsvLoader.cs" />

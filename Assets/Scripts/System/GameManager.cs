@@ -26,11 +26,15 @@ public class GameManager : MonoBehaviour{
     public Text[] lab_options;
     public GameObject optionPanel;
 
-    // 流程控制
+    // Kiara
     public Kiara kiara;
-    public BGMManager bgm;
+    public KiaraResponceData kiaraResponceData;
+    public KiaraState[] defaultStateWhenAnswering;
     // 0:holotalkspeedrun 1:yabe 2:sad 3:pant color
     public SFXManager sfx_kiara;
+    public BGMManager bgm;
+    
+     // 流程控制
     private bool needSetQuestion;
     private bool canAnswer;
 
@@ -58,6 +62,7 @@ public class GameManager : MonoBehaviour{
     IEnumerator GameCoroutine()
     {
         yield return new WaitForSeconds(1);
+        kiara.SetKiaraAnime(KiaraState.KeepTalking);
         for (int i = 1; i <= 5; i++)
         {
             string info = $"Kiara/Intro{i}";
@@ -68,7 +73,14 @@ public class GameManager : MonoBehaviour{
 
         sfx_kiara.PlaySFX(0);
         kiara.SetKiaraText("Kiara/Intro6");
-        yield return new WaitForSeconds(5);
+        // 垃圾寫法，等5秒
+        for (int i = 0; i < 5; i++)
+        {
+            if(i < 3)
+                kiara.SetKiaraAnime(KiaraState.Exciting);
+            yield return new WaitForSeconds(1);
+        }
+        
 
         optionPanel.SetActive(true);
         now_question = 0;
@@ -80,9 +92,11 @@ public class GameManager : MonoBehaviour{
             // 等待答題
             while (!needSetQuestion) yield return null;
             SetProgressBar();
-
-            // yield return new WaitForSeconds(0.2f);
+            if(i != 0){
+                yield return new WaitForSeconds(0.5f);
+            }
             SetQuetionWithId(now_question);
+            KiaraResponceWhenQuestioning(now_question);
             needSetQuestion = false;
             canAnswer = true;
         }
@@ -94,6 +108,8 @@ public class GameManager : MonoBehaviour{
         // 結算
         optionPanel.SetActive(false);
         yield return new WaitForSeconds(1);
+
+        kiara.SetKiaraAnime(KiaraState.KeepTalking);
         for (int i = 1; i <= 3; i++)
         {
             string info = $"Kiara/End{i}";
@@ -101,7 +117,9 @@ public class GameManager : MonoBehaviour{
             kiara.SetKiaraText(info);
             yield return new WaitForSeconds(1);
         }
+        kiara.SetKiaraAnime(KiaraState.Except);
         yield return new WaitForSeconds(1);
+        kiara.SetKiaraAnime(KiaraState.Drug);
         
         ResultUI.ShowResult(playerAnswers); 
 
@@ -116,8 +134,8 @@ public class GameManager : MonoBehaviour{
 
         KiaraResponceWhenAnswer(now_question, answer);
         now_question ++;
-        KiaraResponceWhenQuestioning(now_question);
-        // PlayQuestionAnimeWhenAnswered();
+        
+        PlayQuestionAnimeWhenAnswered();
 
         needSetQuestion = true;
         canAnswer = false;
@@ -127,10 +145,23 @@ public class GameManager : MonoBehaviour{
 
     // 回答問題時的反應
     private void KiaraResponceWhenQuestioning(int questionId){
+        bool defaults = true; // 預設反應
+        foreach (KiaraResponce responce in kiaraResponceData.questioningResponces )
+        {
+            if(responce.questionId == questionId){
+                kiara.SetKiaraAnime(responce.kiaraState);
+                defaults = false;
+            }
+        }
+
+        if(defaults){
+            kiara.SetKiaraAnime(KiaraState.Talking);
+        }
+
         switch (questionId)
         {
             case 18:
-                kiara.SetKiaraAnime("exciting");
+                // kiara.SetKiaraAnime(KiaraState.Exciting);
                 sfx_kiara.PlaySFX(3);
                 break;
             default:
@@ -139,6 +170,20 @@ public class GameManager : MonoBehaviour{
     }
 
     private void KiaraResponceWhenAnswer(int questionId, int answer){
+        bool defaults = true; // 預設反應
+        foreach (KiaraResponce responce in kiaraResponceData.answeredResponces )
+        {
+            if(responce.questionId == questionId & responce.answer == answer){
+                kiara.SetKiaraAnime(responce.kiaraState);
+                defaults = false;
+            }
+        }
+
+        if(defaults){
+            int f = Random.Range(0, defaultStateWhenAnswering.Length);
+            kiara.SetKiaraAnime(defaultStateWhenAnswering[f]);
+        }
+        
         switch (questionId)
         {
             case 8:
@@ -217,6 +262,4 @@ public class GameManager : MonoBehaviour{
         }
     } 
 }
-
-
 

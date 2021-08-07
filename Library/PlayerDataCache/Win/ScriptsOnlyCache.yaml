@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - BGMManager
+    - ButtonClick
     - CsvLoader
     - GameManager
     - Kiara
@@ -12,6 +13,7 @@ ScriptsOnlyBuild:
     - SFXManager
     - SimilarityBar
     - Test
+    - VTuberSimilarityCalculator
     LeanLocalization.dll:
     - Lean.Localization.LeanLanguageCSV
     - Lean.Localization.LeanLocalization
@@ -29,8 +31,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -86,47 +90,51 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11244}
     - Class: 114
-      Script: {instanceID: 11272}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11326}
+      Script: {instanceID: 11322}
     - Class: 114
-      Script: {instanceID: 11334}
+      Script: {instanceID: 11330}
     - Class: 114
-      Script: {instanceID: 11574}
+      Script: {instanceID: 11570}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 11666}
+      Script: {instanceID: 11662}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11728}
     - Class: 114
-      Script: {instanceID: 12120}
+      Script: {instanceID: 12076}
     - Class: 114
-      Script: {instanceID: 12316}
+      Script: {instanceID: 12118}
     - Class: 114
-      Script: {instanceID: 12440}
+      Script: {instanceID: 12314}
     - Class: 114
-      Script: {instanceID: 12452}
+      Script: {instanceID: 12438}
     - Class: 114
-      Script: {instanceID: 12478}
+      Script: {instanceID: 12450}
     - Class: 114
-      Script: {instanceID: 12634}
+      Script: {instanceID: 12476}
     - Class: 114
-      Script: {instanceID: 12648}
+      Script: {instanceID: 12632}
     - Class: 114
-      Script: {instanceID: 12682}
+      Script: {instanceID: 12646}
     - Class: 114
-      Script: {instanceID: 13176}
+      Script: {instanceID: 12680}
     - Class: 114
-      Script: {instanceID: 13668}
+      Script: {instanceID: 13174}
     - Class: 114
-      Script: {instanceID: 13730}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 13760}
+      Script: {instanceID: 13728}
     - Class: 114
-      Script: {instanceID: 13816}
+      Script: {instanceID: 13758}
     - Class: 114
-      Script: {instanceID: 14110}
+      Script: {instanceID: 13814}
+    - Class: 114
+      Script: {instanceID: 14108}
+    - Class: 114
+      Script: {instanceID: 14250}
     - Class: 114
       Script: {instanceID: 14440}
     - Class: 115
@@ -163,15 +171,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11242}
     - Class: 114
-      Script: {instanceID: 11272}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11628}
+      Script: {instanceID: 11624}
     - Class: 114
-      Script: {instanceID: 12296}
+      Script: {instanceID: 12294}
     - Class: 114
-      Script: {instanceID: 12316}
+      Script: {instanceID: 12314}
     - Class: 114
-      Script: {instanceID: 13816}
+      Script: {instanceID: 13814}
     - Class: 114
       Script: {instanceID: 14440}
     - Class: 115
@@ -245,7 +253,7 @@ ScriptsOnlyBuild:
     className: LeanLanguageCSV
   - hash:
       serializedVersion: 2
-      Hash: 5fc41bede48863c7251706b022661483
+      Hash: 7b9d019bd4a6cc3dcd13347c3adfe2d4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -461,13 +469,19 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonClick
+  - hash:
+      serializedVersion: 2
       Hash: 549fae01e40ade0b062e59a15ada4c04
     assemblyName: LeanLocalization.dll
     namespaceName: Lean.Localization
     className: LeanLocalizedImage
   - hash:
       serializedVersion: 2
-      Hash: 185bad715d3877d72b406ee2b726ad81
+      Hash: de6c9f85cf74c6dd0ce131c24489e243
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ResultUI
@@ -563,7 +577,7 @@ ScriptsOnlyBuild:
     className: SFXManager
   - hash:
       serializedVersion: 2
-      Hash: 7014dbb75dc6b2aa1f08cb1cf2eb0119
+      Hash: e9e0350e9846f4df83289a8f1b8f996a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Kiara
@@ -777,6 +791,12 @@ ScriptsOnlyBuild:
     assemblyName: LeanLocalization.dll
     namespaceName: Lean.Localization
     className: LeanPhrase
+  - hash:
+      serializedVersion: 2
+      Hash: 49736ff68aaf5fab0e13a6ce42c1e7dc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: VTuberSimilarityCalculator
   - hash:
       serializedVersion: 2
       Hash: 8cd1cbba27f3cb1717254f668e9e0d5a
