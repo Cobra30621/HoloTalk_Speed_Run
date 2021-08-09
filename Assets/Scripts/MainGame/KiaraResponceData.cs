@@ -15,7 +15,7 @@ public class KiaraResponce{
     public int questionId;
     public int answer;
     public KiaraState kiaraState;
-    public int sfxId = -1;
+    public KiaraSFX kiaraSFX;
     
 }
 

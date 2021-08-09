@@ -13,6 +13,7 @@ public class ResultUI : MonoBehaviour
     public Text lab_similarity;
     public Text lab_vubter;
     public Image img_vtuber;
+    public Image img_percentage;
 
     [Header("Info")]
     public List<VTuberSimilar> most_simliarVTuber;
@@ -54,6 +55,7 @@ public class ResultUI : MonoBehaviour
 
         lab_similarity.text = (similarity ) + "%";
         lab_vubter.text = most_simliarVTuber[0].name;
+        img_percentage.fillAmount = similarity / 100f;
         Debug.Log("(similarity * 100)"+ (similarity ));
         img_vtuber.sprite = most_simliarVTuber[0].sprites[0];
 

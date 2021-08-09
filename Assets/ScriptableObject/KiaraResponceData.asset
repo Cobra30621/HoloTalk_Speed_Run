@@ -17,30 +17,30 @@ MonoBehaviour:
     questionId: 18
     answer: 0
     kiaraState: 4
-    sfxId: -1
+    kiaraSFX: 3
   answeredResponces:
   - description: "\u53EF\u653E\u9CF3\u68A8"
     questionId: 8
     answer: 0
     kiaraState: 6
-    sfxId: 0
+    kiaraSFX: 4
   - description: "\u4E0D\u53EF\u653E\u9CF3\u68A8"
     questionId: 8
     answer: 1
     kiaraState: 5
-    sfxId: 0
+    kiaraSFX: 2
   - description: "\u88F8\u7761"
     questionId: 12
     answer: 0
     kiaraState: 6
-    sfxId: 0
+    kiaraSFX: 1
   - description: "\u5167\u8932\u984F\u8272"
     questionId: 18
     answer: 0
     kiaraState: 6
-    sfxId: 0
+    kiaraSFX: 4
   - description: "\u6C92\u5167\u8932"
     questionId: 18
     answer: 7
     kiaraState: 6
-    sfxId: 0
+    kiaraSFX: 1

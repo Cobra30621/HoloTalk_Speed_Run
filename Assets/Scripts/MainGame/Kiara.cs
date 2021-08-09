@@ -7,6 +7,7 @@ using Lean.Localization;
 public class Kiara : MonoBehaviour
 {
     public Animator animator;
+    // 0:holotalkspeedrun 1:yabe 2:sad 3:pant color 4:ohh 5:nnn 6:why
     public SFXManager sfx;
 
     public GameObject kiaraBubble;
@@ -67,6 +68,12 @@ public class Kiara : MonoBehaviour
         Debug.Log($"撥放KiaraState:{state}");
     }
 
+    public void PlaySFX(KiaraSFX kiaraSFX){
+        if(kiaraSFX == KiaraSFX.None){return;}
+        int id = (int)kiaraSFX;
+        sfx.PlaySFX(id);
+    }
+
     public void SetKiaraText(string text){
         SetBubbleActive(true);
         Debug.Log(text + LeanLocalization.GetTranslationText(text));
@@ -82,3 +89,9 @@ public class Kiara : MonoBehaviour
 public enum KiaraState{
     Idle, Talking, Except, Unexcept, Exciting, Sad, Drug, KeepTalking, Smile, SmallSmile
 }
+
+[System.Serializable]
+public enum KiaraSFX{
+    SpeedRun = 0 , Yabe, Sad , Pant, Ohh, NNN, Why ,None
+}
+// 0:holotalkspeedrun 1:yabe 2:sad 3:pant color 4:ohh 5:nnn 6:why

@@ -30,8 +30,7 @@ public class GameManager : MonoBehaviour{
     public Kiara kiara;
     public KiaraResponceData kiaraResponceData;
     public KiaraState[] defaultStateWhenAnswering;
-    // 0:holotalkspeedrun 1:yabe 2:sad 3:pant color
-    public SFXManager sfx_kiara;
+    public KiaraSFX [] defalutSFXWhenAnswering;
     public BGMManager bgm;
     
      // 流程控制
@@ -71,7 +70,7 @@ public class GameManager : MonoBehaviour{
             yield return new WaitForSeconds(1);
         }
 
-        sfx_kiara.PlaySFX(0);
+        kiara.PlaySFX(0);
         kiara.SetKiaraText("Kiara/Intro6");
         // 垃圾寫法，等5秒
         for (int i = 0; i < 5; i++)
@@ -141,8 +140,6 @@ public class GameManager : MonoBehaviour{
         canAnswer = false;
     }
 
-    
-
     // 回答問題時的反應
     private void KiaraResponceWhenQuestioning(int questionId){
         bool defaults = true; // 預設反應
@@ -150,6 +147,7 @@ public class GameManager : MonoBehaviour{
         {
             if(responce.questionId == questionId){
                 kiara.SetKiaraAnime(responce.kiaraState);
+                kiara.PlaySFX(responce.kiaraSFX);
                 defaults = false;
             }
         }
@@ -158,15 +156,15 @@ public class GameManager : MonoBehaviour{
             kiara.SetKiaraAnime(KiaraState.Talking);
         }
 
-        switch (questionId)
-        {
-            case 18:
-                // kiara.SetKiaraAnime(KiaraState.Exciting);
-                sfx_kiara.PlaySFX(3);
-                break;
-            default:
-                break;
-        }
+        // switch (questionId)
+        // {
+        //     case 18:
+        //         // kiara.SetKiaraAnime(KiaraState.Exciting);
+        //         kiara.PlaySFX(3);
+        //         break;
+        //     default:
+        //         break;
+        // }
     }
 
     private void KiaraResponceWhenAnswer(int questionId, int answer){
@@ -175,6 +173,7 @@ public class GameManager : MonoBehaviour{
         {
             if(responce.questionId == questionId & responce.answer == answer){
                 kiara.SetKiaraAnime(responce.kiaraState);
+                kiara.PlaySFX(responce.kiaraSFX);
                 defaults = false;
             }
         }
@@ -182,22 +181,28 @@ public class GameManager : MonoBehaviour{
         if(defaults){
             int f = Random.Range(0, defaultStateWhenAnswering.Length);
             kiara.SetKiaraAnime(defaultStateWhenAnswering[f]);
+
+            // 有一半機率會發聲
+            int f2 = Random.Range(0, defalutSFXWhenAnswering.Length * 2);
+            if(f2 < defalutSFXWhenAnswering.Length){
+                kiara.PlaySFX(defalutSFXWhenAnswering[f2]);
+            }
         }
         
-        switch (questionId)
-        {
-            case 8:
-                if(answer == 1) {sfx_kiara.PlaySFX(2);}
-                break;
-            case 12:
-                if(answer == 0) {sfx_kiara.PlaySFX(1);}
-                break;
-            case 18:
-                if(answer == 7) {sfx_kiara.PlaySFX(1);}
-                break;
-            default:
-                break;
-        }
+        // switch (questionId)
+        // {
+        //     case 8:
+        //         if(answer == 1) {kiara.PlaySFX(2);}
+        //         break;
+        //     case 12:
+        //         if(answer == 0) {kiara.PlaySFX(1);}
+        //         break;
+        //     case 18:
+        //         if(answer == 7) {kiara.PlaySFX(1);}
+        //         break;
+        //     default:
+        //         break;
+        // }
     }
 
     private void PlayQuestionAnimeWhenAnswered(){

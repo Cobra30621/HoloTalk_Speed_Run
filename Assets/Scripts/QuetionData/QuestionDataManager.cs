@@ -9,9 +9,6 @@ public class QuestionDataManager : MonoBehaviour{
     public QuestionData questionData;
     public CsvLoader csvLoader;
 
-    // 儲存玩家的答題情況
-    // public List<int> playerAnswers;
-    public Dictionary<VTuber, float> similarityDictionary;
 
     // 每一題的選項數量
     public static int[] questionOptionCount = 
