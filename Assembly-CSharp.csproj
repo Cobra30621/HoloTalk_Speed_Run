@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\System\BGMManager.cs" />
      <Compile Include="Assets\Scripts\System\GameManager.cs" />
      <Compile Include="Assets\Scripts\System\GameSettings.cs" />
+     <Compile Include="Assets\Scripts\System\MusicController.cs" />
      <Compile Include="Assets\Scripts\System\SFXManager.cs" />
      <Compile Include="Assets\Scripts\UI\ButtonClick.cs" />
      <Compile Include="Assets\Scripts\UI\ResultUI.cs" />
@@ -241,6 +242,9 @@
     </Reference>
     <Reference Include="UnityEditor">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+        <HintPath>C:/Users/user/Desktop/Unity/HoloTalk_Speed_Run/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -670,6 +674,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{95ae4cdb-e9be-46de-c686-14f8eb1ba1ce}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="LeanLocalization.csproj">
       <Project>{5cc2d012-d41b-441f-1c7d-ee274660c183}</Project>
       <Name>LeanLocalization</Name>

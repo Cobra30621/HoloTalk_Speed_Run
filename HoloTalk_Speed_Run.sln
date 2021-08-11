@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeanCommon", "LeanCommon.csproj", "{0044d1b0-b0c0-0e3f-3113-62272b23ef74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{95ae4cdb-e9be-46de-c686-14f8eb1ba1ce}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +20,8 @@ Global
 		{1c373bc2-59b2-c5c8-1ed9-c084643ab492}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0044d1b0-b0c0-0e3f-3113-62272b23ef74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0044d1b0-b0c0-0e3f-3113-62272b23ef74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95ae4cdb-e9be-46de-c686-14f8eb1ba1ce}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95ae4cdb-e9be-46de-c686-14f8eb1ba1ce}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
