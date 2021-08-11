@@ -20,8 +20,15 @@ public class GameManager : MonoBehaviour{
     public GridLayoutGroup option_gridLayoutGroup;
     private float moreThanFourOptionsWeight = 1000;
     private float lessThanFourOptionsWeight = 500;
-    private float optionsHeight = 100;
-    public Text lab_questionInfo;
+    private float optionsHeight = 130;
+
+    public Text lab_questionInfo_BG;
+    public Text lab_questionInfo_FG;
+    public GameObject GO_questionInfoFG;
+    public Transform transform_questionInfo;
+    private string now_question_text;
+    public Animator question_Animator;
+
     public GameObject[] options;
     public Text[] lab_options;
     public GameObject optionPanel;
@@ -91,10 +98,14 @@ public class GameManager : MonoBehaviour{
             // 等待答題
             while (!needSetQuestion) yield return null;
             SetProgressBar();
+
+            SetQuetionWithId(now_question);
+            PlayNextQuestionAnime();
             if(i != 0){
                 yield return new WaitForSeconds(0.5f);
             }
-            SetQuetionWithId(now_question);
+            
+            
             KiaraResponceWhenQuestioning(now_question);
             needSetQuestion = false;
             canAnswer = true;
@@ -133,8 +144,6 @@ public class GameManager : MonoBehaviour{
 
         KiaraResponceWhenAnswer(now_question, answer);
         now_question ++;
-        
-        PlayQuestionAnimeWhenAnswered();
 
         needSetQuestion = true;
         canAnswer = false;
@@ -205,12 +214,6 @@ public class GameManager : MonoBehaviour{
         // }
     }
 
-    private void PlayQuestionAnimeWhenAnswered(){
-        for (int op = 0; op < lab_options.Length; op++)
-        {
-            lab_options[op].text = "";
-        }
-    }
 
     private void SetProgressBar(){
         nowProgress = (float)now_question / (float)questionCount;
@@ -218,10 +221,25 @@ public class GameManager : MonoBehaviour{
         if(nowProgress > 1){nowProgress = 1;}
         if(nowProgress < 0){nowProgress = 0;}
 
-        Debug.Log(nowProgress+"JOJO");
+        Debug.Log(nowProgress);
         progressBarFG.transform.localScale = new Vector3(nowProgress,1,1);
 
         preProgress = nowProgress;
+    }
+
+    private void PlayNextQuestionAnime(){
+        question_Animator.SetTrigger("nextquestion");
+
+        for (int op = 0; op < lab_options.Length; op++)
+        {
+            // lab_options[op].text = "";
+        }
+    }
+
+    // 將問題歸為
+    public void SetQuestionPosInfoBack(){
+        lab_questionInfo_FG.text = now_question_text;
+        GO_questionInfoFG.transform.position = transform_questionInfo.position;
     }
 
     // 顯示答題介面
@@ -229,10 +247,10 @@ public class GameManager : MonoBehaviour{
         // 取得題目的選項數
         int optionCount = QuestionDataManager.questionOptionCount[questionId];
         
-
         // 設定題目
         string questionInfo_key = questionId + "_question";
-        lab_questionInfo.text =  LeanLocalization.GetTranslationText(questionInfo_key);
+        now_question_text = LeanLocalization.GetTranslationText(questionInfo_key);
+        lab_questionInfo_BG.text =  now_question_text;
 
         // 設定選項
         SetOptionsLayout(optionCount);
@@ -247,11 +265,11 @@ public class GameManager : MonoBehaviour{
     private void SetOptionsLayout(int optionCount){
         if(optionCount > 4){
             option_gridLayoutGroup.constraintCount = 2;
-            option_gridLayoutGroup.cellSize = new Vector2(lessThanFourOptionsWeight, 100);
+            option_gridLayoutGroup.cellSize = new Vector2(lessThanFourOptionsWeight, optionsHeight);
         }
         else{
             option_gridLayoutGroup.constraintCount = 1;
-            option_gridLayoutGroup.cellSize = new Vector2(moreThanFourOptionsWeight, 100);
+            option_gridLayoutGroup.cellSize = new Vector2(moreThanFourOptionsWeight, optionsHeight);
         }
     }
 
