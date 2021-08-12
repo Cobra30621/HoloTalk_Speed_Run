@@ -51,9 +51,9 @@
      <Compile Include="Assets\Scripts\System\MusicController.cs" />
      <Compile Include="Assets\Scripts\System\SFXManager.cs" />
      <Compile Include="Assets\Scripts\UI\ButtonClick.cs" />
-     <Compile Include="Assets\Scripts\UI\QuestionUI.cs" />
      <Compile Include="Assets\Scripts\UI\ResultUI.cs" />
      <Compile Include="Assets\Scripts\UI\SimilarityBar.cs" />
+     <Compile Include="Assets\Scripts\UI\TextCardSystem.cs" />
      <None Include="Assets\Locolization\Kiara_EN.txt" />
      <None Include="Assets\Locolization\Question_CH.txt" />
      <None Include="Assets\Locolization\Question_EN.txt" />

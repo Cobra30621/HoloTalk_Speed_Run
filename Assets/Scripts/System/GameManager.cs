@@ -22,16 +22,13 @@ public class GameManager : MonoBehaviour{
     private float lessThanFourOptionsWeight = 500;
     private float optionsHeight = 130;
 
-    public Text lab_questionInfo_BG;
-    public Text lab_questionInfo_FG;
-    public GameObject GO_questionInfoFG;
-    public Transform transform_questionInfo;
-    private string now_question_text;
-    public Animator question_Animator;
-
     public GameObject[] options;
     public Text[] lab_options;
     public GameObject optionPanel;
+    
+    // 字卡系統
+    public TextCardSystem textCardSystem;
+    public bool waitClick;
 
     // Kiara
     public Kiara kiara;
@@ -39,8 +36,10 @@ public class GameManager : MonoBehaviour{
     public KiaraState[] defaultStateWhenAnswering;
     public KiaraSFX [] defalutSFXWhenAnswering;
     public BGMManager bgm;
+
     
-     // 流程控制
+
+    // 流程控制
     private bool needSetQuestion;
     private bool canAnswer;
 
@@ -51,6 +50,10 @@ public class GameManager : MonoBehaviour{
 
     void Start(){
         StartGame();
+    }
+
+    void Update(){
+        InputNextTextCard();
     }
 
     [ContextMenu("StartGaming")]
@@ -71,14 +74,19 @@ public class GameManager : MonoBehaviour{
         kiara.SetKiaraAnime(KiaraState.KeepTalking);
         for (int i = 1; i <= 5; i++)
         {
-            string info = $"Kiara/Intro{i}";
-            // Debug.Log(info);
-            kiara.SetKiaraText(info);
-            yield return new WaitForSeconds(1);
+            textCardSystem.SetWaitClick(true);
+
+            string key = $"Kiara/Intro{i}";
+            SetTextCardWithKey(key, 1);
+
+            while (textCardSystem.waitClick) yield return null;
         }
 
+        textCardSystem.SetWaitClick(true);
+        while (textCardSystem.waitClick) yield return null;
+
         kiara.PlaySFX(0);
-        kiara.SetKiaraText("Kiara/Intro6");
+        SetTextCardWithKey("Kiara/Intro6", 1);
         // 垃圾寫法，等5秒
         for (int i = 0; i < 5; i++)
         {
@@ -87,7 +95,6 @@ public class GameManager : MonoBehaviour{
             yield return new WaitForSeconds(1);
         }
         
-
         optionPanel.SetActive(true);
         now_question = 0;
 
@@ -102,9 +109,8 @@ public class GameManager : MonoBehaviour{
             SetQuetionWithId(now_question);
             PlayNextQuestionAnime();
             if(i != 0){
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(0.1f);
             }
-            
             
             KiaraResponceWhenQuestioning(now_question);
             needSetQuestion = false;
@@ -122,10 +128,14 @@ public class GameManager : MonoBehaviour{
         kiara.SetKiaraAnime(KiaraState.KeepTalking);
         for (int i = 1; i <= 3; i++)
         {
-            string info = $"Kiara/End{i}";
-            Debug.Log(info);
-            kiara.SetKiaraText(info);
-            yield return new WaitForSeconds(1);
+            if(i != 1){
+                textCardSystem.SetWaitClick(true);
+                while (textCardSystem.waitClick) yield return null;
+            }
+            
+            string key = $"Kiara/End{i}";
+            SetTextCardWithKey(key, 1);
+            // yield return new WaitForSeconds(1);
         }
         kiara.SetKiaraAnime(KiaraState.Except);
         yield return new WaitForSeconds(1);
@@ -135,6 +145,17 @@ public class GameManager : MonoBehaviour{
 
     }
 
+    private void SetTextCardWithKey(string key , int cardType){
+        string info = LeanLocalization.GetTranslationText(key);
+        TextCard textCard = new TextCard(info, cardType);
+        textCardSystem.SetNextCard(textCard);
+    }
+
+    private void InputNextTextCard(){
+        if(Input.GetKeyDown(KeyCode.Return)){
+            textCardSystem.SetWaitClick(false);
+        }
+    }
 
     public void AnswererQuestion(int answer){
         if(!canAnswer){return;}
@@ -228,7 +249,6 @@ public class GameManager : MonoBehaviour{
     }
 
     private void PlayNextQuestionAnime(){
-        question_Animator.SetTrigger("nextquestion");
 
         for (int op = 0; op < lab_options.Length; op++)
         {
@@ -236,11 +256,6 @@ public class GameManager : MonoBehaviour{
         }
     }
 
-    // 將問題歸為
-    public void SetQuestionPosInfoBack(){
-        lab_questionInfo_FG.text = now_question_text;
-        GO_questionInfoFG.transform.position = transform_questionInfo.position;
-    }
 
     // 顯示答題介面
     public void SetQuetionWithId(int questionId){
@@ -249,8 +264,7 @@ public class GameManager : MonoBehaviour{
         
         // 設定題目
         string questionInfo_key = questionId + "_question";
-        now_question_text = LeanLocalization.GetTranslationText(questionInfo_key);
-        lab_questionInfo_BG.text =  now_question_text;
+        SetTextCardWithKey(questionInfo_key, 1);
 
         // 設定選項
         SetOptionsLayout(optionCount);
