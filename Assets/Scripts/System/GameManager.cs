@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour{
     {
         yield return new WaitForSeconds(1);
         kiara.SetKiaraAnime(KiaraState.KeepTalking);
-        for (int i = 1; i <= 5; i++)
+        for (int i = 1; i <= 6; i++)
         {
             textCardSystem.SetWaitClick(true);
 
@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour{
         while (textCardSystem.waitClick) yield return null;
 
         kiara.PlaySFX(0);
-        SetTextCardWithKey("Kiara/Intro6", 1);
+        SetTextCardWithKey("Kiara/Intro7", 1);
         // 垃圾寫法，等5秒
         for (int i = 0; i < 5; i++)
         {
@@ -109,7 +109,7 @@ public class GameManager : MonoBehaviour{
             SetQuetionWithId(now_question);
             PlayNextQuestionAnime();
             if(i != 0){
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.4f);
             }
             
             KiaraResponceWhenQuestioning(now_question);
@@ -137,8 +137,9 @@ public class GameManager : MonoBehaviour{
             SetTextCardWithKey(key, 1);
             // yield return new WaitForSeconds(1);
         }
+
         kiara.SetKiaraAnime(KiaraState.Except);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         kiara.SetKiaraAnime(KiaraState.Drug);
         
         ResultUI.ShowResult(playerAnswers); 

@@ -12,8 +12,8 @@ _option5,option5
 1_question,Rice or noodles?
 1_option0,Rice
 1_option1,Noodles
-2_question,Gusto Or Saizeriya?
-2_option0,Gusto
+2_question,Guzto Or Saizeriya?
+2_option0,Guzto
 2_option1,Saizeriya
 2_option2,Both
 3_question,Twitter or Instagram?
@@ -50,7 +50,7 @@ _option5,option5
 12_option1,With clothes
 13_question,Favorite holiday?
 13_option0,Christmas
-13_option1,HollowWind
+13_option1,Halloween
 13_option2,Labor Thanksgiving Day
 13_option3,Children's day
 13_option4,Every Day

@@ -12,8 +12,8 @@ _option5,選項5
 1_question,飯或麵?
 1_option0,飯
 1_option1,麵
-2_question,Gusto Or Saizeriya?
-2_option0,Gusto
+2_question,Guzto Or Saizeriya?
+2_option0,Guzto
 2_option1,Saizeriya
 2_option2,都喜歡
 3_question,Twitter or Instagram?
