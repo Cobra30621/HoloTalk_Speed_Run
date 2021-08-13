@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour{
         GameSettings.ResetToDefaults();
         optionPanel.SetActive(false);
         StartCoroutine(GameCoroutine());
+        SetProgressBar(); // 設置進度條
     }
 
     public void Again(){
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour{
 
     IEnumerator GameCoroutine()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.4f);
         kiara.SetKiaraAnime(KiaraState.KeepTalking);
         for (int i = 1; i <= 6; i++)
         {
