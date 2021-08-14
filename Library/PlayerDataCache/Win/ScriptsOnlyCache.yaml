@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - CsvLoader
     - GameManager
     - Kiara
+    - KiaraResponceData
     - PlayButtonController
     - QuestionData
     - QuestionDataManager
@@ -13,7 +14,10 @@ ScriptsOnlyBuild:
     - SFXManager
     - SimilarityBar
     - Test
+    - TextCardSystem
     - VTuberSimilarityCalculator
+    DOTween.dll:
+    - DG.Tweening.Core.DOTweenSettings
     LeanLocalization.dll:
     - Lean.Localization.LeanLanguageCSV
     - Lean.Localization.LeanLocalization
@@ -31,10 +35,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -42,6 +44,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -84,59 +87,65 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11240}
-    - Class: 114
-      Script: {instanceID: 11242}
-    - Class: 114
       Script: {instanceID: 11244}
     - Class: 114
-      Script: {instanceID: 11268}
+      Script: {instanceID: 11246}
     - Class: 114
-      Script: {instanceID: 11322}
+      Script: {instanceID: 11248}
     - Class: 114
-      Script: {instanceID: 11330}
+      Script: {instanceID: 11250}
     - Class: 114
-      Script: {instanceID: 11570}
+      Script: {instanceID: 11274}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11662}
+      Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11728}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 12076}
+      Script: {instanceID: 11674}
     - Class: 114
-      Script: {instanceID: 12118}
+      Script: {instanceID: 11742}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 12090}
     - Class: 114
-      Script: {instanceID: 12438}
+      Script: {instanceID: 12132}
     - Class: 114
-      Script: {instanceID: 12450}
+      Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 12476}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 12632}
+      Script: {instanceID: 12466}
     - Class: 114
-      Script: {instanceID: 12646}
+      Script: {instanceID: 12492}
     - Class: 114
-      Script: {instanceID: 12680}
+      Script: {instanceID: 12650}
     - Class: 114
-      Script: {instanceID: 13174}
+      Script: {instanceID: 12666}
     - Class: 114
-      Script: {instanceID: 13666}
+      Script: {instanceID: 12700}
     - Class: 114
-      Script: {instanceID: 13728}
+      Script: {instanceID: 13204}
     - Class: 114
-      Script: {instanceID: 13758}
+      Script: {instanceID: 13602}
     - Class: 114
-      Script: {instanceID: 13814}
+      Script: {instanceID: 13700}
     - Class: 114
-      Script: {instanceID: 14108}
+      Script: {instanceID: 13762}
     - Class: 114
-      Script: {instanceID: 14250}
+      Script: {instanceID: 13792}
     - Class: 114
-      Script: {instanceID: 14440}
+      Script: {instanceID: 13848}
+    - Class: 114
+      Script: {instanceID: 14146}
+    - Class: 114
+      Script: {instanceID: 14288}
+    - Class: 114
+      Script: {instanceID: 14388}
+    - Class: 114
+      Script: {instanceID: 14412}
+    - Class: 114
+      Script: {instanceID: 14480}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -169,19 +178,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11242}
+      Script: {instanceID: 11246}
     - Class: 114
-      Script: {instanceID: 11268}
+      Script: {instanceID: 11274}
     - Class: 114
-      Script: {instanceID: 11624}
+      Script: {instanceID: 11636}
     - Class: 114
-      Script: {instanceID: 12294}
+      Script: {instanceID: 12308}
     - Class: 114
-      Script: {instanceID: 12314}
+      Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 13814}
+      Script: {instanceID: 12916}
     - Class: 114
-      Script: {instanceID: 14440}
+      Script: {instanceID: 13848}
+    - Class: 114
+      Script: {instanceID: 14480}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -223,6 +234,12 @@ ScriptsOnlyBuild:
     className: ContentSizeFitter
   - hash:
       serializedVersion: 2
+      Hash: aeb62f729c52c814dec86c47dcac1471
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -253,7 +270,7 @@ ScriptsOnlyBuild:
     className: LeanLanguageCSV
   - hash:
       serializedVersion: 2
-      Hash: 7b9d019bd4a6cc3dcd13347c3adfe2d4
+      Hash: c64e3c44c2983ab6df57363b8e10319c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -305,12 +322,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
-  - hash:
-      serializedVersion: 2
-      Hash: aeb62f729c52c814dec86c47dcac1471
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Text
   - hash:
       serializedVersion: 2
       Hash: 499fd23433e68e265d153aa6b95d0047
@@ -481,7 +492,7 @@ ScriptsOnlyBuild:
     className: LeanLocalizedImage
   - hash:
       serializedVersion: 2
-      Hash: de6c9f85cf74c6dd0ce131c24489e243
+      Hash: 07c4a523e311e0cd0a8d38e11e63deb0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ResultUI
@@ -583,6 +594,12 @@ ScriptsOnlyBuild:
     className: Kiara
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MusicController
+  - hash:
+      serializedVersion: 2
       Hash: 16b319a1ac7e425a5308867b8aa0b7eb
     assemblyName: LeanLocalization.dll
     namespaceName: Lean.Localization
@@ -611,6 +628,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 704dcd31abc789439bc3f3cd10b58c2b
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 9b2663563359a91d0a6867fee160c936
+    assemblyName: DOTween.dll
+    namespaceName: DG.Tweening.Core
+    className: DOTweenSettings
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -713,6 +742,12 @@ ScriptsOnlyBuild:
     assemblyName: LeanCommon.dll
     namespaceName: Lean.Common.Examples
     className: LeanLinkTo
+  - hash:
+      serializedVersion: 2
+      Hash: 0d1e5e505edd7f976de374cf91cde86d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: KiaraResponceData
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -829,6 +864,12 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
+      Hash: dd48229b3b0e00e811256febaaa7f93f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TextCardSystem
+  - hash:
+      serializedVersion: 2
       Hash: 39a9bb9768c8206c97dc997d364a6275
     assemblyName: LeanCommon.dll
     namespaceName: Lean.Common
@@ -903,4 +944,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/user/Desktop/HoloTalk_Speed_Round_V0.1/HoloTalk_Speed_Run.exe
+  playerPath: C:/Users/user/Desktop/holotalkV0.1/HoloTalk_Speed_Run.exe
