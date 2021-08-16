@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\UI\ResultUI.cs" />
      <Compile Include="Assets\Scripts\UI\SimilarityBar.cs" />
      <Compile Include="Assets\Scripts\UI\TextCardSystem.cs" />
+     <Compile Include="Assets\Scripts\WebServer\GoogleSheetRecorder.cs" />
      <None Include="Assets\Locolization\Kiara_EN.txt" />
      <None Include="Assets\Locolization\Question_CH.txt" />
      <None Include="Assets\Locolization\Question_EN.txt" />

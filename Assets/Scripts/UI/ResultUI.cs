@@ -25,6 +25,8 @@ public class ResultUI : MonoBehaviour
     [SerializeField] private Transform bar_pos;
     private List<SimilarityBar> similarityBars;
 
+    public GoogleSheetRecorder googleSheetRecorder;
+
     void Awake(){
         resultUI = this;
     }
@@ -59,8 +61,14 @@ public class ResultUI : MonoBehaviour
         Debug.Log("(similarity * 100)"+ (similarity ));
         img_vtuber.sprite = most_simliarVTuber[0].sprites[0];
 
+        RecordOutcomeToGoogleSheet(most_simliarVTuber[0].name, (int)similarity);
+
         // matsuriSpeech1.text = localize ? LeanLocalization.GetTranslationText(text) : text;
         yield return null;
+    }
+
+    private void RecordOutcomeToGoogleSheet(string vtuber, int similiarity){
+        googleSheetRecorder.RecordOutcome(vtuber, similiarity);
     }
 
 
