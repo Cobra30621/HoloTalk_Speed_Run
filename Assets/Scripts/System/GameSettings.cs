@@ -11,7 +11,7 @@ public class GameSettings
     {
         fullScreen = 0;
         sfxVolume = 1f;
-        bgmVolume = 0.5f;
+        bgmVolume = 0.3f;
     }
 
     public static void SaveSettings()

@@ -3454,7 +3454,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  bgmList: []
+  bgmList:
+  - {fileID: 8300000, guid: cf210af5239e2ac4eb35892b79b39d80, type: 3}
   playOnAwake: 0
   playRandom: 0
   index: 0
@@ -3698,7 +3699,7 @@ MonoBehaviour:
   kiara: {fileID: 2458005272609625897}
   kiaraResponceData: {fileID: 11400000, guid: 81ff6961e17544a488bc4e20db158a28, type: 2}
   defaultStateWhenAnswering: 020000000800000009000000
-  defalutSFXWhenAnswering: 
+  defalutSFXWhenAnswering: 0400000005000000
   bgm: {fileID: 1814651855}
   progressBarFG: {fileID: 1931126903}
 --- !u!4 &1965815776
@@ -5414,7 +5415,7 @@ PrefabInstance:
     - target: {fileID: 8870219690195622780, guid: 5fc674e3648e6db4fa31f9aa116d87a4,
         type: 3}
       propertyPath: m_Text
-      value: Share
+      value: 'Give back '
       objectReference: {fileID: 0}
     - target: {fileID: 8870219690487700912, guid: 5fc674e3648e6db4fa31f9aa116d87a4,
         type: 3}
@@ -5521,6 +5522,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8870219690487700913, guid: 5fc674e3648e6db4fa31f9aa116d87a4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6492531242706263684}
+    - target: {fileID: 8870219690487700913, guid: 5fc674e3648e6db4fa31f9aa116d87a4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGoogleForm
+      objectReference: {fileID: 0}
     - target: {fileID: 8870219690487700919, guid: 5fc674e3648e6db4fa31f9aa116d87a4,
         type: 3}
       propertyPath: m_Name
@@ -5547,6 +5558,7 @@ GameObject:
   - component: {fileID: 6492531242706263709}
   - component: {fileID: 6492531242706263708}
   - component: {fileID: 6492531242706263704}
+  - component: {fileID: 6492531242706263684}
   m_Layer: 5
   m_Name: ResultCanvas
   m_TagString: Untagged
@@ -5554,6 +5566,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6492531242706263684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492531242706263683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22afde789f83fd44888af165e6300cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6492531242706263704
 MonoBehaviour:
   m_ObjectHideFlags: 0
