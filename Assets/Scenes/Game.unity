@@ -5559,6 +5559,7 @@ GameObject:
   - component: {fileID: 6492531242706263708}
   - component: {fileID: 6492531242706263704}
   - component: {fileID: 6492531242706263684}
+  - component: {fileID: 6492531242706263685}
   m_Layer: 5
   m_Name: ResultCanvas
   m_TagString: Untagged
@@ -5578,6 +5579,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22afde789f83fd44888af165e6300cd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6492531242706263685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492531242706263683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7c0f870c42ba242b92a3a64aff9611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionData: {fileID: 11400000, guid: 3e87b188ffecfcb4fa0e1bcf994c131f, type: 2}
+  showSpriteNum: 10
+  shortInterval: 0.1
+  longInterval: 0.4
+  image: {fileID: 8186424614175678295}
 --- !u!114 &6492531242706263704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5596,6 +5614,8 @@ MonoBehaviour:
   lab_vubter: {fileID: 6492531242374311148}
   img_vtuber: {fileID: 8186424614175678295}
   img_percentage: {fileID: 1651642182}
+  buttonPanel: {fileID: 6492531241999623172}
+  characterResult: {fileID: 6492531242706263685}
   most_simliarVTuber:
   - vTuber: 5
     similarity: 0.6111111
