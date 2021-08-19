@@ -22,6 +22,10 @@ public class SFXManager : MonoBehaviour
         }
     }
 
+    public void VolumeChanged(float newVolume) {
+        //使音量等同於newVolume
+        audioSource.volume = newVolume;
+    }
     // play SFX at specified index
     public void PlaySFX(int index)
     {

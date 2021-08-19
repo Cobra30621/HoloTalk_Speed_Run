@@ -13,9 +13,10 @@ public class PlayButtonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
-        {
-            SceneManager.LoadScene("Game");
-        }
+        
+    }
+    public void OnClick()
+    {
+        SceneManager.LoadScene("Game");
     }
 }

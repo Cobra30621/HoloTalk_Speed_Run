@@ -45,7 +45,11 @@ public class BGMManager : MonoBehaviour
         audioSource.clip = bgmList[index];
         audioSource.Play();
     }
-
+    //控制音量滑條
+    public void VolumeChanged(float newVolume) {
+        //使音量等同於newVolume
+        audioSource.volume = newVolume;
+    }
     // directly provide audio clip to play
     public void PlayBGM(AudioClip clip)
     {
