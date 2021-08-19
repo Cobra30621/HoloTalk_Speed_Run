@@ -6,6 +6,7 @@ using DG.Tweening;
 
 public class ResultUI : MonoBehaviour
 {
+    public bool isTest;
     public static ResultUI resultUI;
     public VTuberSimilarityCalculator vTuberSimilarityCalculator;
 
@@ -18,9 +19,10 @@ public class ResultUI : MonoBehaviour
     public GameObject buttonPanel;
 
     [Header("Info")]
-    public CharacterResult characterResult;
+    
     public List<VTuberSimilar> most_simliarVTuber;
     public List<int> playerAnswers;
+
 
     [Header("Detail")]
     [SerializeField] private GameObject detailPanel;
@@ -28,10 +30,24 @@ public class ResultUI : MonoBehaviour
     [SerializeField] private Transform bar_pos;
     private List<SimilarityBar> similarityBars;
 
+    [Header("UIAnime")]
+    public float outpanelStartPosX;
+    public Vector3 vec_outcome;
+    public CharacterResult characterResult;
+    public Ease moveEase;
+    
     public GoogleSheetRecorder googleSheetRecorder;
+
 
     void Awake(){
         resultUI = this;
+    }
+
+    void Start(){
+        if (isTest)
+        {
+            Test();
+        }
     }
 
     [ContextMenu("Test")]
@@ -52,6 +68,7 @@ public class ResultUI : MonoBehaviour
     }
 
     
+    
 
     IEnumerator ShowCoroutine(List<int> playerAnswers)
     {
@@ -62,8 +79,15 @@ public class ResultUI : MonoBehaviour
         VTuber vTuber = most_simliarVTuber[0].vTuber;
         float similarity = most_simliarVTuber[0].similarity;
 
+        // 移動面板
+        yield return new WaitForSeconds(1f);
+        // outcomePanel.GetComponent<RectTransform>().position = new Vector3(vec_outcome.x, vec_outcome.y, vec_outcome.z);
+        outcomePanel.transform.DOMoveX(vec_outcome.x, 0.5f).SetEase(moveEase);
+        yield return new WaitForSeconds(0.7f);
+        outcomePanel.GetComponent<RectTransform>().DOAnchorMin(new Vector3(0, 0f), 0.5f, false).SetEase(moveEase);
+        yield return new WaitForSeconds(1f);
+
         // 照片顯示
-        yield return new WaitForSeconds(0.5f);
         img_vtuber.gameObject.SetActive(true);
         yield return characterResult.Show(most_simliarVTuber[0].sprites[0]);
         // img_vtuber.sprite = most_simliarVTuber[0].sprites[0];
@@ -79,8 +103,8 @@ public class ResultUI : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         // 顯示像似度進度條
-        img_percentage.DOFillAmount(similarity / 100f, 1f);
-        yield return new WaitForSeconds(1.3f);
+        img_percentage.DOFillAmount(similarity / 100f, 0.5f).SetEase(moveEase);
+        yield return new WaitForSeconds(0.7f);
         // .DOFillAmount(rate, progressBarAddTime)
 
         // 顯示像似度文字
@@ -99,6 +123,10 @@ public class ResultUI : MonoBehaviour
     }
 
     private void InitResultInfo(){
+        vec_outcome = outcomePanel.GetComponent<RectTransform>().position;
+        outcomePanel.GetComponent<RectTransform>().position = new Vector3(outpanelStartPosX, vec_outcome.y, vec_outcome.z);
+        outcomePanel.GetComponent<RectTransform>().DOAnchorMin(new Vector2(0, 0.8f), 0, false);
+        
         // 其他資訊顯示
         img_vtuber.gameObject.SetActive(false);
         buttonPanel.SetActive(false);

@@ -84,8 +84,8 @@ public class GameManager : MonoBehaviour{
             while (textCardSystem.waitClick) yield return null;
         }
 
-        textCardSystem.SetWaitClick(true);
-        while (textCardSystem.waitClick) yield return null;
+        // textCardSystem.SetWaitClick(true);
+        // while (textCardSystem.waitClick) yield return null;
 
         kiara.PlaySFX(0);
         
