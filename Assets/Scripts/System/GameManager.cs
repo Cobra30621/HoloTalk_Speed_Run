@@ -72,6 +72,7 @@ public class GameManager : MonoBehaviour{
     IEnumerator GameCoroutine()
     {
         yield return new WaitForSeconds(0.4f);
+        bgm.PlayBGM(0);
         kiara.SetKiaraAnime(KiaraState.KeepTalking);
         for (int i = 1; i <= 6; i++)
         {
@@ -87,6 +88,7 @@ public class GameManager : MonoBehaviour{
         while (textCardSystem.waitClick) yield return null;
 
         kiara.PlaySFX(0);
+        
         SetTextCardWithKey("Kiara/Intro7", 1);
         // 垃圾寫法，等5秒
         for (int i = 0; i < 5; i++)
@@ -214,10 +216,11 @@ public class GameManager : MonoBehaviour{
             int f = Random.Range(0, defaultStateWhenAnswering.Length);
             kiara.SetKiaraAnime(defaultStateWhenAnswering[f]);
 
-            // 有一半機率會發聲
-            int f2 = Random.Range(0, defalutSFXWhenAnswering.Length * 2);
+            // 有一半機率會發聲 
+            int f2 = Random.Range(0, defalutSFXWhenAnswering.Length);
             if(f2 < defalutSFXWhenAnswering.Length){
-                kiara.PlaySFX(defalutSFXWhenAnswering[f2]);
+                // 先暫停播音效
+                // kiara.PlaySFX(defalutSFXWhenAnswering[f2]);
             }
         }
         

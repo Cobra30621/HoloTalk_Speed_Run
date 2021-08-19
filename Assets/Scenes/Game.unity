@@ -1347,6 +1347,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &571969288
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 571969290}
+  - component: {fileID: 571969289}
+  m_Layer: 0
+  m_Name: GoogleSheetRecorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &571969289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571969288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 954f33467cd1e3244bb4f39b8da9ca77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isEditMode: 1
+--- !u!4 &571969290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571969288}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -30.891663, y: -1.8796387, z: -667.375}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6492531242706263711}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619705680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3410,7 +3454,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
-  bgmList: []
+  bgmList:
+  - {fileID: 8300000, guid: cf210af5239e2ac4eb35892b79b39d80, type: 3}
   playOnAwake: 0
   playRandom: 0
   index: 0
@@ -3654,7 +3699,7 @@ MonoBehaviour:
   kiara: {fileID: 2458005272609625897}
   kiaraResponceData: {fileID: 11400000, guid: 81ff6961e17544a488bc4e20db158a28, type: 2}
   defaultStateWhenAnswering: 020000000800000009000000
-  defalutSFXWhenAnswering: 
+  defalutSFXWhenAnswering: 0400000005000000
   bgm: {fileID: 1814651855}
   progressBarFG: {fileID: 1931126903}
 --- !u!4 &1965815776
@@ -5370,7 +5415,7 @@ PrefabInstance:
     - target: {fileID: 8870219690195622780, guid: 5fc674e3648e6db4fa31f9aa116d87a4,
         type: 3}
       propertyPath: m_Text
-      value: Share
+      value: 'Give back '
       objectReference: {fileID: 0}
     - target: {fileID: 8870219690487700912, guid: 5fc674e3648e6db4fa31f9aa116d87a4,
         type: 3}
@@ -5477,6 +5522,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8870219690487700913, guid: 5fc674e3648e6db4fa31f9aa116d87a4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6492531242706263684}
+    - target: {fileID: 8870219690487700913, guid: 5fc674e3648e6db4fa31f9aa116d87a4,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenGoogleForm
+      objectReference: {fileID: 0}
     - target: {fileID: 8870219690487700919, guid: 5fc674e3648e6db4fa31f9aa116d87a4,
         type: 3}
       propertyPath: m_Name
@@ -5503,6 +5558,8 @@ GameObject:
   - component: {fileID: 6492531242706263709}
   - component: {fileID: 6492531242706263708}
   - component: {fileID: 6492531242706263704}
+  - component: {fileID: 6492531242706263684}
+  - component: {fileID: 6492531242706263685}
   m_Layer: 5
   m_Name: ResultCanvas
   m_TagString: Untagged
@@ -5510,6 +5567,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6492531242706263684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492531242706263683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22afde789f83fd44888af165e6300cd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6492531242706263685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6492531242706263683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e7c0f870c42ba242b92a3a64aff9611, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionData: {fileID: 11400000, guid: 3e87b188ffecfcb4fa0e1bcf994c131f, type: 2}
+  showSpriteNum: 10
+  shortInterval: 0.1
+  longInterval: 0.4
+  image: {fileID: 8186424614175678295}
 --- !u!114 &6492531242706263704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5528,6 +5614,8 @@ MonoBehaviour:
   lab_vubter: {fileID: 6492531242374311148}
   img_vtuber: {fileID: 8186424614175678295}
   img_percentage: {fileID: 1651642182}
+  buttonPanel: {fileID: 6492531241999623172}
+  characterResult: {fileID: 6492531242706263685}
   most_simliarVTuber:
   - vTuber: 5
     similarity: 0.6111111
@@ -5540,6 +5628,7 @@ MonoBehaviour:
   barPrefab: {fileID: 4615466715519909456, guid: 51789b709e4a7b944af1aea17bc3b289,
     type: 3}
   bar_pos: {fileID: 289934065}
+  googleSheetRecorder: {fileID: 571969289}
 --- !u!114 &6492531242706263708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5613,6 +5702,7 @@ RectTransform:
   m_Children:
   - {fileID: 6492531242623343268}
   - {fileID: 859071473}
+  - {fileID: 571969290}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

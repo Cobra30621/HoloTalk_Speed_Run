@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class CsvLoader : MonoBehaviour
 {
-    public string [][] VTuberAnswers;  
-    public string [][] options;  
+    public string [][] VTuberAnswers;   
 
     // 注意:檔案類型要txt
     public void Init(){
         VTuberAnswers = LoadData("holotalk");
-        options = LoadData("options");
+        // options = LoadData("options");
     }
 
     public void SetLanguageData(Language language){
@@ -55,13 +54,5 @@ public class CsvLoader : MonoBehaviour
         return VTuberAnswers[nRow][nCol];  
     }  
 
-    public string GetOptionsDataByRowAndColFrom(int nRow, int nCol)  
-    {  
-        if (options.Length <= 0 || nRow >= options.Length)  
-            return"";  
-        if (nCol >= options[0].Length)  
-            return"";  
-        return options[nRow][nCol];  
-    }  
 
 }
