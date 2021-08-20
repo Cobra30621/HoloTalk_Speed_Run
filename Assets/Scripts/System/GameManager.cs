@@ -30,12 +30,13 @@ public class GameManager : MonoBehaviour{
     public TextCardSystem textCardSystem;
     public bool waitClick;
 
-    // Kiara
+    // 動畫相關
     public Kiara kiara;
     public KiaraResponceData kiaraResponceData;
     public KiaraState[] defaultStateWhenAnswering;
     public KiaraSFX [] defalutSFXWhenAnswering;
     public BGMManager bgm;
+    public SpeedRoundAnime speedRoundAnime;
 
     
 
@@ -86,7 +87,7 @@ public class GameManager : MonoBehaviour{
 
         // textCardSystem.SetWaitClick(true);
         // while (textCardSystem.waitClick) yield return null;
-
+        speedRoundAnime.PlayAnime();
         kiara.PlaySFX(0);
         
         SetTextCardWithKey("Kiara/Intro7", 1);

@@ -35,7 +35,7 @@ public class BoardPanel : MonoBehaviour
         panel.GetComponent<RectTransform>().DOAnchorMin(new Vector2(0, panelAnchorMinY), 0, false);
 
         // 移動面板
-        yield return new WaitForSeconds(1f);
+        // yield return new WaitForSeconds(1f);
         // panel.GetComponent<RectTransform>().position = new Vector3(vec_outcome.x, vec_outcome.y, vec_outcome.z);
         panel.transform.DOMoveX(endPos.position.x, 0.5f).SetEase(moveEase);
         yield return new WaitForSeconds(0.7f);

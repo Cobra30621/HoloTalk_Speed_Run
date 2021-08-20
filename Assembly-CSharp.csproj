@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\UI\FullScreenController.cs" />
      <Compile Include="Assets\Scripts\UI\ResultUI.cs" />
      <Compile Include="Assets\Scripts\UI\SimilarityBar.cs" />
+     <Compile Include="Assets\Scripts\UI\SpeedRoundAnime.cs" />
      <Compile Include="Assets\Scripts\UI\TextCardSystem.cs" />
      <Compile Include="Assets\Scripts\WebServer\GoogleSheetRecorder.cs" />
      <Compile Include="Assets\Scripts\WebServer\WebOpenManager.cs" />
