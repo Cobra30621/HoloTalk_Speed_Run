@@ -142,8 +142,8 @@ public class GameManager : MonoBehaviour{
         }
 
         kiara.SetKiaraAnime(KiaraState.Except);
-        yield return new WaitForSeconds(2);
-        kiara.SetKiaraAnime(KiaraState.Drug);
+        yield return new WaitForSeconds(0.5f);
+        // kiara.SetKiaraAnime(KiaraState.Drug);
         
         ResultUI.ShowResult(playerAnswers); 
 

@@ -9,6 +9,9 @@ public class ResultUI : MonoBehaviour
     public bool isTest;
     public static ResultUI resultUI;
     public VTuberSimilarityCalculator vTuberSimilarityCalculator;
+    public GoogleSheetRecorder googleSheetRecorder;
+    public GameManager gameManager;
+
 
     [Header("UI")]
     public GameObject outcomePanel;
@@ -31,12 +34,13 @@ public class ResultUI : MonoBehaviour
     private List<SimilarityBar> similarityBars;
 
     [Header("UIAnime")]
-    public float outpanelStartPosX;
-    public Vector3 vec_outcome;
+    // public float outpanelStartPosX;
+    // public Vector3 vec_outcome;
+    public BoardPanel boardPanel;
     public CharacterResult characterResult;
     public Ease moveEase;
     
-    public GoogleSheetRecorder googleSheetRecorder;
+    
 
 
     void Awake(){
@@ -62,30 +66,22 @@ public class ResultUI : MonoBehaviour
     }
 
     public void SetOutCome(List<int> playerAnswers){
-        outcomePanel.SetActive(true);
         StartCoroutine(ShowCoroutine(playerAnswers));
         
     }
 
-    
-    
-
     IEnumerator ShowCoroutine(List<int> playerAnswers)
     {
-        InitResultInfo();
+        // yield return new WaitForSeconds(1f);
+        yield return InitResultInfo();
 
         this.playerAnswers = playerAnswers;
         most_simliarVTuber = vTuberSimilarityCalculator.GetMostSimilarVuber(playerAnswers);
         VTuber vTuber = most_simliarVTuber[0].vTuber;
         float similarity = most_simliarVTuber[0].similarity;
 
-        // 移動面板
-        yield return new WaitForSeconds(1f);
-        // outcomePanel.GetComponent<RectTransform>().position = new Vector3(vec_outcome.x, vec_outcome.y, vec_outcome.z);
-        outcomePanel.transform.DOMoveX(vec_outcome.x, 0.5f).SetEase(moveEase);
-        yield return new WaitForSeconds(0.7f);
-        outcomePanel.GetComponent<RectTransform>().DOAnchorMin(new Vector3(0, 0f), 0.5f, false).SetEase(moveEase);
-        yield return new WaitForSeconds(1f);
+        // 顯示面板
+        yield return boardPanel.Show();
 
         // 照片顯示
         img_vtuber.gameObject.SetActive(true);
@@ -94,6 +90,9 @@ public class ResultUI : MonoBehaviour
 
         // 其他資訊顯示
         yield return new WaitForSeconds(0.5f);
+        // Kiara 嗑藥
+        gameManager.kiara.SetKiaraAnime(KiaraState.Drug);
+
         // 顯示明子
         lab_vubter.text = most_simliarVTuber[0].name;
         lab_vubter.transform.rotation = Quaternion.Euler(0,0,45f);
@@ -122,17 +121,18 @@ public class ResultUI : MonoBehaviour
         yield return null;
     }
 
-    private void InitResultInfo(){
-        vec_outcome = outcomePanel.GetComponent<RectTransform>().position;
-        outcomePanel.GetComponent<RectTransform>().position = new Vector3(outpanelStartPosX, vec_outcome.y, vec_outcome.z);
-        outcomePanel.GetComponent<RectTransform>().DOAnchorMin(new Vector2(0, 0.8f), 0, false);
-        
+    private IEnumerator InitResultInfo(){
         // 其他資訊顯示
+        outcomePanel.SetActive(true);
         img_vtuber.gameObject.SetActive(false);
         buttonPanel.SetActive(false);
+        boardPanel.panel.SetActive(false); // 爛透了的方法
+
         img_percentage.fillAmount = 0;
         lab_similarity.text = "";
         lab_vubter.text = "";
+
+        yield return null;
     }
 
     private void RecordOutcomeToGoogleSheet(string vtuber, int similiarity){
