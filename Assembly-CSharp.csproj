@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\UI\ButtonClick.cs" />
      <Compile Include="Assets\Scripts\UI\CharacterResult.cs" />
      <Compile Include="Assets\Scripts\UI\FullScreenController.cs" />
+     <Compile Include="Assets\Scripts\UI\OptionButton.cs" />
      <Compile Include="Assets\Scripts\UI\ResultUI.cs" />
      <Compile Include="Assets\Scripts\UI\SimilarityBar.cs" />
      <Compile Include="Assets\Scripts\UI\SpeedRoundAnime.cs" />

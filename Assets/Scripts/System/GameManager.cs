@@ -49,6 +49,9 @@ public class GameManager : MonoBehaviour{
     private float preProgress;
     private float nowProgress;
 
+    public float optionsChangeTime = 0.5f;
+    public int lastOptionCount = 0;
+
     void Start(){
         StartGame();
     }
@@ -110,11 +113,11 @@ public class GameManager : MonoBehaviour{
             while (!needSetQuestion) yield return null;
             SetProgressBar();
 
-            SetQuetionWithId(now_question);
-            PlayNextQuestionAnime();
-            if(i != 0){
-                yield return new WaitForSeconds(0.4f);
-            }
+            yield return SetQuetionWithId(now_question);
+            // PlayNextQuestionAnime();
+            // if(i != 0){
+            //     yield return new WaitForSeconds(0.4f);
+            // }
             
             KiaraResponceWhenQuestioning(now_question);
             needSetQuestion = false;
@@ -244,11 +247,9 @@ public class GameManager : MonoBehaviour{
 
     private void SetProgressBar(){
         nowProgress = (float)now_question / (float)questionCount;
-        Debug.Log(nowProgress);
         if(nowProgress > 1){nowProgress = 1;}
         if(nowProgress < 0){nowProgress = 0;}
 
-        Debug.Log(nowProgress);
         progressBarFG.transform.localScale = new Vector3(nowProgress,1,1);
 
         preProgress = nowProgress;
@@ -263,8 +264,9 @@ public class GameManager : MonoBehaviour{
     }
 
 
+    public bool waitSetting = false;
     // 顯示答題介面
-    public void SetQuetionWithId(int questionId){
+    public IEnumerator SetQuetionWithId(int questionId){
         // 取得題目的選項數
         int optionCount = QuestionDataManager.questionOptionCount[questionId];
         
@@ -275,12 +277,35 @@ public class GameManager : MonoBehaviour{
         // 設定選項
         SetOptionsLayout(optionCount);
         SetOptionsActive(optionCount);
+        yield return new WaitForSeconds(0.005f); // 等待設定完畢
+
+        SetOptionsImageLayout(optionCount);
+        // 撥放按鈕切換動畫
+        for (int op = 0; op < optionCount; op++)
+        {
+            Debug.Log($"lastOptionCount{lastOptionCount} op{op}");
+            if(op >= lastOptionCount || optionCount > 4){ // 新出現的選項
+                options[op].GetComponent<OptionButton>().PlayAnime(optionsChangeTime, true, false);
+            }
+            else if(optionCount < lastOptionCount && op >= optionCount){ // 消失的選項
+                options[op].GetComponent<OptionButton>().PlayAnime(optionsChangeTime, false, true);
+            }
+            else{ // 其他選項
+                options[op].GetComponent<OptionButton>().PlayAnime(optionsChangeTime, false, false);
+            }
+        }
+        lastOptionCount = optionCount; // 設定上一題選項數
+
+        yield return new WaitForSeconds(optionsChangeTime); // 等待選項動畫跑完一半，在改變選項
         for (int op = 0; op < optionCount; op++)
         {
             string optionKey = questionId + optionRawKey + op ;
             lab_options[op].text = LeanLocalization.GetTranslationText(optionKey);
         }
+        yield return new WaitForSeconds(optionsChangeTime); // 等待選項動畫跑完，才開放作答
     }
+
+    
 
     private void SetOptionsLayout(int optionCount){
         if(optionCount > 4){
@@ -293,7 +318,9 @@ public class GameManager : MonoBehaviour{
         }
     }
 
+    
     private void SetOptionsActive(int optionCount){
+        // waitSetting = true;
         foreach (GameObject option in options)
         {
             option.SetActive(false);
@@ -301,8 +328,22 @@ public class GameManager : MonoBehaviour{
 
         for (int i = 0; i < optionCount; i++)
         {
+            // 當此題比上一題多選項、切換版面，該選像文字設為空白
+            if(i >= lastOptionCount || optionCount > 4){
+                lab_options[i].text = "";
+                // 爛寫法:將選項變成透明
+                options[i].GetComponent<OptionButton>().SetImageUnActive(); 
+            }
             options[i].SetActive(true);
         }
+        
     } 
+
+    private void SetOptionsImageLayout(int optionCount){
+        for (int i = 0; i < optionCount; i++)
+        {
+            options[i].GetComponent<OptionButton>().SetLayout();
+        }
+    }
 }
 
