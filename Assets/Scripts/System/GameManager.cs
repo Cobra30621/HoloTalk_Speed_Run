@@ -22,9 +22,10 @@ public class GameManager : MonoBehaviour{
     private float lessThanFourOptionsWeight = 500;
     private float optionsHeight = 130;
 
-    public GameObject[] options;
-    public Text[] lab_options;
+    // public GameObject[] options;
+    // public Text[] lab_options;
     public GameObject optionPanel;
+    public OptionBar[] optionBars;
     
     // 字卡系統
     public TextCardSystem textCardSystem;
@@ -99,9 +100,16 @@ public class GameManager : MonoBehaviour{
             yield return new WaitForSeconds(1);
         }
         
+        // 設定選項面板
         optionPanel.SetActive(true);
-        now_question = 0;
+        foreach (OptionBar bar in optionBars)
+        {
+            bar.Init();
+        }
+        yield return new WaitForSeconds(0.01f);
 
+        preOptionCount = 0;
+        now_question = 0;
         needSetQuestion = true;
         canAnswer = false;
         for (int i = 0; i < questionCount; i++)
@@ -111,10 +119,11 @@ public class GameManager : MonoBehaviour{
             SetProgressBar();
 
             SetQuetionWithId(now_question);
-            PlayNextQuestionAnime();
-            if(i != 0){
-                yield return new WaitForSeconds(0.4f);
-            }
+            PlayOptionBarsAnime();
+
+            preOptionCount = optionCount;
+
+            yield return new WaitForSeconds(0.8f); // 等待選項跑完
             
             KiaraResponceWhenQuestioning(now_question);
             needSetQuestion = false;
@@ -141,6 +150,8 @@ public class GameManager : MonoBehaviour{
             SetTextCardWithKey(key, 1);
             // yield return new WaitForSeconds(1);
         }
+        textCardSystem.SetWaitClick(true);
+        while (textCardSystem.waitClick) yield return null;
 
         kiara.SetKiaraAnime(KiaraState.Except);
         yield return new WaitForSeconds(0.5f);
@@ -190,16 +201,6 @@ public class GameManager : MonoBehaviour{
         if(defaults){
             kiara.SetKiaraAnime(KiaraState.Talking);
         }
-
-        // switch (questionId)
-        // {
-        //     case 18:
-        //         // kiara.SetKiaraAnime(KiaraState.Exciting);
-        //         kiara.PlaySFX(3);
-        //         break;
-        //     default:
-        //         break;
-        // }
     }
 
     private void KiaraResponceWhenAnswer(int questionId, int answer){
@@ -225,84 +226,115 @@ public class GameManager : MonoBehaviour{
             }
         }
         
-        // switch (questionId)
-        // {
-        //     case 8:
-        //         if(answer == 1) {kiara.PlaySFX(2);}
-        //         break;
-        //     case 12:
-        //         if(answer == 0) {kiara.PlaySFX(1);}
-        //         break;
-        //     case 18:
-        //         if(answer == 7) {kiara.PlaySFX(1);}
-        //         break;
-        //     default:
-        //         break;
-        // }
     }
 
 
     private void SetProgressBar(){
         nowProgress = (float)now_question / (float)questionCount;
-        Debug.Log(nowProgress);
         if(nowProgress > 1){nowProgress = 1;}
         if(nowProgress < 0){nowProgress = 0;}
 
-        Debug.Log(nowProgress);
+        
         progressBarFG.transform.localScale = new Vector3(nowProgress,1,1);
 
         preProgress = nowProgress;
     }
 
-    private void PlayNextQuestionAnime(){
 
-        for (int op = 0; op < lab_options.Length; op++)
-        {
-            // lab_options[op].text = "";
-        }
-    }
-
+    public bool oneOptionPerBar;
+    private int optionCount;
+    private int preOptionCount;
 
     // 顯示答題介面
     public void SetQuetionWithId(int questionId){
         // 取得題目的選項數
-        int optionCount = QuestionDataManager.questionOptionCount[questionId];
+        optionCount = QuestionDataManager.questionOptionCount[questionId];
         
         // 設定題目
         string questionInfo_key = questionId + "_question";
         SetTextCardWithKey(questionInfo_key, 1);
 
-        // 設定選項
-        SetOptionsLayout(optionCount);
-        SetOptionsActive(optionCount);
+        WhetherOneOptionPerBar(optionCount);
+
+        // 設定選項資訊
         for (int op = 0; op < optionCount; op++)
         {
             string optionKey = questionId + optionRawKey + op ;
-            lab_options[op].text = LeanLocalization.GetTranslationText(optionKey);
+            string info = LeanLocalization.GetTranslationText(optionKey);
+            if(oneOptionPerBar){
+                optionBars[op].SetOption1Info(info);
+            }
+            else{
+                int barID = op / 2;
+                int optionID = op % 2;
+                Debug.Log($"op{op} index{barID}");
+                optionBars[barID].SetOption2Info(optionID, info);
+            }   
+        }
+        
+    }
+
+    private bool preQuestionIsTwoOptionPerBar;
+
+    // 宇宙無敵dirty code OAO
+    private void PlayOptionBarsAnime(){
+
+        bool optionSub; // 選項變少
+        int count; // 取這題與前題選項最多的
+        // Debug.Log($"optionCount{optionCount} preOptionCount{preOptionCount}\n count{count} optionSub{optionSub}"); 
+        if(oneOptionPerBar){ // 單邊選項
+            if(preQuestionIsTwoOptionPerBar){ // 上一題是雙邊選項
+                optionSub = optionCount  < (preOptionCount/2); // 選項變少
+                count = optionSub ? preOptionCount: optionCount; // 取這題與前題選項最多的
+            }
+            else{
+                optionSub = optionCount < preOptionCount; // 選項變少
+                count = optionSub ? preOptionCount: optionCount; // 取這題與前題選項最多的
+            }
+            for (int op = 0; op < count; op++)
+            {   
+                // 選項增加與否
+                if(op >= preOptionCount && !optionSub){ // 選項增加
+                    Debug.Log("Fade In");
+                    optionBars[op].FadeIn();
+                }
+                if(op >= optionCount && optionSub){ // 選項減少
+                    Debug.Log("Fade Out");
+                    optionBars[op].FadeOut();
+                }
+                optionBars[op].PlayAnime(true, false);
+            }
+
+            preQuestionIsTwoOptionPerBar = false;
+        }
+        else{ // 雙邊選項
+            optionSub = (optionCount / 2) < preOptionCount; // 選項變少
+            count = optionSub ? preOptionCount: optionCount; // 取這題與前題選項最多的
+
+            for (int i = 0; i < count; i +=2){
+                // 選項增加與否
+                if(i >= preOptionCount && !optionSub){ // 選項增加
+                    Debug.Log("Fade In");
+                    optionBars[i / 2].FadeIn();
+                }
+                if(i >= optionCount && optionSub){ // 選項減少
+                    Debug.Log("Fade Out");
+                    optionBars[i / 2].FadeOut();
+                }
+                // 選項個數為奇數或偶數
+                if(i == optionCount -1) // optionCount: 5,7,9 
+                    optionBars[i / 2].PlayAnime(false, false);
+                else
+                    optionBars[i / 2].PlayAnime(false, true);
+            }
+            preQuestionIsTwoOptionPerBar = true;
         }
     }
 
-    private void SetOptionsLayout(int optionCount){
-        if(optionCount > 4){
-            option_gridLayoutGroup.constraintCount = 2;
-            option_gridLayoutGroup.cellSize = new Vector2(lessThanFourOptionsWeight, optionsHeight);
-        }
-        else{
-            option_gridLayoutGroup.constraintCount = 1;
-            option_gridLayoutGroup.cellSize = new Vector2(moreThanFourOptionsWeight, optionsHeight);
-        }
+    private bool WhetherOneOptionPerBar(int optionsCount){
+        oneOptionPerBar = (optionsCount < 5);
+        return oneOptionPerBar;
     }
 
-    private void SetOptionsActive(int optionCount){
-        foreach (GameObject option in options)
-        {
-            option.SetActive(false);
-        }
-
-        for (int i = 0; i < optionCount; i++)
-        {
-            options[i].SetActive(true);
-        }
-    } 
 }
 
