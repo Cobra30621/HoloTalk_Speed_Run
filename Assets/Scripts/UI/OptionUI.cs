@@ -15,12 +15,12 @@ public class OptionUI : MonoBehaviour
     {
         
     }
-    public void OnClick()
+    public void BackToStart()
     {
         SceneManager.LoadScene("StartScene");
     }
     //控制全螢幕
-    public void OnClick(bool IsOn)
+    public void SetFullScreen(bool IsOn)
     {
         if(IsOn)
         {
@@ -32,5 +32,14 @@ public class OptionUI : MonoBehaviour
             print("Off");
             Screen.fullScreen=false;
         }
+    }
+    //重設成預設值
+    public void ResetButton()
+    {
+        
+    }
+    public void LanguageChange()
+    {
+        
     }
 }

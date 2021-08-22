@@ -123,11 +123,10 @@ public class ResultUI : MonoBehaviour
 
     private IEnumerator InitResultInfo(){
         // 其他資訊顯示
+        outcomePanel.SetActive(true);
         img_vtuber.gameObject.SetActive(false);
         buttonPanel.SetActive(false);
         boardPanel.panel.SetActive(false); // 爛透了的方法
-        outcomePanel.SetActive(true);
-        
 
         img_percentage.fillAmount = 0;
         lab_similarity.text = "";
