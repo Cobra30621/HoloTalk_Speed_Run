@@ -188,3 +188,6 @@ MonoBehaviour:
   - vTuber: 10
     sprites:
     - {fileID: 21300000, guid: 21bfe23a4defd9c4f8ef95dad86b8744, type: 3}
+  - vTuber: 11
+    sprites:
+    - {fileID: 21300000, guid: eeb3b1dbc6f31ed48b9ad2da980464e2, type: 3}

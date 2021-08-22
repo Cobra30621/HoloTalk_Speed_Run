@@ -14,8 +14,8 @@ public class QuestionDataManager : MonoBehaviour{
     public static int[] questionOptionCount = 
     {2,2,3,2,2,
     2,3,2,2,2,
-    3,2,2,5,3,
-    2,2,2,8};
+    3,2,2,6,3,
+    2,2,2,9};
     private const string optionRawKey = "_option";
 
     // ==================================

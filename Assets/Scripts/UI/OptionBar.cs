@@ -92,7 +92,7 @@ public class OptionBar : MonoBehaviour
 
     public void FadeOut(){
         Sequence sequence = DOTween.Sequence();
-        sequence.AppendInterval(animeTime + 0.01f) // 將所有選項關閉
+        sequence.AppendInterval(animeTime + 0.05f) // 將所有選項關閉
         .AppendCallback(SetAllOptionUnActive)
         .AppendInterval(animeTime - 0.1f)
         .Append(img_head.DOFade(0f, 0.2f));

@@ -54,6 +54,7 @@ _option5,選項5
 13_option2,勞工感謝節
 13_option3,兒童節
 13_option4,每一天
+13_option5,新年
 14_question,7-11 全家 Lawason?
 14_option0,7-11
 14_option1,全家
@@ -76,3 +77,4 @@ _option5,選項5
 18_option5,秘密
 18_option6,給你想像
 18_option7,沒穿內褲
+18_option8,紅和黑

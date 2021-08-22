@@ -222,23 +222,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 583c0000
       m_LastClickedID: 0
-      m_ExpandedIDs: b2b1ffff36b2ffffb6b2ffffbab2ffffa4daffff0ce5ffff02e7ffff0ce7ffff16e7ffff20e7ffff18e8ffff26e8ffff3ce8ffff3ee8ffff7ce9ffffe0f2ffffe2f2ffff86f4ffffecf8fffffaf8ffff10f9ffff12f9ffff12fbffff6e410000044200001e4200003c420000464200000e43000094490000b2490000444a0000624a00006c4a0000d64a0000344b0000
+      m_ExpandedIDs: 1ef8ffff5efbffff2c3a0000a03a0000e83a00007e3b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: KiaraTalk
+        m_OriginalName: KiaraTalk
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 15092
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -312,9 +312,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1126.9036, y: 391.97128, z: -390.25}
+    m_Target: {x: 754.0134, y: 440.73474, z: -439.075}
     speed: 2
-    m_Value: {x: 1126.9036, y: 391.97128, z: -390.25}
+    m_Value: {x: 754.0134, y: 440.73474, z: -439.075}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -364,9 +364,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 781.85614
+    m_Target: 536.5775
     speed: 2
-    m_Value: 781.85614
+    m_Value: 536.5775
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -485,20 +485,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/UI
+    - Assets/ScriptableObject
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/UI
+  - Assets/ScriptableObject
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Desktop\Unity\HoloTalk_Speed_Run
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 66}
-    m_SelectedIDs: 6c440000
-    m_LastClickedID: 17516
-    m_ExpandedIDs: 00000000a03f0000a23f0000a43f0000a63f0000a83f0000aa3f0000ac3f0000ae3f0000be3f000000ca9a3b
+    scrollPos: {x: 0, y: 157}
+    m_SelectedIDs: cc3e0000
+    m_LastClickedID: 16076
+    m_ExpandedIDs: 00000000a83e0000aa3e0000ac3e0000ae3e0000b03e0000b23e0000b43e0000b63e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -526,7 +526,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a03f0000a23f0000a43f0000a63f0000a83f0000aa3f0000ac3f0000ae3f000000ca9a3b
+    m_ExpandedIDs: 00000000a83e0000aa3e0000ac3e0000ae3e0000b03e0000b23e0000b43e0000b63e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -551,8 +551,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 583c0000
+    m_LastClickedInstanceID: 15448
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000b85700009e52000052f20000f64500006e4300000e3a0000743b0000c63c0000ca3c0000f83c00005a47000008430000144300003c40000016400000503a0000aa9b0000e0460000823d0000da3d0000d24e0000d64e0000
     m_RenameOverlay:
@@ -734,7 +734,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 19230
+  m_LastSelectedObjectID: 15236
 --- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -798,4 +798,4 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 1335

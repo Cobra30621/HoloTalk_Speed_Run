@@ -293,6 +293,7 @@ public class GameManager : MonoBehaviour{
             }
             for (int op = 0; op < count; op++)
             {   
+                optionBars[op].PlayAnime(true, false);
                 // 選項增加與否
                 if(op >= preOptionCount && !optionSub){ // 選項增加
                     Debug.Log("Fade In");
@@ -302,7 +303,7 @@ public class GameManager : MonoBehaviour{
                     Debug.Log("Fade Out");
                     optionBars[op].FadeOut();
                 }
-                optionBars[op].PlayAnime(true, false);
+                
             }
 
             preQuestionIsTwoOptionPerBar = false;
@@ -322,7 +323,7 @@ public class GameManager : MonoBehaviour{
                     optionBars[i / 2].FadeOut();
                 }
                 // 選項個數為奇數或偶數
-                if(i == optionCount -1) // optionCount: 5,7,9 
+                if(i == optionCount -1) // optionCount: 7,9 
                     optionBars[i / 2].PlayAnime(false, false);
                 else
                     optionBars[i / 2].PlayAnime(false, true);
@@ -332,7 +333,7 @@ public class GameManager : MonoBehaviour{
     }
 
     private bool WhetherOneOptionPerBar(int optionsCount){
-        oneOptionPerBar = (optionsCount < 5);
+        oneOptionPerBar = (optionsCount < 6);
         return oneOptionPerBar;
     }
 

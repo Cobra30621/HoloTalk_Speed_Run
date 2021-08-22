@@ -10,3 +10,4 @@ HoloMember/A,A-chan
 HoloMember/Coco,Kiryu Coco
 HoloMember/Matsuri,Natsuiro Matsuri
 HoloMember/AZKi,AZKi
+HoloMember/Haachama,Haachama
