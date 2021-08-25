@@ -25,18 +25,28 @@ public class OptionUI : MonoBehaviour
         if(IsOn)
         {
             print("On");
-            Screen.fullScreen=true;
+            GameSettings.fullScreen=1;
         }
         else
         {
             print("Off");
-            Screen.fullScreen=false;
+            GameSettings.fullScreen=0;
         }
+    }
+    public void SetBGMValue(float newvalue)
+    {
+        GameSettings.bgmVolume=newvalue;
+    }
+    public void SetSFXValue(float newvalue)
+    {
+        GameSettings.sfxVolume=newvalue;
     }
     //重設成預設值
     public void ResetButton()
     {
-        
+        GameSettings.sfxVolume=0.5f;
+        GameSettings.bgmVolume=0.5f;
+        GameSettings.fullScreen=1;
     }
     public void LanguageChange()
     {
