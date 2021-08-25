@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour{
         now_question = 0;
         GameSettings.LoadSettings();
         if (localization) localization.SetCurrentLanguage(GameSettings.lang);
-
+        Screen.fullScreen = GameSettings.fullScreen == 1 ? true : false;
 
         optionPanel.SetActive(false);
         StartCoroutine(GameCoroutine());

@@ -40,18 +40,19 @@ public class OptionUI : MonoBehaviour
     }
 
     //控制全螢幕
-    public void SetFullScreen(bool IsOn)
+    public void SetFullScreen()
     {
-        if(IsOn)
-        {
-            print("On");
-            Screen.fullScreen=true;
-        }
-        else
-        {
-            print("Off");
-            Screen.fullScreen=false;
-        }
+        // if(IsOn)
+        // {
+        //     print("On");
+        //     Screen.fullScreen=true;
+        // }
+        // else
+        // {
+        //     print("Off");
+        //     Screen.fullScreen=false;
+        // }
+        Screen.fullScreen = GameSettings.fullScreen == 1 ? true : false;
     }
     //重設成預設值
     public void ResetButton()
@@ -78,4 +79,5 @@ public class OptionUI : MonoBehaviour
         langUI.value = GameSettings.lang;
         localization.SetCurrentLanguage(GameSettings.lang);
     }
+
 }
