@@ -29,5 +29,9 @@ public class GameSettings
         sfxVolume = PlayerPrefs.GetFloat("sfxVolume", 1f);
         bgmVolume = PlayerPrefs.GetFloat("bgmVolume", 0.5f);
         lang = PlayerPrefs.GetInt("lang", 0);
+        Debug.Log($"sfxVolume{sfxVolume}");
+        Debug.Log($"fullScreen{fullScreen}");
+        Debug.Log($"bgmVolume{bgmVolume}");
+        Debug.Log($"lang{lang}");
     }
 }

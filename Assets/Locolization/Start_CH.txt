@@ -1,0 +1,6 @@
+Key,繁體中文
+Start/bgm,音樂
+Start/sfx,音效
+Start/fullScreen,全螢幕
+Start/reset,重製為預設
+Start/back,返回

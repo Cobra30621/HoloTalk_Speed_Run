@@ -67,9 +67,12 @@
      <None Include="Assets\Locolization\Question_CH.txt" />
      <None Include="Assets\Locolization\Question_EN.txt" />
      <None Include="Assets\Lean\READ ME.txt" />
+     <None Include="Assets\Locolization\Kiara_CH.txt" />
      <None Include="Assets\Locolization\HoloMember_EN.txt" />
+     <None Include="Assets\Locolization\Start_EN.txt" />
      <None Include="Assets\Locolization\HoloMember_CH.txt" />
      <None Include="Assets\Locolization\Result_EN.txt" />
+     <None Include="Assets\Locolization\Start_CH.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

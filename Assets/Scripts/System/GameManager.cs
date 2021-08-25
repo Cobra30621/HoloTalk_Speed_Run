@@ -17,15 +17,12 @@ public class GameManager : MonoBehaviour{
     private const string optionRawKey = "_option";
     private const string questionRawKey = "_question";
 
-    public GridLayoutGroup option_gridLayoutGroup;
-    private float moreThanFourOptionsWeight = 1000;
-    private float lessThanFourOptionsWeight = 500;
-    private float optionsHeight = 130;
 
     // public GameObject[] options;
     // public Text[] lab_options;
     public GameObject optionPanel;
     public OptionBar[] optionBars;
+    public LeanLocalization localization;
     
     // 字卡系統
     public TextCardSystem textCardSystem;
@@ -61,7 +58,10 @@ public class GameManager : MonoBehaviour{
     [ContextMenu("StartGaming")]
     public void StartGame(){
         now_question = 0;
-        GameSettings.ResetToDefaults();
+        GameSettings.LoadSettings();
+        if (localization) localization.SetCurrentLanguage(GameSettings.lang);
+
+
         optionPanel.SetActive(false);
         StartCoroutine(GameCoroutine());
         SetProgressBar(); // 設置進度條

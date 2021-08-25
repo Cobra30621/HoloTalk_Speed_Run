@@ -1,0 +1,6 @@
+Key,Enlish
+Start/bgm,BGM
+Start/sfx,SFX
+Start/fullScreen,FullScreen
+Start/reset,Reset to Defult
+Start/back,Back
