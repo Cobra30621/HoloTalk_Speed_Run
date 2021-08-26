@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\WebServer\GoogleSheetRecorder.cs" />
      <Compile Include="Assets\Scripts\WebServer\WebOpenManager.cs" />
      <None Include="Assets\Locolization\Kiara_EN.txt" />
+     <None Include="Assets\Locolization\Game_EN.txt" />
      <None Include="Assets\Locolization\Question_CH.txt" />
      <None Include="Assets\Locolization\Question_EN.txt" />
      <None Include="Assets\Lean\READ ME.txt" />
@@ -72,6 +73,7 @@
      <None Include="Assets\Locolization\HoloMember_EN.txt" />
      <None Include="Assets\Locolization\Start_EN.txt" />
      <None Include="Assets\Locolization\HoloMember_CH.txt" />
+     <None Include="Assets\Locolization\Game_CH.txt" />
      <None Include="Assets\Locolization\Result_EN.txt" />
      <None Include="Assets\Locolization\Start_CH.txt" />
     <Reference Include="UnityEngine">

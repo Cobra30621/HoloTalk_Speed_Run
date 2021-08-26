@@ -1,0 +1,13 @@
+Key,繁體中文
+Stop/setting,設定
+Stop/backToTitle,返回標題
+Stop/retry,重來
+Stop/cancel,取消
+Result/detail,詳細資料
+Result/feedback,回饋表單
+Result/share,分享
+Result/Retry,再玩一次
+Result/name,姓名
+Result/sameAnswer,答題相同
+Result/allAnswer,所有答案
+Result/similiarity,答題相似度

@@ -1,0 +1,13 @@
+Key,Enlish
+Stop/setting,Setting
+Stop/backToTitle,Back To Title
+Stop/retry,Retry
+Stop/cancel,Cancel
+Result/detail,Detail
+Result/feedback,FeedBack
+Result/share,Share
+Result/Retry,Retry
+Result/name,Name
+Result/sameAnswer,Same Answers
+Result/allAnswer,All Answers
+Result/similiarity,Similiarity

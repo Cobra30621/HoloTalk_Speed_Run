@@ -36,7 +36,7 @@ public class OptionUI : MonoBehaviour
 
     public void CloseOptionUI(){
         boardPanel.ClosePanel();
-        SaveSettings();
+        // SaveSettings();
     }
 
     //控制全螢幕
