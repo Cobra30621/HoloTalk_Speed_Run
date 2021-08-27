@@ -69,3 +69,13 @@ MonoBehaviour:
     answer: 6
     kiaraState: 2
     kiaraSFX: 4
+  - description: "\u5167\u8932\u984F\u8272"
+    questionId: 18
+    answer: 7
+    kiaraState: 6
+    kiaraSFX: 1
+  - description: "\u5167\u8932\u984F\u8272"
+    questionId: 18
+    answer: 6
+    kiaraState: 6
+    kiaraSFX: 4

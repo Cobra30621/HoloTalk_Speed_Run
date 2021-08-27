@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 954f33467cd1e3244bb4f39b8da9ca77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEditMode: 1
+  isEditMode: 0
 --- !u!4 &571969290
 Transform:
   m_ObjectHideFlags: 0
@@ -2005,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34dc155e163b61a49ab54cb897c35591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionData: {fileID: 11400000, guid: 3e87b188ffecfcb4fa0e1bcf994c131f, type: 2}
+  questionData: {fileID: 11400000, guid: f1456a5d5008cd547b9efe4aab043145, type: 2}
 --- !u!1 &860155193
 GameObject:
   m_ObjectHideFlags: 0
@@ -7210,8 +7210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8beeb185599b9bc49bbc6af6ec30c270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionData: {fileID: 11400000, guid: 3e87b188ffecfcb4fa0e1bcf994c131f, type: 2}
+  questionData: {fileID: 11400000, guid: f1456a5d5008cd547b9efe4aab043145, type: 2}
   csvLoader: {fileID: 4580224022209512568}
+  localization: {fileID: 4428177818052056579}
 --- !u!1 &4640494922187952536
 GameObject:
   m_ObjectHideFlags: 0
@@ -8556,7 +8557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7c0f870c42ba242b92a3a64aff9611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionData: {fileID: 11400000, guid: 3e87b188ffecfcb4fa0e1bcf994c131f, type: 2}
+  questionData: {fileID: 11400000, guid: f1456a5d5008cd547b9efe4aab043145, type: 2}
   showSpriteNum: 10
   shortInterval: 0.1
   longInterval: 0.4

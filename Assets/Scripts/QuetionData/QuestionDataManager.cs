@@ -8,6 +8,7 @@ public class QuestionDataManager : MonoBehaviour{
     // 資料庫
     public QuestionData questionData;
     public CsvLoader csvLoader;
+    public LeanLocalization localization;
 
 
     // 每一題的選項數量
@@ -32,6 +33,8 @@ public class QuestionDataManager : MonoBehaviour{
     private void SetQuestionData(){
         List<Question> questionsList = new List<Question>();
 
+        // 語言設定為中文
+        localization.SetCurrentLanguage(1);
         // 問題的數量
         int questionCount =  questionOptionCount.Length ;
 

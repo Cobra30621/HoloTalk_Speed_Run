@@ -9,7 +9,6 @@ public class QuestionData: ScriptableObject {
     public List<Answerer> answerersList;
     public List<VTuberOutcome> vTuberOutcomesList;
 
-
     public Question GetQuestionById(int id){
         int questionNum = questionsList.Count;
         if(id >= questionNum){
@@ -45,6 +44,7 @@ public class Question // 一道題目
     public int id;
     public string questionInfo;         //question text
     public List<string> options;        //options to select
+
 }
 
 
