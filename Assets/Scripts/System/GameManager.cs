@@ -223,11 +223,10 @@ public class GameManager : MonoBehaviour{
             int f = Random.Range(0, defaultStateWhenAnswering.Length);
             kiara.SetKiaraAnime(defaultStateWhenAnswering[f]);
 
-            // 有一半機率會發聲 
             int f2 = Random.Range(0, defalutSFXWhenAnswering.Length);
             if(f2 < defalutSFXWhenAnswering.Length){
                 // 先暫停播音效
-                // kiara.PlaySFX(defalutSFXWhenAnswering[f2]);
+                kiara.PlaySFX(defalutSFXWhenAnswering[f2]);
             }
         }
         

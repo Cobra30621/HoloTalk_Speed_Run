@@ -39,8 +39,33 @@ MonoBehaviour:
     answer: 0
     kiaraState: 6
     kiaraSFX: 4
-  - description: "\u6C92\u5167\u8932"
+  - description: "\u5167\u8932\u984F\u8272"
     questionId: 18
-    answer: 7
+    answer: 1
     kiaraState: 6
-    kiaraSFX: 1
+    kiaraSFX: 4
+  - description: "\u5167\u8932\u984F\u8272"
+    questionId: 18
+    answer: 2
+    kiaraState: 6
+    kiaraSFX: 4
+  - description: "\u5167\u8932\u984F\u8272"
+    questionId: 18
+    answer: 3
+    kiaraState: 6
+    kiaraSFX: 4
+  - description: "\u5167\u8932\u984F\u8272"
+    questionId: 18
+    answer: 4
+    kiaraState: 6
+    kiaraSFX: 4
+  - description: "\u5167\u8932\u984F\u8272"
+    questionId: 18
+    answer: 5
+    kiaraState: 5
+    kiaraSFX: 2
+  - description: "\u5167\u8932\u984F\u8272"
+    questionId: 18
+    answer: 6
+    kiaraState: 2
+    kiaraSFX: 4

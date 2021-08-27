@@ -92,6 +92,6 @@ public enum KiaraState{
 
 [System.Serializable]
 public enum KiaraSFX{
-    SpeedRun = 0 , Yabe, Sad , Pant, Ohh, NNN, Why ,None
+    SpeedRun = 0 , Yabe =1, Sad =2, Pant=3, Ohh=4, NNN=5, Why=6 , OhhLow=7, OK=8, allRight =9, nnnnn = 10, ohhQuestion =11, None = 100
 }
 // 0:holotalkspeedrun 1:yabe 2:sad 3:pant color 4:ohh 5:nnn 6:why
