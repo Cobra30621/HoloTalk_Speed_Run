@@ -47,6 +47,11 @@ public class GameManager : MonoBehaviour{
     private float preProgress;
     private float nowProgress;
 
+    public bool oneOptionPerBar;
+    private int optionCount;
+    private int preOptionCount;
+    private bool preQuestionIsTwoOptionPerBar;
+
     void Start(){
         StartGame();
     }
@@ -118,7 +123,7 @@ public class GameManager : MonoBehaviour{
             while (!needSetQuestion) yield return null;
             SetProgressBar();
 
-            SetQuetionWithId(now_question);
+            SetQuetionInfoWithId(now_question);
             PlayOptionBarsAnime();
 
             preOptionCount = optionCount;
@@ -240,13 +245,8 @@ public class GameManager : MonoBehaviour{
         preProgress = nowProgress;
     }
 
-
-    public bool oneOptionPerBar;
-    private int optionCount;
-    private int preOptionCount;
-
     // 顯示答題介面
-    public void SetQuetionWithId(int questionId){
+    public void SetQuetionInfoWithId(int questionId){
         // 取得題目的選項數
         optionCount = QuestionDataManager.questionOptionCount[questionId];
         
@@ -271,10 +271,39 @@ public class GameManager : MonoBehaviour{
                 optionBars[barID].SetOption2Info(optionID, info);
             }   
         }
-        
     }
 
-    private bool preQuestionIsTwoOptionPerBar;
+    public void SetQuestionInfoWhenChangeLanguage(){
+        // 取得題目的選項數
+        optionCount = QuestionDataManager.questionOptionCount[now_question];
+        
+        // 設定題目
+        string questionInfo_key = now_question + "_question";
+        string questionInfo = LeanLocalization.GetTranslationText(questionInfo_key);
+        textCardSystem.SetTextCardInfo(questionInfo);
+
+        WhetherOneOptionPerBar(optionCount);
+
+        // 設定選項資訊
+        for (int op = 0; op < optionCount; op++)
+        {
+            string optionKey = now_question + optionRawKey + op ;
+            string info = LeanLocalization.GetTranslationText(optionKey);
+            if(oneOptionPerBar){
+                optionBars[op].SetOption1Info(info);
+                optionBars[op].SetOptionLab();
+            }
+            else{
+                int barID = op / 2;
+                int optionID = op % 2;
+                Debug.Log($"op{op} index{barID}");
+                optionBars[barID].SetOption2Info(optionID, info);
+                optionBars[op].SetOptionLab();
+            } 
+        }
+    }
+
+    
 
     // 宇宙無敵dirty code OAO
     private void PlayOptionBarsAnime(){

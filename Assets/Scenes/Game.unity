@@ -3057,6 +3057,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7628531110156408676, guid: 7085db78ca982424dac5683d7643fb54,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628531110156408676, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1304904246}
@@ -3064,6 +3069,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseOptionPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628531110156408676, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628531110156408676, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628531110156408676, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1965815775}
+    - target: {fileID: 7628531110156408676, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetQuestionInfoWhenChangeLanguage
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628531110156408676, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7628531111269110306, guid: 7085db78ca982424dac5683d7643fb54,
         type: 3}

@@ -45,6 +45,12 @@ public class TextCardSystem : MonoBehaviour
         GO_textCard_FG.transform.position = transform_textBox.position;
     }
 
+    public void SetTextCardInfo(string info){
+        now_text = info;
+        lab_BG.text = now_text;
+        lab_FG.text = now_text;
+    }
+
     public void OnClick(){
         SetWaitClick(false);
     }

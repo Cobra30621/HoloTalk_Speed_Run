@@ -24,6 +24,10 @@ public class OptionBar : MonoBehaviour
     private bool oneOption;
     private bool option2;
 
+    [SerializeField]private string info_option1;
+    [SerializeField]private string info_option2_1;
+    [SerializeField]private string info_option2_2;
+
     [ContextMenu("Test")]
     public void Test(){
 
@@ -41,26 +45,10 @@ public class OptionBar : MonoBehaviour
         sequence.AppendInterval(animeTime)
         .AppendCallback(SetOptionActive)
         .AppendCallback(SetOptionLab);
-        // Sequence sequence = DOTween.Sequence();
-        // if(fadeIn){
-        //     // 背景關閉再撥放
-        //     // img_bar.color = new Color(1,1,1,0);
-        //     sequence.AppendInterval(animeTime)
-        //     .Append(img_bar.DOFade(1f, 0f));
-        // }
 
-        // if(fadeOut){
-        //     sequence.PrependInterval(animeTime)
-        //     .Append(img_bar.DOFade(0f, 0f))
-        //     .Append(img_buckle.DOFade(0f, animeTime + 0.2f));
-        // }
     }
 
-    [SerializeField]private string info_option1;
-    [SerializeField]private string info_option2_1;
-    [SerializeField]private string info_option2_2;
-
-    private void SetOptionLab(){
+    public void SetOptionLab(){
         lab_option1.text = info_option1;
         lab_option2_1.text = info_option2_1;
         lab_option2_2.text = info_option2_2;
