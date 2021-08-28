@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\UI\BoardPanel.cs" />
      <Compile Include="Assets\Scripts\UI\ButtonClick.cs" />
      <Compile Include="Assets\Scripts\UI\CharacterResult.cs" />
+     <Compile Include="Assets\Scripts\UI\CreditsUI.cs" />
      <Compile Include="Assets\Scripts\UI\FullScreenController.cs" />
      <Compile Include="Assets\Scripts\UI\OptionBar.cs" />
      <Compile Include="Assets\Scripts\UI\OptionUI.cs" />
