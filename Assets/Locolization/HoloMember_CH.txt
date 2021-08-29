@@ -3,7 +3,7 @@ HoloMember/Shion,紫咲詩音
 HoloMember/Subaru,大空昴
 HoloMember/Miko,櫻巫女
 HoloMember/Mel,夜空梅露
-HoloMember/Aki,亞綺·羅森塔爾
+HoloMember/Aki,亞綺
 HoloMember/Suisei,星街彗星
 HoloMember/Roboco,蘿蔔子 
 HoloMember/A,A醬

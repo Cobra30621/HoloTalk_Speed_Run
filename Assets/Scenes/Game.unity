@@ -323,7 +323,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4428177818052056580}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &48138995
 MonoBehaviour:
@@ -679,7 +679,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lab_BG: {fileID: 803514651}
+  lean_BG: {fileID: 8300907146600865577}
   lab_FG: {fileID: 848420238}
+  lean_FG: {fileID: 848420240}
   img_BG: {fileID: 8300907146600865576}
   img_FG: {fileID: 848420239}
   sprite_cardTypes:
@@ -1221,7 +1223,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4428177818052056580}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &320200860
 MonoBehaviour:
@@ -1627,7 +1629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 954f33467cd1e3244bb4f39b8da9ca77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isEditMode: 1
+  isEditMode: 0
 --- !u!4 &571969290
 Transform:
   m_ObjectHideFlags: 0
@@ -2377,6 +2379,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &848420240 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3247314309516782281, guid: 9e426fa0e51e3484baf38ae619376a95,
+    type: 3}
+  m_PrefabInstance: {fileID: 848420235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &859071472
@@ -3480,7 +3494,7 @@ PrefabInstance:
     - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
         type: 3}
@@ -3515,6 +3529,56 @@ PrefabInstance:
     - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1305775772}
+    - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SaveSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 1965815775}
+    - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetQuestionInfoWhenChangeLanguage
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710933069416964794, guid: d4ca7a21c0d17ff44b0c51b608c7632f,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3750,6 +3814,61 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2991293355809644527, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991293355809644527, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991293355809644527, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991293355809644527, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991293355809644527, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991293355809644527, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1965815775}
+    - target: {fileID: 2991293355809644527, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: SetQuestionInfoWhenChangeLanguage
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991293355809644527, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991293355809644527, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1305775772}
+    - target: {fileID: 2991293355809644527, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SaveSettings
+      objectReference: {fileID: 0}
+    - target: {fileID: 2991293355809644527, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4705745974600005092, guid: 7085db78ca982424dac5683d7643fb54,
         type: 3}
       propertyPath: m_IsActive
@@ -3774,6 +3893,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: -447.6941
+      objectReference: {fileID: 0}
+    - target: {fileID: 7628531110156408674, guid: 7085db78ca982424dac5683d7643fb54,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7628531110156408676, guid: 7085db78ca982424dac5683d7643fb54,
         type: 3}
@@ -4023,6 +4147,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1305775770}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1305775772 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7628531111147466355, guid: 7085db78ca982424dac5683d7643fb54,
+    type: 3}
+  m_PrefabInstance: {fileID: 1305775770}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90090863164a27a478c655c438849459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1356689604 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4615466715519909457, guid: 51789b709e4a7b944af1aea17bc3b289,
@@ -4495,6 +4631,81 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1617888425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1617888426}
+  - component: {fileID: 1617888427}
+  m_Layer: 0
+  m_Name: KiaraTalk_CN
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1617888426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617888425}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.63602, y: 1.3627483, z: -0.20657659}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4428177818052056580}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1617888427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617888425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086ae75064fca9f46b315403da7f5d20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Source: {fileID: 4900000, guid: 1a2aa6ad044fc5641a5f89d6ae54eb29, type: 3}
+  Language: "\u7E41\u9AD4\u4E2D\u6587"
+  Separator: ','
+  NewLine: \n
+  Comment: 
+  Cache: 0
+  entries:
+  - Name: Key
+    Text: "\u7E41\u9AD4\u4E2D\u6587"
+  - Name: Kiara/Intro1
+    Text: "\u6B61\u8FCE\u4F86\u5230\u812B\u53E3\u79C0\u7BC0\u76EE HoloTalk !!!"
+  - Name: Kiara/Intro2
+    Text: "\u6211\u662F\u4E3B\u6301\u4EBA\u5C0F\u9CE5\u904A\u742A\u4E9E\u62C9"
+  - Name: Kiara/Intro3
+    Text: "\u63A5\u4E0B\u4F86\u8981\u9032\u5165\u5FEB\u554F\u5FEB\u7B54\u7684\u74B0\u7BC0\u3002"
+  - Name: Kiara/Intro4
+    Text: "\u6211\u6703\u63D0\u51FA\u4E00\u500B\u554F\u984C\uFF0C\u4F60\u5FC5\u9808\u8981\u9078\u64C7\u4E00\u500B\u4F60\u504F\u597D\u7684\u9078\u9805\u3002"
+  - Name: Kiara/Intro5
+    Text: "\u5982\u679C\u90FD\u6C92\u6709\u504F\u597D\u7684\u9078\u9805\uFF0C\u53EF\u4EE5\u9EDE\u64CASkip\u9375\u8DF3\u904E\u3002"
+  - Name: Kiara/Intro6
+    Text: "\u8981\u99AC\u4E0A\u56DE\u7B54\uFF0C\u7D55\u5C0D\u4E0D\u80FD\u601D\u8003\u6B50\uFF01"
+  - Name: Kiara/Intro7
+    Text: "\u6E96\u5099\u597D\u4E86\u55CE ?"
+  - Name: Kiara/Intro8
+    Text: HoloTalk Speed Round!
+  - Name: Kiara/End1
+    Text: "\u611F\u8B1D\u4F60\u7684\u56DE\u7B54 ~"
+  - Name: Kiara/End2
+    Text: "\u5728\u4F60\u4E4B\u524D\u670911\u4F4D\u4F86\u8CD3\u53C3\u52A0\u904E HoloTalk
+      Speed Round\u3002"
+  - Name: Kiara/End3
+    Text: "\u5176\u4E2D\u7B54\u984C\u72C0\u6CC1\u8207\u4F60\u6700\u76F8\u8FD1\u7684\u4EBA\u662F......"
 --- !u!1 &1620636671
 GameObject:
   m_ObjectHideFlags: 0
@@ -4954,7 +5165,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4428177818052056580}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1698969388
 MonoBehaviour:
@@ -6921,7 +7132,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4428177818052056580}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3647569382705456004
 Animator:
@@ -7181,7 +7392,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4428177818052056580}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4428177818052056578
 GameObject:
@@ -7262,6 +7473,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 657467405574737329}
+  - {fileID: 1617888426}
   - {fileID: 4428177819569665401}
   - {fileID: 2898452907311292803}
   - {fileID: 4296731340619261680}
@@ -7300,7 +7512,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4428177818052056580}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4428177819569665402
 MonoBehaviour:
@@ -7350,9 +7562,9 @@ MonoBehaviour:
   - Name: 1_option1
     Text: Noodles
   - Name: 2_question
-    Text: Guzto Or Saizeriya?
+    Text: Gusto Or Saizeriya?
   - Name: 2_option0
-    Text: Guzto
+    Text: Gusto
   - Name: 2_option1
     Text: Saizeriya
   - Name: 2_option2
@@ -7524,29 +7736,30 @@ MonoBehaviour:
   Comment: 
   Cache: 0
   entries:
+  - Name: Key
+    Text: Enlish
   - Name: Kiara/Intro1
-    Text: "\u6B61\u8FCE\u4F86\u5230\u812B\u53E3\u79C0\u7BC0\u76EE HOLOTALK !!!"
+    Text: Welcome to a talk show HoloTalk!!!
   - Name: Kiara/Intro2
-    Text: "\u6211\u662F\u4E3B\u6301\u4EBA\u5C0F\u9CE5\u904A\u742A\u4E9E\u62C9"
+    Text: I am the host. Takanashi Kiara
   - Name: Kiara/Intro3
-    Text: "\u63A5\u4E0B\u4F86\u8981\u9032\u5165\u5FEB\u554F\u5FEB\u7B54\u7684\u74B0\u7BC0\u3002"
+    Text: I have a speed question for you.
   - Name: Kiara/Intro4
-    Text: "\u6211\u6703\u63D0\u51FA\u4E00\u500B\u554F\u984C\uFF0C\u4F60\u5FC5\u9808\u8981\u9078\u64C7\u4E00\u500B\u4F60\u504F\u597D\u7684\u9078\u9805\u3002"
+    Text: I will ask you a question. You need to choose the option you prefer.
   - Name: Kiara/Intro5
-    Text: "\u5982\u679C\u90FD\u6C92\u6709\u504F\u597D\u7684\u9078\u9805\uFF0C\u53EF\u4EE5\u9EDE\u64CASkip\u9375\u8DF3\u904E\u3002"
+    Text: Click the Skip button if no option you prefer.
   - Name: Kiara/Intro6
-    Text: "\u8981\u99AC\u4E0A\u56DE\u7B54\uFF0C\u7D55\u5C0D\u4E0D\u80FD\u601D\u8003\u6B50\uFF01"
+    Text: Don't think about it. Just quickly answers the question.
   - Name: Kiara/Intro7
-    Text: "\u6E96\u5099\u597D\u4E86\u55CE ?"
+    Text: Are you ready?
   - Name: Kiara/Intro8
-    Text: HoloTalk Speed Run!
+    Text: HoloTalk Speed Round!
   - Name: Kiara/End1
-    Text: "\u611F\u8B1D\u4F60\u7684\u56DE\u7B54 ~"
+    Text: Thank you for answering~
   - Name: Kiara/End2
-    Text: "\u5728\u4F60\u4E4B\u524D\u670911\u4F4D\u4F86\u8CD3\u53C3\u52A0\u904E HoloTalk
-      Speed Run\u3002"
+    Text: We have 12 guests join HoloTalk Speed Round.
   - Name: Kiara/End3
-    Text: "\u5176\u4E2D\u7B54\u984C\u72C0\u6CC1\u8207\u4F60\u6700\u76F8\u8FD1\u7684\u4EBA\u662F......"
+    Text: The guest whose answer is most similar to you is ......
 --- !u!114 &4580224022209512568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8270,7 +8483,7 @@ MonoBehaviour:
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 30
   m_Viewport: {fileID: 0}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
@@ -8688,25 +8901,25 @@ MonoBehaviour:
   - Name: Key
     Text: Enlish
   - Name: HoloMember/Shion
-    Text: Murasaki Shion
+    Text: Shion
   - Name: HoloMember/Subaru
-    Text: Oozora Subaru
+    Text: Subaru
   - Name: HoloMember/Miko
-    Text: Sakura Miko
+    Text: Miko
   - Name: HoloMember/Mel
-    Text: Yozora Mel
+    Text: Mel
   - Name: HoloMember/Aki
-    Text: Aki rosenthal
+    Text: Aki
   - Name: HoloMember/Suisei
-    Text: Hoshimachi Suisei
+    Text: Suisei
   - Name: HoloMember/Roboco
-    Text: Roboco San
+    Text: Roboco
   - Name: HoloMember/A
     Text: A-chan
   - Name: HoloMember/Coco
-    Text: Kiryu Coco
+    Text: Coco
   - Name: HoloMember/Matsuri
-    Text: Natsuiro Matsuri
+    Text: Matsuri
   - Name: HoloMember/AZKi
     Text: AZKi
   - Name: HoloMember/Haachama
@@ -9617,6 +9830,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8300907146600865577 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3247314309516782281, guid: 9e426fa0e51e3484baf38ae619376a95,
+    type: 3}
+  m_PrefabInstance: {fileID: 8300907146600865575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee4021ce59f313499a5cab041f02aba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8475512208222416487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9665,9 +9890,9 @@ MonoBehaviour:
   - Name: 1_option1
     Text: "\u9EB5"
   - Name: 2_question
-    Text: Guzto Or Saizeriya?
+    Text: "Gusto Or Saizeriya (\u5169\u8005\u7686\u65E5\u672C\u9023\u9396\u5BB6\u5EAD\u9910\u5EF3)?"
   - Name: 2_option0
-    Text: Guzto
+    Text: Gusto
   - Name: 2_option1
     Text: Saizeriya
   - Name: 2_option2
@@ -9679,17 +9904,17 @@ MonoBehaviour:
   - Name: 3_option1
     Text: Instagram
   - Name: 4_question
-    Text: "\u53EF\u6A02\u6216\u767E\u4E8B?"
+    Text: "\u53EF\u53E3\u53EF\u6A02\u6216\u767E\u4E8B\u53EF\u6A02?"
   - Name: 4_option0
-    Text: "\u53EF\u6A02"
+    Text: "\u53EF\u53E3\u53EF\u6A02"
   - Name: 4_option1
-    Text: "\u767E\u4E8B"
+    Text: "\u767E\u4E8B\u53EF\u6A02"
   - Name: 5_question
     Text: "\u860B\u679C\u6C41\u6216\u67F3\u4E01\u6C41?"
   - Name: 5_option0
-    Text: Apple juice
+    Text: "\u860B\u679C\u6C41"
   - Name: 5_option1
-    Text: Orange juice
+    Text: "\u67F3\u4E01\u6C41"
   - Name: 6_question
     Text: "\u722C\u5C71\u6216\u8DD1\u99AC\u62C9\u677E?"
   - Name: 6_option0

@@ -398,7 +398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &150186579
 RectTransform:
   m_ObjectHideFlags: 0
@@ -533,7 +533,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 39, y: 161}
+  m_AnchoredPosition: {x: 39, y: 72.19998}
   m_SizeDelta: {x: 256.0304, y: 62.90007}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &237005151
@@ -2755,7 +2755,7 @@ PrefabInstance:
     - target: {fileID: 2710415832291230457, guid: d8122015ae37c8d4e95a11d235cf471c,
         type: 3}
       propertyPath: m_ScrollSensitivity
-      value: 10
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2710415832291230457, guid: d8122015ae37c8d4e95a11d235cf471c,
         type: 3}
@@ -2973,12 +2973,11 @@ PrefabInstance:
       value: "\u3010Author\u3011\r\nDesign: Cobra \u9695\u77F3\r\nArt: \u83F2\u77AC\r\nProgramming:
         \u51A0\u4F51 Cobra\r\n\r\n\u3010Image\u3011\r\nTakanashi Kiara Ch. hololive-EN 
         // HoloTalk Cover\r\n\u3066\u3093\u3071\u308B1 // \u300C\u30D5\u30EA\u30FC\u7D20\u6750\u300D\u6C34\u5F69\u98A8\u3010\u90FD\u4F1A\u591C\u666F\u30FB\u7A7A\u6D77\u5915\u666F\u3011\u540410\u679A\u30BB\u30C3\u30C8\n\r\n\u3010Sound
-        Clip\u3011\r\nTakanashi Kiara Ch. hololive-EN // HOLOTALK\r\n\r\n\u3010Music\u3011\r\nminari
-        studio \u307F\u306A\u308A\u30B9\u30BF\u30B8\u30AA  // HOLOTALK with Takanashi
-        Kiara - OP Theme\r\nDOVA-SYNDROME YouTube Official // RGB @ \u30D5\u30EA\u30FCBGM\r\n\r\nThis
-        game is derived from Cover Corporation's hololive property, for non-commercial
-        purpose.\r\nThis game is produced according to Cover Corporation's Derivative
-        Work License Agreement. "
+        Clip\u3011\r\nTakanashi Kiara Ch. hololive-EN // HOLOTALK\r\n\r\n\u3010Music\u3011\r\nDOVA-SYNDROME
+        YouTube Official // RGB @ \u30D5\u30EA\u30FCBGM\r\n\r\nThis game is derived
+        from Cover Corporation's hololive property, for non-commercial purpose.\r\nThis
+        game is produced according to Cover Corporation's Derivative Work License
+        Agreement. "
       objectReference: {fileID: 0}
     - target: {fileID: 8501353828520901697, guid: d8122015ae37c8d4e95a11d235cf471c,
         type: 3}

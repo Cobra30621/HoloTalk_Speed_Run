@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Lean.Localization;
 
 public class OptionBar : MonoBehaviour
 {
@@ -12,9 +13,13 @@ public class OptionBar : MonoBehaviour
     [SerializeField]private GameObject option2_1;
     [SerializeField]private GameObject option2_2;
 
-    [SerializeField]private Text lab_option1;
-    [SerializeField]private Text lab_option2_1;
-    [SerializeField]private Text lab_option2_2;
+    // [SerializeField]private Text lab_option1;
+    // [SerializeField]private Text lab_option2_1;
+    // [SerializeField]private Text lab_option2_2;
+
+    [SerializeField]private LeanLocalizedText lean_option1;
+    [SerializeField]private LeanLocalizedText lean_option2_1;
+    [SerializeField]private LeanLocalizedText lean_option2_2;
 
     [SerializeField]private Transform endPos;
     public Ease moveEase;
@@ -49,9 +54,13 @@ public class OptionBar : MonoBehaviour
     }
 
     public void SetOptionLab(){
-        lab_option1.text = info_option1;
-        lab_option2_1.text = info_option2_1;
-        lab_option2_2.text = info_option2_2;
+        // lab_option1.text = info_option1;
+        // lab_option2_1.text = info_option2_1;
+        // lab_option2_2.text = info_option2_2;
+
+        lean_option1.TranslationName = info_option1;
+        lean_option2_1.TranslationName = info_option2_1;
+        lean_option2_2.TranslationName = info_option2_2;
     }
 
     // 設定選項文字

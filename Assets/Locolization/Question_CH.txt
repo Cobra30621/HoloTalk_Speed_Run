@@ -12,19 +12,19 @@ _option5,選項5
 1_question,飯或麵?
 1_option0,飯
 1_option1,麵
-2_question,Guzto Or Saizeriya?
-2_option0,Guzto
+2_question,Gusto Or Saizeriya (兩者皆日本連鎖家庭餐廳)?
+2_option0,Gusto
 2_option1,Saizeriya
 2_option2,都喜歡
 3_question,Twitter or Instagram?
 3_option0,Twitter
 3_option1,Instagram
-4_question,可樂或百事?
-4_option0,可樂
-4_option1,百事
+4_question,可口可樂或百事可樂?
+4_option0,可口可樂
+4_option1,百事可樂
 5_question,蘋果汁或柳丁汁?
-5_option0,Apple juice
-5_option1,Orange juice
+5_option0,蘋果汁
+5_option1,柳丁汁
 6_question,爬山或跑馬拉松?
 6_option0,爬山
 6_option1,跑馬拉松

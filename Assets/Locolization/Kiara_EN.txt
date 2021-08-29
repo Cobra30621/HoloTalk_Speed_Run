@@ -1,11 +1,12 @@
-Kiara/Intro1, 歡迎來到脫口秀節目 HOLOTALK !!!
-Kiara/Intro2, 我是主持人小鳥遊琪亞拉
-Kiara/Intro3, 接下來要進入快問快答的環節。
-Kiara/Intro4, 我會提出一個問題，你必須要選擇一個你偏好的選項。
-Kiara/Intro5, 如果都沒有偏好的選項，可以點擊Skip鍵跳過。
-Kiara/Intro6, 要馬上回答，絕對不能思考歐！
-Kiara/Intro7, 準備好了嗎 ?
-Kiara/Intro8, HoloTalk Speed Run!
-Kiara/End1, 感謝你的回答 ~
-Kiara/End2, 在你之前有11位來賓參加過 HoloTalk Speed Run。
-Kiara/End3, 其中答題狀況與你最相近的人是......
+Key,Enlish
+Kiara/Intro1,Welcome to a talk show HoloTalk!!!
+Kiara/Intro2,I am the host. Takanashi Kiara
+Kiara/Intro3,I have a speed question for you.
+Kiara/Intro4,I will ask you a question. You need to choose the option you prefer. 
+Kiara/Intro5,Click the Skip button if no option you prefer. 
+Kiara/Intro6,Don't think about it. Just quickly answers the question.
+Kiara/Intro7,Are you ready?
+Kiara/Intro8,HoloTalk Speed Round!
+Kiara/End1,Thank you for answering~
+Kiara/End2,We have 12 guests join HoloTalk Speed Round.
+Kiara/End3,The guest whose answer is most similar to you is ......

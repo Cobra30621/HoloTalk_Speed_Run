@@ -86,11 +86,11 @@ public class GameManager : MonoBehaviour{
     {
         yield return new WaitForSeconds(0.4f);
         bgm.PlayBGM(0);
-        kiara.SetKiaraAnime(KiaraState.KeepTalking);
-        for (int i = 1; i <= 6; i++)
+        // kiara.SetKiaraAnime(KiaraState.KeepTalking);
+        for (int i = 1; i <= 7; i++)
         {
             textCardSystem.SetWaitClick(true);
-
+            kiara.SetKiaraAnime(KiaraState.Talking);
             string key = $"Kiara/Intro{i}";
             SetTextCardWithKey(key, 1);
 
@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour{
         speedRoundAnime.PlayAnime();
         kiara.PlaySFX(0);
         
-        SetTextCardWithKey("Kiara/Intro7", 1);
+        SetTextCardWithKey("Kiara/Intro8", 1);
         // 垃圾寫法，等5秒
         for (int i = 0; i < 5; i++)
         {
@@ -149,9 +149,10 @@ public class GameManager : MonoBehaviour{
         optionPanel.SetActive(false);
         yield return new WaitForSeconds(1);
 
-        kiara.SetKiaraAnime(KiaraState.KeepTalking);
+        // kiara.SetKiaraAnime(KiaraState.KeepTalking);
         for (int i = 1; i <= 3; i++)
         {
+            kiara.SetKiaraAnime(KiaraState.Talking);
             if(i != 1){
                 textCardSystem.SetWaitClick(true);
                 while (textCardSystem.waitClick) yield return null;
@@ -161,6 +162,8 @@ public class GameManager : MonoBehaviour{
             SetTextCardWithKey(key, 1);
             // yield return new WaitForSeconds(1);
         }
+        
+        kiara.SetKiaraAnime(KiaraState.Talking);
         textCardSystem.SetWaitClick(true);
         while (textCardSystem.waitClick) yield return null;
 
@@ -173,8 +176,8 @@ public class GameManager : MonoBehaviour{
     }
 
     private void SetTextCardWithKey(string key , int cardType){
-        string info = LeanLocalization.GetTranslationText(key);
-        TextCard textCard = new TextCard(info, cardType);
+        // string info = LeanLocalization.GetTranslationText(key);
+        TextCard textCard = new TextCard(key, cardType);
         textCardSystem.SetNextCard(textCard);
     }
 
@@ -273,50 +276,21 @@ public class GameManager : MonoBehaviour{
         for (int op = 0; op < optionCount; op++)
         {
             string optionKey = questionId + optionRawKey + op ;
-            string info = LeanLocalization.GetTranslationText(optionKey);
+            // string info = LeanLocalization.GetTranslationText(optionKey);
             if(oneOptionPerBar){
-                optionBars[op].SetOption1Info(info);
+                // optionBars[op].SetOption1Info(info);
+                optionBars[op].SetOption1Info(optionKey);
             }
             else{
                 int barID = op / 2;
                 int optionID = op % 2;
                 Debug.Log($"op{op} index{barID}");
-                optionBars[barID].SetOption2Info(optionID, info);
+                optionBars[barID].SetOption2Info(optionID, optionKey);
             }   
         }
     }
 
-    public void SetQuestionInfoWhenChangeLanguage(){
-        // 取得題目的選項數
-        optionCount = QuestionDataManager.questionOptionCount[now_question];
-        
-        // 設定題目
-        string questionInfo_key = now_question + "_question";
-        string questionInfo = LeanLocalization.GetTranslationText(questionInfo_key);
-        textCardSystem.SetTextCardInfo(questionInfo);
 
-        WhetherOneOptionPerBar(optionCount);
-
-        // 設定選項資訊
-        for (int op = 0; op < optionCount; op++)
-        {
-            string optionKey = now_question + optionRawKey + op ;
-            string info = LeanLocalization.GetTranslationText(optionKey);
-            if(oneOptionPerBar){
-                optionBars[op].SetOption1Info(info);
-                optionBars[op].SetOptionLab();
-            }
-            else{
-                int barID = op / 2;
-                int optionID = op % 2;
-                Debug.Log($"op{op} index{barID}");
-                optionBars[barID].SetOption2Info(optionID, info);
-                optionBars[op].SetOptionLab();
-            } 
-        }
-    }
-
-    
 
     // 宇宙無敵dirty code OAO
     private void PlayOptionBarsAnime(){
