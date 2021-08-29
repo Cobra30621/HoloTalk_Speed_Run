@@ -10,6 +10,7 @@ public class ResultUI : MonoBehaviour
     public static ResultUI resultUI;
     public VTuberSimilarityCalculator vTuberSimilarityCalculator;
     public GoogleSheetRecorder googleSheetRecorder;
+    public WebOpenManager webOpenManager;
     public GameManager gameManager;
 
 
@@ -121,8 +122,8 @@ public class ResultUI : MonoBehaviour
         // 顯示按鈕
         buttonPanel.SetActive(true);
         
-        RecordOutcomeToGoogleSheet(most_simliarVTuber[0].name, (int)similarity);
-
+        RecordOutcomeToGoogleSheet(most_simliarVTuber[0].vTuber.ToString(), (int)similarity);
+        webOpenManager.SetTwitterInfo(most_simliarVTuber[0].name, similarity);
         // matsuriSpeech1.text = localize ? LeanLocalization.GetTranslationText(text) : text;
         yield return null;
     }

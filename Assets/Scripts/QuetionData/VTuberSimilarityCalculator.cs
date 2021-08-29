@@ -83,7 +83,7 @@ public class VTuberSimilarityCalculator : MonoBehaviour{
         similar.SetSprites(GetVtuberSprites(vTuber)) ;
 
         string nameID = "HoloMember/" + vTuber.ToString();
-        similar.name = LeanLocalization.GetTranslationText(nameID ) ; 
+        similar.name = LeanLocalization.GetTranslationText(nameID); 
 
         return similar;
     }
