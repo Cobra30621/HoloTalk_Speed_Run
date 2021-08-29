@@ -17,6 +17,9 @@ public class ResultUI : MonoBehaviour
     public GameObject outcomePanel;
     public Text lab_similarity;
     public Text lab_vubter;
+    [SerializeField] private GameObject GO_vtuberOutline;
+    [SerializeField] private GameObject GO_lab_vtuberOutline;
+    [SerializeField] private GameObject GO_percentageOutline;
     public Image img_vtuber;
     public Image img_percentage;
     public GameObject buttonPanel;
@@ -84,6 +87,7 @@ public class ResultUI : MonoBehaviour
         yield return boardPanel.Show();
 
         // 照片顯示
+        GO_vtuberOutline.SetActive(true);
         img_vtuber.gameObject.SetActive(true);
         yield return characterResult.Show(most_simliarVTuber[0].sprites[0]);
         // img_vtuber.sprite = most_simliarVTuber[0].sprites[0];
@@ -94,6 +98,7 @@ public class ResultUI : MonoBehaviour
         gameManager.kiara.SetKiaraAnime(KiaraState.Drug);
 
         // 顯示明子
+        GO_lab_vtuberOutline.SetActive(true);
         lab_vubter.text = most_simliarVTuber[0].name;
         lab_vubter.transform.rotation = Quaternion.Euler(0,0,45f);
         yield return lab_vubter.transform.DORotateQuaternion(Quaternion.Euler(0,0,0), 0.48763f);
@@ -102,6 +107,7 @@ public class ResultUI : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         // 顯示像似度進度條
+        GO_percentageOutline.SetActive(true);
         img_percentage.DOFillAmount(similarity / 100f, 0.5f).SetEase(moveEase);
         yield return new WaitForSeconds(0.7f);
         // .DOFillAmount(rate, progressBarAddTime)
@@ -124,9 +130,13 @@ public class ResultUI : MonoBehaviour
     private IEnumerator InitResultInfo(){
         // 其他資訊顯示
         outcomePanel.SetActive(true);
+        GO_lab_vtuberOutline.SetActive(false);
+        GO_vtuberOutline.SetActive(false);
         img_vtuber.gameObject.SetActive(false);
+        GO_percentageOutline.SetActive(false);
         buttonPanel.SetActive(false);
         boardPanel.panel.SetActive(false); // 爛透了的方法
+        
 
         img_percentage.fillAmount = 0;
         lab_similarity.text = "";

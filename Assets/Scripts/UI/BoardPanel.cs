@@ -15,6 +15,7 @@ public class BoardPanel : MonoBehaviour
     public GameObject[] showObjects;
     public GameObject GOMask; // 開啟介面的過程中，無法點擊其他東西
 
+
     void Start(){
         // 設置到開始處
         endPos.position = panel.GetComponent<RectTransform>().position;

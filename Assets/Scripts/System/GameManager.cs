@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Lean.Localization;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour{
 
@@ -46,6 +47,11 @@ public class GameManager : MonoBehaviour{
     public GameObject progressBarFG;
     private float preProgress;
     private float nowProgress;
+    public GameObject GO_chickent;
+    public Transform chickentStartPos;
+    public Transform chickentEndPos;
+
+
 
     public bool oneOptionPerBar;
     private int optionCount;
@@ -239,7 +245,15 @@ public class GameManager : MonoBehaviour{
         if(nowProgress < 0){nowProgress = 0;}
 
         
-        progressBarFG.transform.localScale = new Vector3(nowProgress,1,1);
+        progressBarFG.transform.DOScaleX(nowProgress, 0.5f);
+        // = new Vector3(nowProgress,1,1);
+
+        float distance = chickentEndPos.position.x - chickentStartPos.position.x;
+        float posX = chickentStartPos.position.x + nowProgress * distance - 0.5f * distance;
+        Debug.Log($"distance{distance}");
+        Debug.Log($"posX{posX}");
+
+        GO_chickent.transform.DOLocalMoveX(posX, 0.5f);
 
         preProgress = nowProgress;
     }
