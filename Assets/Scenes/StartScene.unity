@@ -2820,7 +2820,7 @@ PrefabInstance:
     - target: {fileID: 5440763683019555210, guid: d8122015ae37c8d4e95a11d235cf471c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 376.33585
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5440763683019555210, guid: d8122015ae37c8d4e95a11d235cf471c,
         type: 3}
@@ -2830,6 +2830,11 @@ PrefabInstance:
     - target: {fileID: 5440763683019555210, guid: d8122015ae37c8d4e95a11d235cf471c,
         type: 3}
       propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440763683019555210, guid: d8122015ae37c8d4e95a11d235cf471c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5571298663064687268, guid: d8122015ae37c8d4e95a11d235cf471c,
@@ -2892,6 +2897,11 @@ PrefabInstance:
       propertyPath: showObjects.Array.data[1]
       value: 
       objectReference: {fileID: 1569070714}
+    - target: {fileID: 8190784395440422019, guid: d8122015ae37c8d4e95a11d235cf471c,
+        type: 3}
+      propertyPath: panelAnchorMinY
+      value: 0.72
+      objectReference: {fileID: 0}
     - target: {fileID: 8501353827596745842, guid: d8122015ae37c8d4e95a11d235cf471c,
         type: 3}
       propertyPath: m_AnchoredPosition.y

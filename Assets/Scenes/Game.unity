@@ -2428,6 +2428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionData: {fileID: 11400000, guid: f1456a5d5008cd547b9efe4aab043145, type: 2}
+  leanLocalization: {fileID: 4428177818052056579}
 --- !u!1 &860155193
 GameObject:
   m_ObjectHideFlags: 0
@@ -9024,6 +9025,7 @@ MonoBehaviour:
     sameCount: 0
     compareCount: 0
     name: 
+    englishName: 
     sprites: []
   playerAnswers: 00000000010000000100000000000000000000000100000001000000000000000100000001000000010000000000000001000000000000000100000000000000010000000000000002000000
   detailPanel: {fileID: 5554275533195731241}

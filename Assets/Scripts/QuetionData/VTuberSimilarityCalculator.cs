@@ -6,6 +6,7 @@ using System;
 
 public class VTuberSimilarityCalculator : MonoBehaviour{
     public QuestionData questionData;
+    public LeanLocalization leanLocalization;
 
 
     public List<VTuberSimilar> GetAllSimilarityWithSort(List<int> playerAnswers){
@@ -84,6 +85,10 @@ public class VTuberSimilarityCalculator : MonoBehaviour{
 
         string nameID = "HoloMember/" + vTuber.ToString();
         similar.name = LeanLocalization.GetTranslationText(nameID); 
+        // 設定成英文名子
+        leanLocalization.SetCurrentLanguage(1);
+        similar.englishName = LeanLocalization.GetTranslationText(nameID);
+        leanLocalization.SetCurrentLanguage(GameSettings.lang);
 
         return similar;
     }
@@ -113,6 +118,7 @@ public class VTuberSimilar{
     public float sameCount;
     public float compareCount;
     public string name;
+    public string englishName;
     public Sprite[] sprites;
 
     public void SetSprites(Sprite[] sprites){

@@ -123,7 +123,7 @@ public class ResultUI : MonoBehaviour
         buttonPanel.SetActive(true);
         
         RecordOutcomeToGoogleSheet(most_simliarVTuber[0].vTuber.ToString(), (int)similarity);
-        webOpenManager.SetTwitterInfo(most_simliarVTuber[0].name, similarity);
+        webOpenManager.SetTwitterInfo(most_simliarVTuber[0].englishName, similarity);
         // matsuriSpeech1.text = localize ? LeanLocalization.GetTranslationText(text) : text;
         yield return null;
     }
