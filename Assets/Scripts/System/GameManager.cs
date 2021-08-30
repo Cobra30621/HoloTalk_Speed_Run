@@ -252,11 +252,11 @@ public class GameManager : MonoBehaviour{
         // = new Vector3(nowProgress,1,1);
 
         float distance = chickentEndPos.position.x - chickentStartPos.position.x;
-        float posX = chickentStartPos.position.x + nowProgress * distance - 0.5f * distance;
+        float posX = chickentStartPos.position.x + nowProgress * distance ;
         Debug.Log($"distance{distance}");
         Debug.Log($"posX{posX}");
 
-        GO_chickent.transform.DOLocalMoveX(posX, 0.5f);
+        GO_chickent.transform.DOMoveX(posX, 0.5f);
 
         preProgress = nowProgress;
     }
