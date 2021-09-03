@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SimilarityBar : MonoBehaviour
 {
     [SerializeField] private Image img_vtuber;
+    [SerializeField] private Image img_bg;
     [SerializeField] private Text lab_name;
     [SerializeField] private Text lab_simility;
     [SerializeField] private Text lab_sameCount;
@@ -19,5 +20,9 @@ public class SimilarityBar : MonoBehaviour
         lab_sameCount.text = vTuberSimilar.sameCount + "";
         lab_compareCount.text = vTuberSimilar.compareCount + "";
     }
+
+    public void SetBG(Sprite sprite){
+        img_bg.sprite = sprite;
+    }   
     
 }

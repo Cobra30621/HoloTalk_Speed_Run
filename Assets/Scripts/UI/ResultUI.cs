@@ -36,6 +36,7 @@ public class ResultUI : MonoBehaviour
     [SerializeField] private GameObject barPrefab;
     [SerializeField] private Transform bar_pos;
     private List<SimilarityBar> similarityBars;
+    [SerializeField] private Sprite[] similarityBarSprites;
 
     [Header("UIAnime")]
     // public float outpanelStartPosX;
@@ -157,9 +158,19 @@ public class ResultUI : MonoBehaviour
 
         List<VTuberSimilar> allSimliaritys = vTuberSimilarityCalculator.GetAllSimilarityWithSort(playerAnswers);
         similarityBars= new List<SimilarityBar>();
-        foreach (VTuberSimilar simliarity in allSimliaritys)
+        // foreach (VTuberSimilar simliarity in allSimliaritys)
+        // {
+        //     CreateSimilarityBar(simliarity);
+        // }
+        for (int i = 0; i < allSimliaritys.Count; i++)
         {
-            CreateSimilarityBar(simliarity);
+            Debug.Log("i"+ i);
+            if(i >= 3){
+                CreateSimilarityBar(allSimliaritys[i], similarityBarSprites[3]);
+            }
+            else{
+                CreateSimilarityBar(allSimliaritys[i], similarityBarSprites[i]);
+            }
         }
     }
 
@@ -167,12 +178,13 @@ public class ResultUI : MonoBehaviour
         detailPanel.SetActive(false);
     }
 
-    public void CreateSimilarityBar(VTuberSimilar simliarity )
+    public void CreateSimilarityBar(VTuberSimilar simliarity , Sprite bg)
     {
         var g = Instantiate(barPrefab, bar_pos);
 
         var l = g.GetComponent<SimilarityBar>();
         l.SetInfo( simliarity ); 
+        l.SetBG(bg);
         similarityBars.Add( l);
     }
 
