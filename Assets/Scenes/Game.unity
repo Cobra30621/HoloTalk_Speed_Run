@@ -7997,7 +7997,7 @@ MonoBehaviour:
   - Name: 3_option1
     Text: Instagram
   - Name: 4_question
-    Text: Coke or pepsi?
+    Text: Coke or Pepsi?
   - Name: 4_option0
     Text: Coke
   - Name: 4_option1
@@ -8710,7 +8710,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000030517578}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -1428.161, y: -756.52747}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &5554275533228714412
@@ -8877,7 +8877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.2999878, y: -56.99997}
+  m_AnchoredPosition: {x: -1.2999268, y: -57}
   m_SizeDelta: {x: -174.36609, y: -255.61224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5554275533467440959
