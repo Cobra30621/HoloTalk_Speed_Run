@@ -821,7 +821,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reset to Defult
+  m_Text: "\u91CD\u88FD\u70BA\u9810\u8A2D"
 --- !u!114 &1451291351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,7 +1470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 312, y: 15.795}
+  m_AnchoredPosition: {x: 0, y: 44.596}
   m_SizeDelta: {x: 560.7617, y: 89.19171}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7628531111124425828
@@ -2158,7 +2158,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7628531111476240110
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2846,7 +2846,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FullScreen
+  m_Text: "\u5168\u87A2\u5E55"
 --- !u!114 &1451291347
 MonoBehaviour:
   m_ObjectHideFlags: 0
