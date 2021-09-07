@@ -14,7 +14,7 @@ public class WebOpenManager : MonoBehaviour
     // 換行用 %0a
     private string twitterMainText ;
     private string GAME_LINK = "https://cobra3279.itch.io/holotalk";
-    private string twittertags = "&hashtags=holoTalkSpeedRound%2Cartsofashes";
+    private string twittertags = "&hashtags=holoTalkSpeedRound";
     
 
     // 表單用
