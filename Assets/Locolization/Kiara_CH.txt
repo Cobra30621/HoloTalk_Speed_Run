@@ -8,5 +8,5 @@ Kiara/Intro6,要馬上回答，絕對不能思考歐！
 Kiara/Intro7,準備好了嗎 ?
 Kiara/Intro8,HoloTalk Speed Round!
 Kiara/End1,感謝你的回答 ~
-Kiara/End2,在你之前有11位來賓參加過 HoloTalk Speed Round。
+Kiara/End2,在你之前有12位來賓參加過 HoloTalk Speed Round。
 Kiara/End3,其中答題狀況與你最相近的人是......

@@ -11,3 +11,4 @@ HoloMember/Coco, Coco
 HoloMember/Matsuri,Matsuri
 HoloMember/AZKi,AZKi
 HoloMember/Haachama,Haachama
+HoloMember/Kiara,Kiara

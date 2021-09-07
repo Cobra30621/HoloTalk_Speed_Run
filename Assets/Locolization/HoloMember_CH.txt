@@ -11,3 +11,4 @@ HoloMember/Coco,桐生可可
 HoloMember/Matsuri,夏色祭
 HoloMember/AZKi,AZKi
 HoloMember/Haachama,哈洽馬
+HoloMember/Kiara,琪亞拉

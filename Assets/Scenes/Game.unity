@@ -4696,7 +4696,7 @@ MonoBehaviour:
   - Name: Kiara/End1
     Text: "\u611F\u8B1D\u4F60\u7684\u56DE\u7B54 ~"
   - Name: Kiara/End2
-    Text: "\u5728\u4F60\u4E4B\u524D\u670911\u4F4D\u4F86\u8CD3\u53C3\u52A0\u904E HoloTalk
+    Text: "\u5728\u4F60\u4E4B\u524D\u670912\u4F4D\u4F86\u8CD3\u53C3\u52A0\u904E HoloTalk
       Speed Round\u3002"
   - Name: Kiara/End3
     Text: "\u5176\u4E2D\u7B54\u984C\u72C0\u6CC1\u8207\u4F60\u6700\u76F8\u8FD1\u7684\u4EBA\u662F......"
@@ -5206,6 +5206,8 @@ MonoBehaviour:
     Text: AZKi
   - Name: HoloMember/Haachama
     Text: "\u54C8\u6D3D\u99AC"
+  - Name: HoloMember/Kiara
+    Text: "\u742A\u4E9E\u62C9"
 --- !u!1 &1763913435
 GameObject:
   m_ObjectHideFlags: 0
@@ -8877,7 +8879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.2999268, y: -57}
+  m_AnchoredPosition: {x: -1.2998047, y: -57}
   m_SizeDelta: {x: -174.36609, y: -255.61224}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5554275533467440959
@@ -9309,6 +9311,8 @@ MonoBehaviour:
     Text: AZKi
   - Name: HoloMember/Haachama
     Text: Haachama
+  - Name: HoloMember/Kiara
+    Text: Kiara
 --- !u!1 &6492531241999623172
 GameObject:
   m_ObjectHideFlags: 0
