@@ -14,6 +14,7 @@ public class CharacterResult : MonoBehaviour
 
     // UI
     public Image image;
+    public Image img_cover;
 
     // 垃圾寫法
     private void Init(Sprite similiarVTuberSprite){
@@ -40,14 +41,32 @@ public class CharacterResult : MonoBehaviour
         for (int i = 0; i < showSpriteNum; i++)
         {
             int index = GetIndex(f + i);
-            image.sprite = vTuberOutcomesList[index].sprites[0];
+
+            bool useCover = vTuberOutcomesList[index].useCover;
+            if(useCover){
+                image.gameObject.SetActive(false);
+                img_cover.sprite = vTuberOutcomesList[index].sprites[0];
+            }
+            else{
+                image.gameObject.SetActive(true);
+                image.sprite = vTuberOutcomesList[index].sprites[0];
+            }
+            
             yield return new WaitForSeconds(shortInterval);
         }
 
         for (int i = 0; i < 3; i++)
         {
             int index = GetIndex(f + i);
-            image.sprite = vTuberOutcomesList[index].sprites[0];
+            bool useCover = vTuberOutcomesList[index].useCover;
+            if(useCover){
+                image.gameObject.SetActive(false);
+                img_cover.sprite = vTuberOutcomesList[index].sprites[0];
+            }
+            else{
+                image.gameObject.SetActive(true);
+                image.sprite = vTuberOutcomesList[index].sprites[0];
+            }
             yield return new WaitForSeconds(longInterval);
         }
 

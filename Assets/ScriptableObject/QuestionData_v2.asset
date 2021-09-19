@@ -170,42 +170,56 @@ MonoBehaviour:
   - vTuber: 0
     sprites:
     - {fileID: 21300000, guid: 218789924570f78498c606f28664bf78, type: 3}
+    useCover: 0
   - vTuber: 1
     sprites:
     - {fileID: 21300000, guid: b0aed1599e4c89048af84bb013b49faf, type: 3}
+    useCover: 0
   - vTuber: 2
     sprites:
     - {fileID: 21300000, guid: 5aada3a837b99df4e8de68bd61457acd, type: 3}
+    useCover: 0
   - vTuber: 3
     sprites:
     - {fileID: 21300000, guid: 292440d380802784da544ad4871e70d1, type: 3}
+    useCover: 0
   - vTuber: 4
     sprites:
     - {fileID: 21300000, guid: 1c733e61f9f5f9e46b642033196e8953, type: 3}
+    useCover: 0
   - vTuber: 5
     sprites:
     - {fileID: 21300000, guid: 34abdb99a7165994eb0dbd75ed237060, type: 3}
+    useCover: 0
   - vTuber: 6
     sprites:
     - {fileID: 21300000, guid: 791b9cf4c1a419c4b8286e84329bfe45, type: 3}
+    useCover: 0
   - vTuber: 7
     sprites:
     - {fileID: 21300000, guid: 6b26b953b8613514dbeb75e3fb8f7ef2, type: 3}
+    useCover: 0
   - vTuber: 8
     sprites:
     - {fileID: 21300000, guid: 09e9696a73082ea48b27bfe931142437, type: 3}
+    useCover: 0
   - vTuber: 9
     sprites:
     - {fileID: 21300000, guid: b817e2cd1863c6349bbfb663fdd78a1a, type: 3}
+    useCover: 0
   - vTuber: 10
     sprites:
     - {fileID: 21300000, guid: 3d2a524d66ca5ad44a39f12ced25635f, type: 3}
+    useCover: 0
   - vTuber: 11
     sprites:
-    - {fileID: 21300000, guid: 5aada3a837b99df4e8de68bd61457acd, type: 3}
+    - {fileID: 21300000, guid: a3dcd739115eed64db0159c62083408b, type: 3}
+    useCover: 1
   - vTuber: 12
     sprites:
     - {fileID: 21300000, guid: 2ace5500041a4b64c92b2be75be0ec57, type: 3}
+    useCover: 0
   - vTuber: 13
     sprites:
-    - {fileID: 21300000, guid: 6b26b953b8613514dbeb75e3fb8f7ef2, type: 3}
+    - {fileID: 21300000, guid: fb460ef050ce51e4ebe31ec209978b47, type: 3}
+    useCover: 1

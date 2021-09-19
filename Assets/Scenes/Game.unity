@@ -6471,6 +6471,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &30483912128319655 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3047515164166060281, guid: 473b7b4e082047e439026b65bc39c5dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 30483912128319652}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &124235024002903321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6596,6 +6608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img_vtuber: {fileID: 0}
+  img_cover: {fileID: 0}
   img_bg: {fileID: 0}
   lab_name: {fileID: 943977656886705787}
   lab_simility: {fileID: 124235024002903321}
@@ -9705,6 +9718,7 @@ MonoBehaviour:
   shortInterval: 0.1
   longInterval: 0.4
   image: {fileID: 30483912128319654}
+  img_cover: {fileID: 30483912128319655}
 --- !u!114 &6492531242706263704
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9739,6 +9753,7 @@ MonoBehaviour:
     name: 
     englishName: 
     sprites: []
+    useCover: 0
   playerAnswers: 00000000010000000100000000000000000000000100000001000000000000000100000001000000010000000000000001000000000000000100000000000000010000000000000002000000
   detailPanel: {fileID: 5554275533195731241}
   barPrefab: {fileID: 4615466715519909456, guid: 51789b709e4a7b944af1aea17bc3b289,

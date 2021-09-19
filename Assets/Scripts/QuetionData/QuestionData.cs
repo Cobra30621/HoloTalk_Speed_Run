@@ -60,6 +60,7 @@ public class Answerer{ // 一個角色的答案
 public class VTuberOutcome{ // 一個角色的答案
     public VTuber vTuber;
     public Sprite[] sprites;
+    public bool useCover = false;
 }
 
 [System.Serializable]

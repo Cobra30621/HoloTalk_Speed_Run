@@ -82,6 +82,7 @@ public class VTuberSimilarityCalculator : MonoBehaviour{
         similar.compareCount = effectiveQuetionCount;
         similar.vTuber =  vTuber ;
         similar.SetSprites(GetVtuberSprites(vTuber)) ;
+        similar.useCover =  GetUseCover(vTuber) ;
 
         string nameID = "HoloMember/" + vTuber.ToString();
         similar.name = LeanLocalization.GetTranslationText(nameID); 
@@ -103,6 +104,17 @@ public class VTuberSimilarityCalculator : MonoBehaviour{
         }
         Debug.LogError($"找不到sprite{vTuber}");
         return null;
+    }   
+    public bool GetUseCover(VTuber vTuber){
+        foreach (VTuberOutcome answerer in questionData.vTuberOutcomesList)
+        {
+            if(vTuber == answerer.vTuber){
+                return answerer.useCover;
+            }
+            
+        }
+        Debug.LogError($"找不到useCover{vTuber}");
+        return false;
     }    
 
 
@@ -120,6 +132,7 @@ public class VTuberSimilar{
     public string name;
     public string englishName;
     public Sprite[] sprites;
+    public bool useCover;
 
     public void SetSprites(Sprite[] sprites){
         this.sprites = sprites;
