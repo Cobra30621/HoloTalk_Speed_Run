@@ -69,5 +69,6 @@ public enum Language{
 [System.Serializable]
 public enum VTuber{ 
     Shion = 0, Subaru, Miko, Mel, Aki,
-    Suisei, Roboco, A,  Coco, Matsuri, AZKi, Haachama, Kiara = 100
+    Suisei, Roboco, A,  Coco, Matsuri, 
+    AZKi, Haachama, Kiara , Sora
 } 
