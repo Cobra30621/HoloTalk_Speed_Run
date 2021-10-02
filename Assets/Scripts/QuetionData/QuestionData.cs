@@ -2,28 +2,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-    
+
 [CreateAssetMenu(fileName = "QuestionData", menuName = "ScriptableObjects/QuestionData")]
-public class QuestionData: ScriptableObject {
+public class QuestionData : ScriptableObject
+{
     public List<Question> questionsList;
     public List<Answerer> answerersList;
     public List<VTuberOutcome> vTuberOutcomesList;
 
-    public Question GetQuestionById(int id){
+    public Question GetQuestionById(int id)
+    {
         int questionNum = questionsList.Count;
-        if(id >= questionNum){
+        if (id >= questionNum)
+        {
             Debug.LogError($"輸入的id{id}超過題目數量{questionNum}");
             return null;
         }
-        else{
+        else
+        {
             return questionsList[id];
         }
     }
 
-    public List<int> GetAnswersListByVTuber(VTuber vTuber){
+    public List<int> GetAnswersListByVTuber(VTuber vTuber)
+    {
         foreach (Answerer answerer in answerersList)
         {
-            if(answerer.vTuber == vTuber){
+            if (answerer.vTuber == vTuber)
+            {
                 return answerer.answers;
             }
         }
@@ -49,27 +55,31 @@ public class Question // 一道題目
 
 
 [System.Serializable]
-public class Answerer{ // 一個角色的答案
+public class Answerer
+{ // 一個角色的答案
     public VTuber vTuber;
     public string name;
     // option_id
-    public List<int> answers; 
+    public List<int> answers;
 }
 
 [System.Serializable]
-public class VTuberOutcome{ // 一個角色的答案
+public class VTuberOutcome
+{ // 一個角色的答案
     public VTuber vTuber;
     public Sprite[] sprites;
     public bool useCover = false;
 }
 
 [System.Serializable]
-public enum Language{
-    Chinese,English
+public enum Language
+{
+    Chinese, English
 }
 [System.Serializable]
-public enum VTuber{ 
+public enum VTuber
+{
     Shion = 0, Subaru, Miko, Mel, Aki,
-    Suisei, Roboco, A,  Coco, Matsuri, 
-    AZKi, Haachama, Kiara , Sora
-} 
+    Suisei, Roboco, A, Coco, Matsuri,
+    AZKi, Haachama, Kiara, Sora, Choco
+}

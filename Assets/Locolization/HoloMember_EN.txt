@@ -1,15 +1,16 @@
 Key,Enlish
-HoloMember/Shion,Murasaki Shion
-HoloMember/Subaru,Oozora Subaru
-HoloMember/Miko,Sakura Miko
-HoloMember/Mel,Yozora Mel
-HoloMember/Aki,Aki rosenthal
-HoloMember/Suisei,Hoshimachi Suisei
+HoloMember/Shion,Shion
+HoloMember/Subaru,Subaru
+HoloMember/Miko,Miko
+HoloMember/Mel,Mel
+HoloMember/Aki,Aki
+HoloMember/Suisei,Suisei
 HoloMember/Roboco,Roboco San
 HoloMember/A,A-chan
-HoloMember/Coco,Kiryu Coco
-HoloMember/Matsuri,Natsuiro Matsuri
+HoloMember/Coco,Coco
+HoloMember/Matsuri,Matsuri
 HoloMember/AZKi,AZKi
 HoloMember/Haachama,Haachama
 HoloMember/Kiara,Kiara
 HoloMember/Sora,Sora
+HoloMember/Choco,Choco

@@ -12,9 +12,6 @@ public class CsvLoader : MonoBehaviour
         // options = LoadData("options");
     }
 
-    public void SetLanguageData(Language language){
-        // 要對 VTuberAnswers與 options 動手角，好麻煩
-    }
 
 
     private string [][] LoadData(string filename){

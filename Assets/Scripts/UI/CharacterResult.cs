@@ -16,17 +16,22 @@ public class CharacterResult : MonoBehaviour
     public Image image;
     public Image img_cover;
 
+    public bool similarityUseCover;
+
     // 垃圾寫法
-    private void Init(Sprite similiarVTuberSprite){
+    private void Init(Sprite similiarVTuberSprite)
+    {
         rawVTuberOutcomesList = questionData.vTuberOutcomesList;
         vTuberOutcomesList = new List<VTuberOutcome>();
 
         foreach (VTuberOutcome outcome in rawVTuberOutcomesList)
         {
-            if(outcome.sprites[0] == similiarVTuberSprite){
-
+            if (outcome.sprites[0] == similiarVTuberSprite)
+            {
+                similarityUseCover = outcome.useCover;
             }
-            else{
+            else
+            {
                 vTuberOutcomesList.Add(outcome);
             }
         }
@@ -43,15 +48,17 @@ public class CharacterResult : MonoBehaviour
             int index = GetIndex(f + i);
 
             bool useCover = vTuberOutcomesList[index].useCover;
-            if(useCover){
+            if (useCover)
+            {
                 image.gameObject.SetActive(false);
                 img_cover.sprite = vTuberOutcomesList[index].sprites[0];
             }
-            else{
+            else
+            {
                 image.gameObject.SetActive(true);
                 image.sprite = vTuberOutcomesList[index].sprites[0];
             }
-            
+
             yield return new WaitForSeconds(shortInterval);
         }
 
@@ -59,11 +66,13 @@ public class CharacterResult : MonoBehaviour
         {
             int index = GetIndex(f + i);
             bool useCover = vTuberOutcomesList[index].useCover;
-            if(useCover){
+            if (useCover)
+            {
                 image.gameObject.SetActive(false);
                 img_cover.sprite = vTuberOutcomesList[index].sprites[0];
             }
-            else{
+            else
+            {
                 image.gameObject.SetActive(true);
                 image.sprite = vTuberOutcomesList[index].sprites[0];
             }
@@ -71,10 +80,21 @@ public class CharacterResult : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.2f);
-        image.sprite = similiarVTuberSprite;
+
+        if (similarityUseCover)
+        {
+            image.gameObject.SetActive(false);
+            img_cover.sprite = similiarVTuberSprite;
+        }
+        else
+        {
+            image.gameObject.SetActive(true);
+            image.sprite = similiarVTuberSprite;
+        }
     }
 
-    private int GetIndex(int index){
+    private int GetIndex(int index)
+    {
         return index % vTuberOutcomesList.Count;
     }
 }
