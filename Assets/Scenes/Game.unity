@@ -6517,7 +6517,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u7B54\u984C\u76F8\u4F3C\u5EA6"
+  m_Text: Similiarity
 --- !u!1 &619709339762053936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6756,7 +6756,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6240\u6709"
+  m_Text: All
 --- !u!1 &943977656228438087
 GameObject:
   m_ObjectHideFlags: 0
@@ -6882,7 +6882,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u76F8\u540C"
+  m_Text: Same
 --- !u!222 &943977656783079419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6983,7 +6983,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u59D3\u540D"
+  m_Text: Name
 --- !u!1 &943977656886705788
 GameObject:
   m_ObjectHideFlags: 0
@@ -9613,8 +9613,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -310.0594, y: 720}
-  m_SizeDelta: {x: 1299.8813, y: 1440}
+  m_AnchoredPosition: {x: -310.0594, y: 540}
+  m_SizeDelta: {x: 1299.8813, y: 1080}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &6492531242623343269
 MonoBehaviour:
