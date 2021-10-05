@@ -462,7 +462,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
-      Hash: 9ee95041a600f6bb7e00ad679ed7ab38
+      Hash: 5d8e657f936120a33bd86ddc15cf2786
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SimilarityBar
@@ -606,7 +606,7 @@ ScriptsOnlyBuild:
     className: LeanLocalizedImage
   - hash:
       serializedVersion: 2
-      Hash: 6a4527195236fd48f718b530087b683e
+      Hash: 937d9e1f2589eb25e432358ba286f651
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ResultUI
@@ -750,7 +750,7 @@ ScriptsOnlyBuild:
     className: SpriteSkinEntity
   - hash:
       serializedVersion: 2
-      Hash: a159d934f948cac2682c83a31ca4f0a3
+      Hash: a862f33ddad01523a19f3de3fcda20fe
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterResult
@@ -978,7 +978,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: d3431eb3c408320ee019d2965f82adee
+      Hash: 5029d40726cd132649763968046936c9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: QuestionData
@@ -1118,4 +1118,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/StartScene.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/user/Desktop/holotalk_web
+  playerPath: C:/Users/user/Desktop/holoTalk_web
