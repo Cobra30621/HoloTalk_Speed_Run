@@ -166,6 +166,9 @@ MonoBehaviour:
   - vTuber: 13
     name: HoloMember/Sora
     answers: 0100000000000000ffffffff00000000ffffffff0100000000000000000000000000000001000000000000000100000001000000000000000000000001000000000000000000000005000000
+  - vTuber: 14
+    name: HoloMember/Choco
+    answers: 01000000000000000100000000000000ffffffff0000000001000000000000000100000001000000000000000100000001000000010000000000000001000000000000000100000003000000
   vTuberOutcomesList:
   - vTuber: 0
     sprites:
@@ -213,13 +216,17 @@ MonoBehaviour:
     useCover: 0
   - vTuber: 11
     sprites:
-    - {fileID: 21300000, guid: a3dcd739115eed64db0159c62083408b, type: 3}
-    useCover: 1
+    - {fileID: 21300000, guid: 2047a3f1149f7f64cbf0c6147b6d3495, type: 3}
+    useCover: 0
   - vTuber: 12
     sprites:
     - {fileID: 21300000, guid: 2ace5500041a4b64c92b2be75be0ec57, type: 3}
     useCover: 0
   - vTuber: 13
     sprites:
-    - {fileID: 21300000, guid: fb460ef050ce51e4ebe31ec209978b47, type: 3}
-    useCover: 1
+    - {fileID: 21300000, guid: 262f32041fdcbd044854464d40e68d42, type: 3}
+    useCover: 0
+  - vTuber: 14
+    sprites:
+    - {fileID: 21300000, guid: eff7f1d36c53cd84199c57da4e86412a, type: 3}
+    useCover: 0

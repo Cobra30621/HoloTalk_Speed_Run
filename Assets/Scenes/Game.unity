@@ -5205,7 +5205,7 @@ MonoBehaviour:
   - Name: HoloMember/Mel
     Text: "\u591C\u7A7A\u6885\u9732"
   - Name: HoloMember/Aki
-    Text: "\u4E9E\u7DBA\xB7\u7F85\u68EE\u5854\u723E"
+    Text: "\u4E9E\u7DBA"
   - Name: HoloMember/Suisei
     Text: "\u661F\u8857\u5F57\u661F"
   - Name: HoloMember/Roboco
@@ -5224,6 +5224,8 @@ MonoBehaviour:
     Text: "\u742A\u4E9E\u62C9"
   - Name: HoloMember/Sora
     Text: "\u6642\u7A7A\u4E43"
+  - Name: HoloMember/Choco
+    Text: "\u5DE7\u53EF"
 --- !u!1 &1763913435
 GameObject:
   m_ObjectHideFlags: 0
@@ -6515,7 +6517,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u7B54\u984C\u76F8\u4F3C\u5EA6"
+  m_Text: Similiarity
 --- !u!1 &619709339762053936
 GameObject:
   m_ObjectHideFlags: 0
@@ -6754,7 +6756,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6240\u6709"
+  m_Text: All
 --- !u!1 &943977656228438087
 GameObject:
   m_ObjectHideFlags: 0
@@ -6880,7 +6882,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u76F8\u540C"
+  m_Text: Same
 --- !u!222 &943977656783079419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6981,7 +6983,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u59D3\u540D"
+  m_Text: Name
 --- !u!1 &943977656886705788
 GameObject:
   m_ObjectHideFlags: 0
@@ -9409,25 +9411,25 @@ MonoBehaviour:
   - Name: Key
     Text: Enlish
   - Name: HoloMember/Shion
-    Text: Murasaki Shion
+    Text: Shion
   - Name: HoloMember/Subaru
-    Text: Oozora Subaru
+    Text: Subaru
   - Name: HoloMember/Miko
-    Text: Sakura Miko
+    Text: Miko
   - Name: HoloMember/Mel
-    Text: Yozora Mel
+    Text: Mel
   - Name: HoloMember/Aki
-    Text: Aki rosenthal
+    Text: Aki
   - Name: HoloMember/Suisei
-    Text: Hoshimachi Suisei
+    Text: Suisei
   - Name: HoloMember/Roboco
     Text: Roboco San
   - Name: HoloMember/A
     Text: A-chan
   - Name: HoloMember/Coco
-    Text: Kiryu Coco
+    Text: Coco
   - Name: HoloMember/Matsuri
-    Text: Natsuiro Matsuri
+    Text: Matsuri
   - Name: HoloMember/AZKi
     Text: AZKi
   - Name: HoloMember/Haachama
@@ -9436,6 +9438,8 @@ MonoBehaviour:
     Text: Kiara
   - Name: HoloMember/Sora
     Text: Sora
+  - Name: HoloMember/Choco
+    Text: Choco
 --- !u!1 &6492531241999623172
 GameObject:
   m_ObjectHideFlags: 0
@@ -9719,6 +9723,7 @@ MonoBehaviour:
   longInterval: 0.4
   image: {fileID: 30483912128319654}
   img_cover: {fileID: 30483912128319655}
+  similarityUseCover: 0
 --- !u!114 &6492531242706263704
 MonoBehaviour:
   m_ObjectHideFlags: 0
