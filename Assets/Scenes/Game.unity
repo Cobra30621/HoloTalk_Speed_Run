@@ -5226,6 +5226,8 @@ MonoBehaviour:
     Text: "\u6642\u7A7A\u4E43"
   - Name: HoloMember/Choco
     Text: "\u5DE7\u53EF"
+  - Name: HoloMember/Aqua
+    Text: "\u963F\u5EAB\u5A6D"
 --- !u!1 &1763913435
 GameObject:
   m_ObjectHideFlags: 0
@@ -8208,6 +8210,8 @@ MonoBehaviour:
     Text: Giving
   - Name: 16_option1
     Text: Receiving
+  - Name: 16_option2
+    Text: Both
   - Name: 17_question
     Text: Walk 1 station or take the train?
   - Name: 17_option0
@@ -9440,6 +9444,8 @@ MonoBehaviour:
     Text: Sora
   - Name: HoloMember/Choco
     Text: Choco
+  - Name: HoloMember/Aqua
+    Text: Aqua
 --- !u!1 &6492531241999623172
 GameObject:
   m_ObjectHideFlags: 0
@@ -10382,6 +10388,8 @@ MonoBehaviour:
     Text: "\u7D66\u79AE\u7269"
   - Name: 16_option1
     Text: "\u6536\u79AE\u7269"
+  - Name: 16_option2
+    Text: "\u90FD\u559C\u6B61"
   - Name: 17_question
     Text: "\u8D70\u4E00\u500B\u8ECA\u7AD9\u8DDD\u96E2\u6216\u642D\u6377\u904B?"
   - Name: 17_option0

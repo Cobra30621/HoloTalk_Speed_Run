@@ -71,5 +71,5 @@ public enum Language{
 public enum VTuber{ 
     Shion = 0, Subaru, Miko, Mel, Aki,
     Suisei, Roboco, A,  Coco, Matsuri, 
-    AZKi, Haachama, Kiara , Sora, Choco
+    AZKi, Haachama, Kiara , Sora, Choco, Aqua
 } 

@@ -65,6 +65,7 @@ _option5,option5
 16_question,Giving or receiving presents?
 16_option0,Giving
 16_option1,Receiving
+16_option2,Both
 17_question,Walk 1 station or take the train?
 17_option0,Walk 1 station
 17_option1,Take the train

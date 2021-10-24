@@ -16,7 +16,7 @@ public class QuestionDataManager : MonoBehaviour{
     {2,2,3,2,2,
     2,3,2,2,2,
     3,2,2,6,3,
-    2,2,2,9};
+    2,3,2,9};
     private const string optionRawKey = "_option";
 
     // ==================================

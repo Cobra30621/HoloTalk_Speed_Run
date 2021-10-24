@@ -65,6 +65,7 @@ _option5,選項5
 16_question,給禮物或收禮物?
 16_option0,給禮物
 16_option1,收禮物
+16_option2,都喜歡
 17_question,走一個車站距離或搭捷運?
 17_option0,走一個車站距離
 17_option1,搭捷運

@@ -14,3 +14,4 @@ HoloMember/Haachama,Haachama
 HoloMember/Kiara,Kiara
 HoloMember/Sora,Sora
 HoloMember/Choco,Choco
+HoloMember/Aqua,Aqua
