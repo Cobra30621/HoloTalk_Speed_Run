@@ -12,6 +12,6 @@ HoloMember/Matsuri,夏色祭
 HoloMember/AZKi,AZKi
 HoloMember/Haachama,哈洽馬
 HoloMember/Kiara,琪亞拉
-HoloMember/Sora,時空乃
+HoloMember/Sora,時乃空
 HoloMember/Choco,巧可
 HoloMember/Aqua,阿庫婭
