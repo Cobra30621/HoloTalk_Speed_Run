@@ -1,6 +1,6 @@
 play link: https://cobra3279.itch.io/holotalk
 
-###【Game Intro】
+### 【Game Intro】
 
 Holotalk Speed Round !!!
 
@@ -14,7 +14,7 @@ In this game, you could
 
 2. watch the similarity among yourselves and other HoloLive participants in the answers and know whom you are similar to.
 
-##【遊戲簡介】
+### 【遊戲簡介】
 
  這款遊戲改編自 Hololive EN組的小鳥遊琪亞拉(Takanashi Kiara)所主持的脫口秀節目《HOLOTALK》裡的快速問答環節(Speed Round)。 
 
